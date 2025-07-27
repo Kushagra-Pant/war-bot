@@ -1,0 +1,38 @@
+body {
+  background-color: #2f3136;
+}
+
+a {
+  font-weight: bolder;
+}
+
+.card {
+  margin: 5%;
+  border-radius: 25px;
+}
+
+.card-title.main{
+  font-size: 60px;
+}
+
+.card-title{
+  font-size: 40px
+}
+
+.card-subtitle{
+  font-size: 20px
+}
+
+
+.rounded-circle{
+  border: 3px black solid;
+}
+
+.command {
+  background-color: #2f31369c;
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-family: monospace;
+  font-size: 0.95em;
+}
