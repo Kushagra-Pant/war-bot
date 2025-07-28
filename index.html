@@ -5,7 +5,7 @@
     <link href="style.css" rel="stylesheet"></link>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg bg-secondary">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -13,19 +13,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Overview</a>
+              <a class="nav-link disabled text-muted" href="#">Overview</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-light" href="pages/how-to-play/index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 How to Play
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Overview</a></li>
-                <li><a class="dropdown-item" href="#">Detailed</a></li>
+                <li><a class="dropdown-item" href="pages/how-to-play/index.html">How to Play</a></li>
+                <li><a class="dropdown-item" href="#">List of Commands</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Updates
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -34,16 +34,16 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-light" href="pages/maps/index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Maps
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Official Maps</a></li>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="pages/maps/index.html">Official Maps</a></li>
                 <li><a class="dropdown-item" href="#">Make your own Map Guide</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Hall of Fame</a>
+              <a class="nav-link active text-light" href="#">Hall of Fame</a>
             </li>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -75,11 +75,13 @@
           <h5 class="card-title">Latest Update - Statues!</h5>
           <h6 class="card-subtitle mb-2 text-muted">Update 1.4.2</h6>
           <p class="card-text" style="font-size: 20px;">
-            The latest update adds Statues - they boost your stability, but at a price. They cost $50,000 to build and provie 0.05 stability per tax (0.1 per hour). However, this stability boost only adds to you - if an enemy takes the territory with your statue, they start losing stability! So a statue acts as a buff for you, and a debuff for enemies that seize them. You can view all your statues with <span class="command">-statues</span>
+            The latest update adds Statues - they boost your stability, but at a price. They cost $50,000 to build and provie 0.05 stability per tax (0.1 per hour). However, this stability boost only adds to you - if an enemy takes the territory with your statue, they start losing stability! So a statue acts as a buff for you, and a debuff for enemies that seize them. You can view all your statues with <span class="command">-statues</span>. Some ideologies also give a boost for how much stability statues give!
             <br>
             Additionally, a new command, <span class="command">-bulldoze</span> was added. For the price of $20,000, you can bulldoze any building in one of your territories. Previously, you had to scorch your territory to remove all buildings, and now with the potential for a negative building (an enemy statue) in your land, this new feature will surely be useful!
             <br>
             Finally, a new cosmetic command but a great addition nonetheless is... <span class="command">-popmap</span>! This is a heatmap of the territories with the largest populations! You can find a demo in How to Play > Detailed. 
+            <br>
+            You can find other additions to this update in Updates > Detailed.
           </p>
         </div>
       </div>
