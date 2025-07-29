@@ -37,3 +37,11 @@ a {
   font-family: monospace;
   font-size: 0.95em;
 }
+
+.bg-skyblue{
+  background-color: #00BAFF;
+}
+
+.bg-turquoise{
+  background-color: #00BEB6;
+}
