@@ -10,6 +10,8 @@ a {
 .card {
   margin: 5%;
   border-radius: 25px;
+  padding-block: 2%;
+  padding-inline: 1%;
 }
 
 .card-title.main{
@@ -59,7 +61,7 @@ a {
 }
 
 .innerbody{
-  padding-inline: 5%;
+  padding-inline: 3%;
 }
 
 p{
