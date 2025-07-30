@@ -11,21 +11,21 @@ commands				Links to this very page
 bal				Displays your balance
 buy			-buy <item> <(optional quantity)>	Buys an item from the shop
 register		Admin Only	-register <user> <country>	Registers someone as a country
-channel		Admin Only		
-inv				
-territories	t			
-top				
-population				
-save				
-declarewar				
-wars				
-peace				
-resign				
-accept				
-reject				
-treaties				
-attack				
-give				
+channel		Admin Only	-channel <nation>	Changes the channel of the nation to the one the command is run in
+inv				Displays your inventory
+territories	t		-territories <(optional nation)>	Displays the territories of the nation specified. Displays your territories if left unspecified
+top			-top <pop / area / coal / oil>	Displays the top countries by one of the following categories: population, area, coal production, or oil production.
+population			-population <nation>	Returns the population of the nation specified
+save				Hard saves the current round, in case anything goes wrong and data is wiped.
+declarewar			-declarewar <nation>	Declares war on a nation
+wars				Displays all currently ongoing wars
+peace			-peace <nation> <clauses>	Offers a peace treaty to a nation
+resign				Removes you as the leader of your nation
+accept			-accept <treaty number>	Accepts a peace treaty
+reject			-reject <treaty number>	Rejects a peace treaty
+treaties				Displays all treaties to and from you, and their respective numbers
+attack			-attack <territory> <units separated by space>	Attacks the specified territory with all units mentioned. The attack does not commence unless all units are valid and yours and eligible to attack.
+give			-give <nation> <amount of money> <(optional message)>	Gives a nation some amount of money, with an optional message attached
 fortify				
 borders	b			
 bordersnat	bnat			

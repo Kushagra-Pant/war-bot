@@ -10,7 +10,7 @@
 
         title = `<span class="command">${commandName}</span>`
         if (alternateName != ''){
-          title += ` / <span class="command">${alternateName}</span>`
+          title += `&nbsp;/&nbsp;<span class="command">${alternateName}</span>`
         }
 
         descarray = description.split("`")
