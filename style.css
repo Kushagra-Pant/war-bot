@@ -57,3 +57,11 @@ a {
 .bg-mudgreen{
   background-color: #6C7A00;
 }
+
+.innerbody{
+  padding-inline: 5%;
+}
+
+p{
+  font-size: 20px
+}
