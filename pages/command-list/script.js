@@ -8,12 +8,37 @@
       lines.forEach((line, index) => {
         const [commandName, alternateName, category, syntax, description] = line.split('\t');
 
+        title = `<span class="command">${commandName}</span>`
+        if (alternateName != ''){
+          title += `/ <span class="command">${alternateName}</span>`
+        }
+
+        descarray = description.split("`")
+        desc = ""
+        for(i = 0; i < length(desc) - 1; i++){
+          desc += descarray[i]
+          if(i%2 == 0){
+            desc += `<span class="command">`
+          } else {
+            desc += `</span>`
+          }
+        }
+        try{
+          desc += descarray[-1]
+        } catch {
+          desc = ""
+        }        
+
+        if(syntax != ""){
+          desc = `<b>Syntax: </b> <span class="command">${syntax}</span> <br>${desc}`
+        }
+
         const safeId = `collapse${index}`;
         const accordionItem = `
           <div class="accordion-item">
             <h2 class="accordion-header" id="heading${index}">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${safeId}" aria-expanded="false" aria-controls="${safeId}">
-                <span class="command">${commandName}</span>
+                ${title}
               </button>
             </h2>
             <div id="${safeId}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#accordionExample">
