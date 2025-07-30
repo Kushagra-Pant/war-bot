@@ -10,12 +10,12 @@
 
         title = `<span class="command">${commandName}</span>`
         if (alternateName != ''){
-          title += `/ <span class="command">${alternateName}</span>`
+          title += ` / <span class="command">${alternateName}</span>`
         }
 
         descarray = description.split("`")
         desc = ""
-        for(i = 0; i < length(desc) - 1; i++){
+        for(i = 0; i < descarray.length - 1; i++){
           desc += descarray[i]
           if(i%2 == 0){
             desc += `<span class="command">`
