@@ -1,0 +1,90 @@
+help				The help command. Type a sentence after `-help` and the bot will try its best to find what problem you're having and how to solve it.
+players	p			List of all nations in the game, the ruler, and their ideology.
+shop				A list of all items and their prices.
+settax			-settax <rate>	Sets your national tax rate. The higher the tax rate, the higher the income and stability loss.
+collect				Collects the income you've generated since the last `-collect`.
+deploy				
+navy	n			
+army				
+forces				
+commands				
+bal				
+buy				
+register		Admin Only		
+channel		Admin Only		
+inv				
+territories	t			
+top				
+population				
+save				
+declarewar				
+wars				
+peace				
+resign				
+accept				
+reject				
+treaties				
+attack				
+give				
+fortify				
+borders	b			
+bordersnat	bnat			
+seamap				
+unitinfo				
+rename				
+cede				
+move	m			
+merge				
+split				
+disband				
+map				
+warmap				
+cooldowns				
+multimap				
+scorch				
+settruce				
+z				
+upgrade				
+bombard				
+myseas				
+terrinfo				
+weights				
+load	l			
+checkload				
+unload				
+build				
+pave				
+fuelreq				
+haul				
+rails				
+pathfrom				
+distribute				
+mappoint		Admin Only		
+unitcooldowns				
+getterrainmap		Admin Only		
+terrainmap				
+legendmap	lmap			
+railmap				
+maps				
+market				
+order				
+sell				
+rescind				
+scan				
+getterr				
+form				
+formable				
+buildmap				
+resmap				
+formreq				
+formlist				
+ideologies				
+viewide				
+setide				
+setnews		Admin Only		
+setcapital				
+econboost				
+popmap				
+statues				
+bulldoze				
+reset		Admin Only		
