@@ -3,14 +3,14 @@ players	p			List of all nations in the game, the ruler, and their ideology.
 shop				A list of all items and their prices.
 settax			-settax <rate>	Sets your national tax rate. The higher the tax rate, the higher the income and stability loss.
 collect				Collects the income you've generated since the last `-collect`.
-deploy				
-navy	n			
-army				
-forces				
-commands				
-bal				
-buy				
-register		Admin Only		
+deploy			-deploy <unit> <territory> <optional amount>	Deploys a unit in one of your territories
+navy	n			Shows all your boats and where they're located
+army				Shows all your ground forces and where they're located
+forces				Shows all your combined naval and ground forces and where they're located
+commands				Links to this very page
+bal				Displays your balance
+buy			-buy <item> <(optional quantity)>	Buys an item from the shop
+register		Admin Only	-register <user> <country>	Registers someone as a country
 channel		Admin Only		
 inv				
 territories	t			
