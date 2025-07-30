@@ -26,65 +26,65 @@ reject			-reject <treaty number>	Rejects a peace treaty
 treaties				Displays all treaties to and from you, and their respective numbers
 attack			-attack <territory> <units separated by space>	Attacks the specified territory with all units mentioned. The attack does not commence unless all units are valid and yours and eligible to attack.
 give			-give <nation> <amount of money> <(optional message)>	Gives a nation some amount of money, with an optional message attached
-fortify				
-borders	b			
-bordersnat	bnat			
-seamap				
-unitinfo				
-rename				
-cede				
-move	m			
-merge				
-split				
-disband				
-map				
-warmap				
-cooldowns				
-multimap				
-scorch				
-settruce				
-z				
-upgrade				
-bombard				
-myseas				
-terrinfo				
-weights				
-load	l			
-checkload				
-unload				
-build				
-pave				
-fuelreq				
-haul				
-rails				
-pathfrom				
-distribute				
-mappoint		Admin Only		
-unitcooldowns				
-getterrainmap		Admin Only		
-terrainmap				
-legendmap	lmap			
-railmap				
-maps				
-market				
-order				
-sell				
-rescind				
-scan				
-getterr				
-form				
-formable				
-buildmap				
-resmap				
-formreq				
-formlist				
-ideologies				
-viewide				
-setide				
-setnews		Admin Only		
-setcapital				
-econboost				
-popmap				
-statues				
-bulldoze				
-reset		Admin Only		
+fortify				placeholder
+borders	b			placeholder
+bordersnat	bnat			placeholder
+seamap				placeholder
+unitinfo				placeholder
+rename				placeholder
+cede				placeholder
+move	m			placeholder
+merge				placeholder
+split				placeholder
+disband				placeholder
+map				placeholder
+warmap				placeholder
+cooldowns				placeholder
+multimap				placeholder
+scorch				placeholder
+settruce				placeholder
+z				placeholder
+upgrade				placeholder
+bombard				placeholder
+myseas				placeholder
+terrinfo				placeholder
+weights				placeholder
+load	l			placeholder
+checkload				placeholder
+unload				placeholder
+build				placeholder
+pave				placeholder
+fuelreq				placeholder
+haul				placeholder
+rails				placeholder
+pathfrom				placeholder
+distribute				placeholder
+mappoint		Admin Only		placeholder
+unitcooldowns				placeholder
+getterrainmap		Admin Only		placeholder
+terrainmap				placeholder
+legendmap	lmap			placeholder
+railmap				placeholder
+maps				placeholder
+market				placeholder
+order				placeholder
+sell				placeholder
+rescind				placeholder
+scan				placeholder
+getterr				placeholder
+form				placeholder
+formable				placeholder
+buildmap				placeholder
+resmap				placeholder
+formreq				placeholder
+formlist				placeholder
+ideologies				placeholder
+viewide				placeholder
+setide				placeholder
+setnews		Admin Only		placeholder
+setcapital				placeholder
+econboost				placeholder
+popmap				placeholder
+statues				placeholder
+bulldoze				placeholder
+reset		Admin Only		placeholder
