@@ -25,10 +25,9 @@ fetch('info.txt')
           desc += `</span>`
         }
       }
-      try{
+      if(descarray.length > 0){
         desc += descarray[descarray.length - 1]
-      } catch {
-      }        
+      }
 
       if(syntax != ""){
         desc = `<b>Syntax: </b> <span class="command">${syntax}</span> <br>${desc}`
