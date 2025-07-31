@@ -24,7 +24,7 @@
           }
         }
         try{
-          desc += descarray[desc.length - 1]
+          desc += descarray[descarray.length - 1]
         } catch {
         }        
 

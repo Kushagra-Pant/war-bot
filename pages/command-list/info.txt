@@ -40,18 +40,18 @@ disband			-disband <unit id>	Eliminates the unit specified, if it's yours
 map			-map <nation / territory / 'all'> <(optional specification: 'nat' for nation, 'terr' for territory)>	Displays a map of the specified nation or territory, or 'all' if specified. 
 warmap				Displays a map of all nations you are at war with
 cooldowns			-cooldowns <unit / int for integration>	Displays all the cooldowns, for either your units or for territory integration
-multimap				placeholder
-scorch				placeholder
-settruce				placeholder
-z				placeholder
-upgrade				placeholder
-bombard				placeholder
-myseas				placeholder
-terrinfo				placeholder
-weights				placeholder
-load	l			placeholder
-checkload				placeholder
-unload				placeholder
+multimap			-multimap <nations separated by space>	Maps several nations at once
+scorch			-scorch <territory>	Scorches a territory. This reduces the population by half and removes all buildings from the territory. 20 fuel is required to scorch a province
+settruce		Admin Only	-settruce <duration in format "#h #m">	Sets a global truce, where no nation can attack another. Often done at the start of games, to give preparation time to everybody.
+z				Returns a simple message. Exists to test whether the bot is online at the moment.
+upgrade			-upgrade <territory / 'cost'>	Upgrades one of your territories. If you specify 'cost', it will display the cost to upgrade each.
+bombard			-bombard <territory> <(optional battleship id)>	Bombards a province with one of your battleships.
+myseas				Displays the seas you currently occupy
+terrinfo			-terrinfo <territory>	Displays all information pertaining to the territory specified. If you own the territory, it also shows the units stationed in it.
+weights				Displays the weight per unit for each unit type
+load	l		-load <carrier id> <unit ids separated by space>	Loads a carrier with the specified units. You cannot load a submarine or battleship onto a carrier. Each carrier has a capacity of 10 weight.
+checkload				Displays the units currently on each carrier you own and how much space is available
+unload				Unloads all units aboard a carrier
 build				placeholder
 pave				placeholder
 fuelreq				placeholder
