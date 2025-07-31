@@ -24,22 +24,22 @@ resign				Removes you as the leader of your nation
 accept			-accept <treaty number>	Accepts a peace treaty
 reject			-reject <treaty number>	Rejects a peace treaty
 treaties				Displays all treaties to and from you, and their respective numbers
-attack			-attack <territory> <units separated by space>	Attacks the specified territory with all units mentioned. The attack does not commence unless all units are valid and yours and eligible to attack.
+attack			-attack <territory> <unit ids separated by space>	Attacks the specified territory with all units mentioned. The attack does not commence unless all units are valid and yours and eligible to attack.
 give			-give <nation> <amount of money> <(optional message)>	Gives a nation some amount of money, with an optional message attached
-fortify				placeholder
-borders	b			placeholder
-bordersnat	bnat			placeholder
-seamap				placeholder
-unitinfo				placeholder
-rename				placeholder
-cede				placeholder
-move	m			placeholder
-merge				placeholder
-split				placeholder
-disband				placeholder
-map				placeholder
-warmap				placeholder
-cooldowns				placeholder
+fortify			-fortify <territory>	Builds a fortress on a territory that you own
+borders	b		-borders <territory>	Returns the territories that border the specified territory
+bordersnat	bnat		-bordersnat <territory>	Returns the territories that border the specified nation
+seamap				Returns a labelled map of the sea
+unitinfo			-unitinfo <unit id>	Returns all information relating to a unit you own
+rename			-rename <unit id> <new id>	Renames a unit to whatever you specify. Restrictions apply
+cede			-cede <territory> <nation>	Cedes a territory to the nation specified. You cannot cede to a nation you're at war with. You also cannot cede your capital or your final territory.
+move	m		-move <unit id> <territory>	Move the specified unit to the specified territory
+merge			-merge <unit ids separated by space>	Merges the specified units into a single division. They must be of the same type and in the same territory upon merging.
+split			-split <unit id> <(optional amount)>	Splits a unit into as many divisions as you specify. If no number is specified, 2 is assumed.
+disband			-disband <unit id>	Eliminates the unit specified, if it's yours
+map			-map <nation / territory / 'all'> <(optional specification: 'nat' for nation, 'terr' for territory)>	Displays a map of the specified nation or territory, or 'all' if specified. 
+warmap				Displays a map of all nations you are at war with
+cooldowns			-cooldowns <unit / int for integration>	Displays all the cooldowns, for either your units or for territory integration
 multimap				placeholder
 scorch				placeholder
 settruce				placeholder

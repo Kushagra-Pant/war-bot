@@ -24,9 +24,8 @@
           }
         }
         try{
-          desc += descarray[desc.length() - 1]
+          desc += descarray[desc.length - 1]
         } catch {
-          desc = ""
         }        
 
         if(syntax != ""){
