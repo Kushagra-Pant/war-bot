@@ -15,7 +15,8 @@ fetch('info.txt')
         title += `<span class="badge ${category.replace(" ", "")}">${category}</span>`
       }
 
-      description = description.replace("<", "&lt;").replace(">", "&gt;")
+      description = description.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
       descarray = description.split("`")
       desc = ""
       for(i = 0; i < descarray.length - 1; i++){
@@ -31,7 +32,7 @@ fetch('info.txt')
       }
 
       if(syntax != ""){
-        desc = `<b>Syntax: </b> <span class="command">${syntax.replace("<", "&lt;").replace(">", "&gt;")}</span> <br>${desc}`
+        desc = `<b>Syntax: </b> <span class="command">${syntax.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</span> <br>${desc}`
       }
 
       const safeId = `collapse${index}`;
