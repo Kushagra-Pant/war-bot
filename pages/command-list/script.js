@@ -12,7 +12,7 @@ fetch('info.txt')
         title += `&nbsp;/&nbsp;<span class="command">${alternateName}</span>`
       }
       if(category != ''){
-        title += `<span class="badge">${category}</span>`
+        title += `<span class="badge ${category.replace(" ", "")}">${category}</span>`
       }
 
       descarray = description.split("`")
