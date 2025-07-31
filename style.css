@@ -60,6 +60,10 @@ a {
   background-color: #6C7A00;
 }
 
+.bg-darkgray{
+  background-color: #3b3b3b;
+}
+
 .innerbody{
   padding-inline: 3%;
 }
