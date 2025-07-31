@@ -101,3 +101,7 @@ p{
 .dropdown-item{
   font-size: 16px;
 }
+
+.page-header{
+  margin-block: 3%; padding-block: 1%;
+}
