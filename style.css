@@ -92,3 +92,12 @@ p{
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+
+.nav-item{
+  font-size: 20px;
+  margin-inline: 5px;
+}
+
+.dropdown-item{
+  font-size: 16px;
+}
