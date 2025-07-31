@@ -69,6 +69,9 @@
             <li>
               <a href="#shop" class="text-info">Buying Things</a>
             </li>
+            <li>
+              <a href="#deploy" class="text-info">Deploying Units</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -105,11 +108,12 @@
 
     <div class="card page-header">
       <div class="d-flex flex-row align-items-center">
-        <div class="card-body" style="padding: 3%" id="shop">
-          <h5 class="card-title">Deploy Troops</h5> <br>
+        <div class="card-body" style="padding: 3%" id="deploy">
+          <h5 class="card-title">Deploying Units</h5> <br>
           <p class="card-text">
-            Do <span class="command">-shop</span> to view all items in the shop. Items are cheaper during global truces. To buy an item, do <span class="command">-buy &lt;item&gt; &lt;(optional quantity)&gt;</span>.
-            The items in the market are infinite - you can buy as many as you'd like. The player-run market is different though.
+            Just because you've bought troops, doesn't mean they're immediately on the frontlines. They must be <b>deployed</b> to a specific <b>territory</b>. The syntax for the command can be found <a href="../command-list/index.html#deploy">here</a>.  
+            <br> <b>For Naval Units: </b>
+            There is an extra complexity for naval units. They must still be deployed on coastal provinces, which you can see visually through <a href="../command-list/index.html#legendmap"><span class="command">-legendmap</span></a> or though all territories with an anchor system in <a href="../command-list/index.html#territories"><span class="command">-territories</span></a>
           </p>
         </div>
       </div>
