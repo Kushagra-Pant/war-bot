@@ -43,7 +43,7 @@
             </h2>
             <div id="${safeId}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                ${description}
+                ${desc}
               </div>
             </div>
           </div>
