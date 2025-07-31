@@ -64,7 +64,7 @@ unitcooldowns			-unitcooldowns <unit type>	Returns the unit type's cooldowns by 
 getterrainmap		Admin Only		Paints a map of all terrains
 terrainmap				Displays a map of all terrains. The image is saved beforehand for higher response speeds.
 legendmap	lmap		-lmap <nation / territory / 'all'>	Displays a labelled map of whatever specified.
-railmap			-railmap <nation / territory / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
+railmap			-railmap <nation / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
 maps				Tells you all types of maps and their syntaxes
 market				Displays the market. The difference between the market and the shop is that on the market, things are sold by users. When buying something off the market you are giving another nation money.
 order			-order <item id> <(optional amount)>	Buys an item off the market.

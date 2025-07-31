@@ -63,7 +63,7 @@ fetch('info.txt')
 
         setTimeout(() => {
           target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 400); 
+        }, 200); 
       }
     }
   });

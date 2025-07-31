@@ -5,7 +5,7 @@
     <link href="../../style.css" rel="stylesheet"></link>
     <link href="style.css" rel="stylesheet"></link>
   </head>
-  <body class="bg-pink">
+  <body class="bg-red">
     <nav class="navbar navbar-expand-lg bg-secondary">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -64,13 +64,25 @@
           <h2>Contents</h2>
           <ul>
             <li>
-              <a href="#money" class="text-info">Collecting Money</a>
+              <a href="#nation" class="text-info">Exploring your Nation</a>
+            </li>
+            <li>
+              <a href="#income" class="text-info">Collecting Income</a>
             </li>
             <li>
               <a href="#shop" class="text-info">Buying Things</a>
             </li>
             <li>
               <a href="#deploy" class="text-info">Deploying Units</a>
+            </li>
+            <li>
+              <a href="#units" class="text-info">Organizing Units</a>
+            </li>
+            <li>
+              <a href="#attack" class="text-info">Attacking</a>
+            </li>
+            <li>
+              <a href="#naval-warfare" class="text-info">Naval Warfare</a>
             </li>
           </ul>
         </div>
@@ -79,10 +91,26 @@
     
     <div class="card page-header">
       <div class="d-flex flex-row align-items-center">
-        <div class="card-body" style="padding: 3%" id="money">
-          <h5 class="card-title">Collecting Money</h5> <br>
+        <div class="card-body" style="padding: 3%" id="nation">
+          <h5 class="card-title">Exploring your nation</h5> <br>
+          <p class="card-text">
+            First thing you'll want to do is get familiar with what you're ruling over! Some commands that can help you do that are: <br>
+            <span class="command">-map &lt;your nation&gt;</span> – maps your nation out, so you know where you're located! To view full syntax, <a href="../command-list/index.html#map">click here</a>! <br>
+            <span class="command">-territories</span> – A list of your territories, in descending order of population. <a href="../command-list/index.html#territories">Full syntax here</a> <br>
+            <span class="command">-legendmap &lt;your nation&gt;</span> – A labelled map of all your territories. <a href="../command-list/index.html#legendmap">Full syntax here</a> <br>
+            <span class="command">-seamap &lt;your nation&gt;</span> – A labelled map of all seas in the game. Useful if you are a seafaring nation. No other syntax is required.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="income">
+          <h5 class="card-title">Collecting Income</h5> <br>
           <p class="card-text">
             Money makes the world go round, and it's no different for War Bot. Do <span class="command">-settax &lt;rate&gt;</span> to set your tax rate, then do <span class="command">-collect</span> to collect your income. You can collect once every tax cycle, which is currently set to 30 minutes.
+            The higher your tax rate, the greater your stability loss will be.
             The more frequently you collect, the more money you will get, though you will continue collecting even when afk.
             Income is affected by stability, population size, integration, and infrastructure. To view the effects of the latter two, do <span class="command">-econboost</span>.
           </p>
@@ -121,13 +149,94 @@
 
     <div class="card page-header">
       <div class="d-flex flex-row align-items-center">
-        <div class="card-body" style="padding: 3%" id="deploy">
+        <div class="card-body" style="padding: 3%" id="units">
           <h5 class="card-title">Organizing Units</h5> <br>
           <p class="card-text">
             Rename units with the <a href="../command-list/index.html#rename"><span class="command">-rename</span></a> command. <br>
             Split units into multiple divisions with the <a href="../command-list/index.html#split"><span class="command">-split</span></a> command. <br>
             Merge multiple divisions into one with the <a href="../command-list/index.html#merge"><span class="command">-merge</span></a> command. <br>
-            Move units to a neighbouring territory with the <a href="../command-list/index.html#move"><span class="command">-move</span></a> command. <br>
+            Move units to a neighbouring territory with the <a href="../command-list/index.html#move"><span class="command">-move</span></a> command.
+            You cannot move naval units to inland territories, and likewise cannot move ground units to seas. Additionally, moving most units requires fuel. To view how much fuel each unit requires, do <span class="command">-fuelreq</span> <br>
+            To view all your units, you can either do <span class="command">-army</span> (for ground forces), <span class="command">-navy</span> (for naval forces), or <span class="command">-forces</span> (for all forces).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="attack">
+          <h5 class="card-title">Attacking</h5> <br>
+          <p class="card-text">
+            To attack with units, use the <a href="../command-list/index.html#attack"><span class="command">-attack</span></a> command. You can only attack nations you're at war with, and can only attack bordering territories and with units that aren't on cooldowns.
+            Attacking either requires the same amount or more fuel than simply moving. To view fuel requirements, do <span class="command">-fuelreq</span>.
+            The way land battles work, is each ground unit has an attack and defense value. They are shown below:
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Unit Type</th>
+                <th scope="col">Attack Strength</th>
+                <th scope="col">Defense Strength</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Light Infantry</th>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">Motorized Infantry</th>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">Artillery</th>
+                <td>5</td>
+                <td>0.1</td>
+              </tr>
+              <tr>
+                <th scope="row">Tank</th>
+                <td>3</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            These are added up for your total army strength. Then, it is squared, and chances are calculated based off that. For example, 1 light infantry vs 1 tank is a 1v9 in terms of strength, so the light infantry has a 10% chance of winning. But 2 light infantry vs 1 tank is a 4v9 in terms of strength, so a ~31% chance of winning.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="naval-warfare">
+          <h5 class="card-title">Naval Warfare</h5> <br>
+          <p class="card-text">
+            Naval warfare also utilizes the <a href="../command-list/index.html#attack"><span class="command">-attack</span></a> command. With naval units, you can attack either a coastal province or a sea. As well, each naval unit has a unique property. <br>
+            <b>Submarines: </b> They sink all other ships, including submarines. They also can't be detected by radar stations. <br>
+            <b>Battleships: </b> These are ships that bombard ground, coastal units. They can sink carriers, but are sunk by submarines. <br>
+            <b>Carriers: </b> These are ships that carry troops across a sea. To put troops on a carrier, you must use the <a href="../command-list/index.html#load"><span class="command">-load</span></a> command.
+            To remove all troops off of a carrier, you would use <a href="../command-list/index.html#unload"><span class="command">-unload</span></a>. To check the units on every one of your carriers as well as how much space is left on each, you would do <span class="command">-checkload</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="naval-warfare">
+          <h5 class="card-title">Railways</h5> <br>
+          <p class="card-text">
+            Railways are used to reduce troop cooldowns and move units (including ships) from one side of the country to another. However, they are quite expensive to build. They do provide an economic boost to the territory they're in, however.
+            <br>
+            There are 2 components to railways: The Railway Stations and the rails. Each railway must have 2 railway stations and have them connected via rails. Only then can troops be hauled between them.
+            <br>
+            As stated, cooldowns from hauling are significantly less than regular movement, plus require a lot less planning. You can also build railways in unintegrated territories, allowing for deeper and faster expansion into other nations.
+            <br>
+            To pave a railroad between two territories or view the prices, use <a href="../command-list/index.html#pave"><span class="command">-pave</span></a> <br>. To view all your railways, do <span class="command">-rails</span>. To view a map of railways, do <span class="command">-railmap &lt;'all' / nation &gt;</span>
           </p>
         </div>
       </div>
