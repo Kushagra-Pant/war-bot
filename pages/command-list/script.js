@@ -37,8 +37,8 @@ fetch('info.txt')
 
       const safeId = `collapse${index}`;
       const accordionItem = `
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="${commandName}">
+        <div class="accordion-item" id="${commandName}">
+          <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${safeId}" aria-expanded="false" aria-controls="${safeId}">
               ${title}
             </button>
