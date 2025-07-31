@@ -4,35 +4,35 @@ fetch('info.txt')
     const lines = text.trim().split('\n');
 
     lines.forEach((line, index) => {
-      const container = document.getElementById(`accordion${index%3+1}`);
-      [commandName, alternateName, category, syntax, description] = line.split('\t');
+      const container = document.getElementById(`accordion${index % 3 + 1}`);
+      let [commandName, alternateName, category, syntax, description] = line.split('\t');
 
-      title = `<span class="command">${commandName}</span>`
-      if (alternateName != ''){
-        title += `&nbsp;/&nbsp;<span class="command">${alternateName}</span>`
+      let title = `<span class="command">${commandName}</span>`;
+      if (alternateName != '') {
+        title += `&nbsp;/&nbsp;<span class="command">${alternateName}</span>`;
       }
-      if(category != ''){
-        title += `<span class="badge ${category.replace(" ", "")}">${category}</span>`
+      if (category != '') {
+        title += `<span class="badge ${category.replace(" ", "")}">${category}</span>`;
       }
 
       description = description.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-      descarray = description.split("`")
-      desc = ""
-      for(i = 0; i < descarray.length - 1; i++){
-        desc += descarray[i]
-        if(i%2 == 0){
-          desc += `<span class="command">`
+      let descarray = description.split("`");
+      let desc = "";
+      for (let i = 0; i < descarray.length - 1; i++) {
+        desc += descarray[i];
+        if (i % 2 == 0) {
+          desc += `<span class="command">`;
         } else {
-          desc += `</span>`
+          desc += `</span>`;
         }
       }
-      if(descarray.length > 0){
-        desc += descarray[descarray.length - 1]
+      if (descarray.length > 0) {
+        desc += descarray[descarray.length - 1];
       }
 
-      if(syntax != ""){
-        desc = `<b>Syntax: </b> <span class="command">${syntax.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</span> <br>${desc}`
+      if (syntax != "") {
+        desc = `<b>Syntax: </b> <span class="command">${syntax.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</span> <br>${desc}`;
       }
 
       const safeId = `collapse${index}`;
@@ -52,17 +52,18 @@ fetch('info.txt')
       `;
       container.insertAdjacentHTML('beforeend', accordionItem);
     });
-  })
 
-  const hash = window.location.hash;
+    const hash = window.location.hash;
+    if (hash !== "") {
+      const target = document.querySelector(hash);
+      const button = target?.querySelector('button[data-bs-toggle="collapse"]');
 
-  if (hash != "") {
-    const button = document.querySelector(`${hash} button[data-bs-toggle="collapse"]`);
-    if (button) {
-      button.click();
+      if (target && button) {
+        button.click();
 
-      setTimeout(() => {
-        document.querySelector(hash).scrollIntoView({ behavior: "smooth" });
-      }, 300);
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 400); 
+      }
     }
-  }
+  });
