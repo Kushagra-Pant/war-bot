@@ -3,7 +3,7 @@
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../style.css" rel="stylesheet"></link>
-    <link href="../style.css" rel="stylesheet"></link>
+    <link href="style.css" rel="stylesheet"></link>
   </head>
   <body class="bg-pink">
     <nav class="navbar navbar-expand-lg bg-secondary">
@@ -61,12 +61,15 @@
         <div class="card-body" style="padding: 3%">
           <h5 class="card-title main">How to Play</h5> <br>
           <p class="card-text">This is the go-to page for begginers, explaining how to play.</p>
-          <h5 class="card-title">Contents</h5>
-          <li>
-            <ul>
+          <h2>Contents</h2>
+          <ul>
+            <li>
               <a href="#money" class="text-info">Collecting Money</a>
-            </ul>
-          </li>
+            </li>
+            <li>
+              <a href="#shop" class="text-info">Buying Things</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -78,7 +81,35 @@
           <p class="card-text">
             Money makes the world go round, and it's no different for War Bot. Do <span class="command">-settax &lt;rate&gt;</span> to set your tax rate, then do <span class="command">-collect</span> to collect your income. You can collect once every tax cycle, which is currently set to 30 minutes.
             The more frequently you collect, the more money you will get, though you will continue collecting even when afk.
-            Income is affected by stability.
+            Income is affected by stability, population size, integration, and infrastructure. To view the effects of the latter two, do <span class="command">-econboost</span>.
+          </p>
+        </div>
+      </div>
+    </div>    
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="shop">
+          <h5 class="card-title">Buying Things</h5> <br>
+          <p class="card-text">
+            Do <span class="command">-shop</span> to view all items in the shop. Items are cheaper during global truces. To buy an item, do <span class="command">-buy &lt;item&gt; &lt;(optional quantity)&gt;</span>.
+            <br>
+            The items in the market are infinite - you can buy as many as you'd like. The player-run market is different though. 
+            <br>
+            To view the market, you must do <span class="command">-market</span>. To buy something off the market, do <span class="command">-order &lt;item id&gt; &lt;(optional quantity)&gt;</span>. These items are finite, and by ordering something you will be giving money to another nation in exchange for their product.
+            To put something onto the market, do <span class="command">-sell &lt;item&gt; &lt;price&gt;</span>. There are additional settings, which to view <a href="../command-list/index.html#sell">go here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="shop">
+          <h5 class="card-title">Deploy Troops</h5> <br>
+          <p class="card-text">
+            Do <span class="command">-shop</span> to view all items in the shop. Items are cheaper during global truces. To buy an item, do <span class="command">-buy &lt;item&gt; &lt;(optional quantity)&gt;</span>.
+            The items in the market are infinite - you can buy as many as you'd like. The player-run market is different though.
           </p>
         </div>
       </div>

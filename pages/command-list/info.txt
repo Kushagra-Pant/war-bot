@@ -3,7 +3,7 @@ players	p			List of all nations in the game, the ruler, and their ideology.
 shop				A list of all items and their prices.
 settax			-settax <rate>	Sets your national tax rate. The higher the tax rate, the higher the income and stability loss.
 collect				Collects the income you've generated since the last `-collect`.
-deploy			-deploy <unit> <territory> <optional amount>	Deploys a unit in one of your territories
+deploy			-deploy <unit> <territory> <(optional amount)>	Deploys a unit in one of your territories
 navy	n			Shows all your boats and where they're located
 army				Shows all your ground forces and where they're located
 forces				Shows all your combined naval and ground forces and where they're located
@@ -68,10 +68,10 @@ railmap			-railmap <nation / territory / 'all'>	Displays a map of all rails and 
 maps				Tells you all types of maps and their syntaxes
 market				Displays the market. The difference between the market and the shop is that on the market, things are sold by users. When buying something off the market you are giving another nation money.
 order			-order <item id> <(optional amount)>	Buys an item off the market.
-sell			-sell <item> <price> <optional quantity> <optional description> <optional "bulkOnly">	Puts an item on the market. If no quantity is specified, 1 is assumed. If bulkOnly not specified, it is assumed that single units can be bought. The price is for all of them together, unless "each" is specified after like so: `-sell tank 5000e 6`. If the item has a space, you should use an underscore in place of it.
+sell			-sell <item> <price> <(optional quantity)> <(optional description)> <(optional "bulkOnly")>	Puts an item on the market. If no quantity is specified, 1 is assumed. If bulkOnly not specified, it is assumed that single units can be bought. The price is for all of them together, unless "each" is specified after like so: `-sell tank 5000e 6`. If the item has a space, you should use an underscore in place of it.
 rescind			-rescind <item id>	Rescinds an item you tried to sell off the market.
 scan			-scan	Scans the bordering territories of all your territories with a Radar Station for enemy troops. Tells you the exact amount and the type, except if it's a Submarine.
-getterr			-getterr <nations separated by space>	Returns the territories of all nations specified in python list format. Mostly useful for the developer when creating formables.
+getterr			-getterr <nations separated by space>	Returns the territories of all nations specified in python list format. Mostly used by the developer when creating formables.
 form			-form <(optional formable)>	If no formable is specified, it lists all the formables you can potentially form. If a formable is specified, it attempts to transform you into that formable.
 formable			-formable <formable>	Returns information and a map of the specified formable.
 buildmap			-buildmap <building>	Displays a map with all territories containing the specified building highlighted
