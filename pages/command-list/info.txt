@@ -59,32 +59,32 @@ haul			-haul <unit id> <territory>	Hauls a unit via rail to another rail station
 rails				Shows all your rails
 pathfrom			-pathfrom <territory1> <territory2> <(optional additional settings)>	Finds the shortest distance between territory1 and territory2. Additional settings are 'nation' if you would like to keep it in a nation, and 'rail' if you would like to only consider railroads. You may use them both at the same time. They are both by default false.
 distribute			-distribute <(optional 'strategic')>	Distributes 1 troop division in all your territories. If 'strategic' is specified, it only distributes them in territories that border another nation, reducing the cost
-mappoint		Admin Only		placeholder
-unitcooldowns				placeholder
-getterrainmap		Admin Only		placeholder
-terrainmap				placeholder
-legendmap	lmap			placeholder
-railmap				placeholder
-maps				placeholder
-market				placeholder
-order				placeholder
-sell				placeholder
-rescind				placeholder
-scan				placeholder
-getterr				placeholder
-form				placeholder
-formable				placeholder
-buildmap				placeholder
-resmap				placeholder
-formreq				placeholder
-formlist				placeholder
-ideologies				placeholder
-viewide				placeholder
-setide				placeholder
-setnews		Admin Only		placeholder
-setcapital				placeholder
-econboost				placeholder
-popmap				placeholder
-statues				placeholder
-bulldoze				placeholder
-reset		Admin Only		placeholder
+mappoint		Admin Only	-mappoint <coordinate>	Paints a point on a map and fills it using the default tolerance. Mostly used for testing issues
+unitcooldowns			-unitcooldowns <unit type>	Returns the unit type's cooldowns by terrain. If you are a nation, it bases them off your stability. If you aren't, it bases them off a modest 60% stability.
+getterrainmap		Admin Only		Paints a map of all terrains
+terrainmap				Displays a map of all terrains. The image is saved beforehand for higher response speeds.
+legendmap	lmap		-lmap <nation / territory / 'all'>	Displays a labelled map of whatever specified.
+railmap			-railmap <nation / territory / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
+maps				Tells you all types of maps and their syntaxes
+market				Displays the market. The difference between the market and the shop is that on the market, things are sold by users. When buying something off the market you are giving another nation money.
+order			-order <item id> <(optional amount)>	Buys an item off the market.
+sell			-sell <item> <price> <optional quantity> <optional description> <optional "bulkOnly">	Puts an item on the market. If no quantity is specified, 1 is assumed. If bulkOnly not specified, it is assumed that single units can be bought. The price is for all of them together, unless "each" is specified after like so: `-sell tank 5000e 6`. If the item has a space, you should use an underscore in place of it.
+rescind			-rescind <item id>	Rescinds an item you tried to sell off the market.
+scan			-scan	Scans the bordering territories of all your territories with a Radar Station for enemy troops. Tells you the exact amount and the type, except if it's a Submarine.
+getterr			-getterr <nations separated by space>	Returns the territories of all nations specified in python list format. Mostly useful for the developer when creating formables.
+form			-form <(optional formable)>	If no formable is specified, it lists all the formables you can potentially form. If a formable is specified, it attempts to transform you into that formable.
+formable			-formable <formable>	Returns information and a map of the specified formable.
+buildmap			-buildmap <building>	Displays a map with all territories containing the specified building highlighted
+resmap			-resmap <coal / oil>	Returns a map of the resource specified
+formreq			-formreq <formable>	Returns the requirements to form a specific formable, including territory and ideology prerequisites
+formlist				A list of all formables in the game.
+ideologies				A list of all ideologies in the game
+viewide			-viewide <ideology>	All the specs of the specified ideology
+setide			-setide <ideology>	Changes your nation's ideology to what you specified, if you have the political power
+setnews		Admin Only	-setnews	Sets the news channel to wherever the command is run.
+setcapital			-setcapital <territory / 'costs'>	Sets your capital to the territory specified. If "cost" is specified, it displays the cost of changing the capital to each territory.
+econboost			-econboost	Displays the boost to a territory's tax revenue each building gives.
+popmap				A heatmap of each territory by population
+statues				A list of all statues within your territory, and statues built by you abroad
+bulldoze			-bulldoze <territory> <building>	Removes a building from the specified territory. To view the cost, run `-bulldoze help`.
+reset		Admin Only		Resets the game back to starting positions. 
