@@ -5,7 +5,7 @@ fetch('info.txt')
 
     lines.forEach((line, index) => {
       const container = document.getElementById(`accordion${index%3+1}`);
-      const [commandName, alternateName, category, syntax, description] = line.split('\t');
+      [commandName, alternateName, category, syntax, description] = line.split('\t');
 
       title = `<span class="command">${commandName}</span>`
       if (alternateName != ''){
