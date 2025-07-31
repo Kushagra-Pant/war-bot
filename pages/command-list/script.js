@@ -1,18 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const hash = window.location.hash;
-
-  if (hash != "") {
-    const button = document.querySelector(`${hash} button[data-bs-toggle="collapse"]`);
-    if (button) {
-      button.click();
-
-      setTimeout(() => {
-        document.querySelector(hash).scrollIntoView({ behavior: "smooth" });
-      }, 300);
-    }
-  }
-});
-
 fetch('info.txt')
   .then(response => response.text())
   .then(text => {
@@ -68,3 +53,16 @@ fetch('info.txt')
       container.insertAdjacentHTML('beforeend', accordionItem);
     });
   })
+
+  const hash = window.location.hash;
+
+  if (hash != "") {
+    const button = document.querySelector(`${hash} button[data-bs-toggle="collapse"]`);
+    if (button) {
+      button.click();
+
+      setTimeout(() => {
+        document.querySelector(hash).scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }
