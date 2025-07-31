@@ -67,3 +67,25 @@ a {
 p{
   font-size: 20px
 }
+
+.accordion-item {
+  border-radius: 25px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.accordion-button {
+  border-radius: 0;
+  border: none;
+}
+
+.accordion-item:first-child .accordion-button {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.accordion-item:last-child .accordion-collapse {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius:25px;
+}

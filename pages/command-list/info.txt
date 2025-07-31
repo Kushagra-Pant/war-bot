@@ -52,13 +52,13 @@ weights				Displays the weight per unit for each unit type
 load	l		-load <carrier id> <unit ids separated by space>	Loads a carrier with the specified units. You cannot load a submarine or battleship onto a carrier. Each carrier has a capacity of 10 weight.
 checkload				Displays the units currently on each carrier you own and how much space is available
 unload				Unloads all units aboard a carrier
-build				placeholder
-pave				placeholder
-fuelreq				placeholder
-haul				placeholder
-rails				placeholder
-pathfrom				placeholder
-distribute				placeholder
+build			-build <territory> <building>	Builds a building in a specified territory.
+pave			-pave <territory1> <territory2>	Paves a railroad between two adjacent territories.
+fuelreq			-fuelreq	Displays the fuel required for each unit type, for both movement and attacking
+haul			-haul <unit id> <territory>	Hauls a unit via rail to another rail station.
+rails				Shows all your rails
+pathfrom			-pathfrom <territory1> <territory2> <(optional additional settings)>	Finds the shortest distance between territory1 and territory2. Additional settings are 'nation' if you would like to keep it in a nation, and 'rail' if you would like to only consider railroads. You may use them both at the same time. They are both by default false.
+distribute			-distribute <(optional 'strategic')>	Distributes 1 troop division in all your territories. If 'strategic' is specified, it only distributes them in territories that border another nation, reducing the cost
 mappoint		Admin Only		placeholder
 unitcooldowns				placeholder
 getterrainmap		Admin Only		placeholder
