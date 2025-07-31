@@ -49,7 +49,7 @@
 
             
             <li class="nav-item">
-              <a class="nav-link disabled text-danger" href="../past-versions/">Past Versions</a>
+              <a class="nav-link active text-light" href="../past-versions/">Past Versions</a>
             </li>
           </ul>
         </div>
@@ -61,15 +61,25 @@
         <div class="card-body" style="padding: 3%">
           <h5 class="card-title main">How to Play</h5> <br>
           <p class="card-text">This is the go-to page for begginers, explaining how to play.</p>
+          <h5 class="card-title">Contents</h5>
+          <li>
+            <ul>
+              <a href="#money" class="text-info">Collecting Money</a>
+            </ul>
+          </li>
         </div>
       </div>
     </div>
     
     <div class="card page-header">
       <div class="d-flex flex-row align-items-center">
-        <div class="card-body" style="padding: 3%">
-          <h5 class="card-title main">Collecting Money</h5> <br>
-          <p class="card-text">Money makes the world go round, and it's no different for War Bot.</p>
+        <div class="card-body" style="padding: 3%" id="money">
+          <h5 class="card-title">Collecting Money</h5> <br>
+          <p class="card-text">
+            Money makes the world go round, and it's no different for War Bot. Do <span class="command">-settax &lt;rate&gt;</span> to set your tax rate, then do <span class="command">-collect</span> to collect your income. You can collect once every tax cycle, which is currently set to 30 minutes.
+            The more frequently you collect, the more money you will get, though you will continue collecting even when afk.
+            Income is affected by stability.
+          </p>
         </div>
       </div>
     </div>
