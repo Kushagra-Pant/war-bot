@@ -13,9 +13,9 @@ fetch('history.txt')
     const updates = [];
     for (block of lines){
       l = block.split('\n')
-      rawName = l.pop(0)
-      rawDate = l.pop(1)
-      rawContent = "\n".join(l)
+      rawName = l.shift()
+      rawDate = l.shift()
+      rawContent = l.join("\n")
 
       const name = rawName.replace(/[*#]/g, '').trim()
       const date = rawDate.replace(/\*/g, '').trim()
