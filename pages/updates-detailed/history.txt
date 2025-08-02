@@ -1,10 +1,25 @@
+# War Bot Beta 
+*Dec 18, 2023, 11:09 am*
+War Bot Beta to players released for the purpose of finding and reporting errors
+
+# War Bot Beta II 
+*Dec 19, 2023, 4:33 pm*
+Second edition of War Bot Beta available to players for testing purposes
+
 # Release 1.0
 *Dec 20, 2023 at 7:30 am*
 Initial release of War Bot Real
+**The available commands are as follows:**
+Purchase Commands: `-tax`, `-shop`, `-buy`, `-inv`
+Information Commands: `-map`, `-territories`, `-borders`, `-bordersnat`, `-wars`, `-toppop`, `-population`
+Army Commands: `-deploy`, `-mytroops`, `-rename`, `-split`, `-merge`, `-move`, `-unitinfo`, `-fortify`
+War Commands: `-declarewar`, `-attack`, `-cede`, `-scorch`
+Treaty Commands: `-peace`, `-treaties`, `-accept`, and `-reject`
+Admin Commands: `-register`
 
 **Update 1.0.1**
 *Dec 20, 2023 at 11:50 am*
-- Added `-message` command; messages can now be sent to other countries via war bot
+- Added `-give` command; messages can now be sent to other countries via war bot
 
 **Update 1.0.2**
 *Dec 20, 2023 at 1:51 pm*
