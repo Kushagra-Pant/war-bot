@@ -9,6 +9,7 @@ class Update {
 fetch('history.txt')
   .then(response => response.text())
   .then(text => {
+    const container = document.getElementById('updates-container')
     const lines = text.split('\n\n')
     const updates = [];
     for (block of lines){
@@ -23,6 +24,20 @@ fetch('history.txt')
 
       updates.push(new Update(name, date, content))
       console.log(content.length)
+      const accordionItem = `
+        <div class="row g-4 mb-4">
+          <div class="col-12">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">${name}</h5>
+                <h6 class="card-subtitle mb-2">${date}</h6>
+                <p class="card-text">${content}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      container.insertAdjacentHTML('beforeend', accordionItem)
     }
     console.log(updates)
   });

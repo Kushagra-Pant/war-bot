@@ -50,7 +50,6 @@ Initial release of War Bot Real
 
 # Update 1.1
 *Dec 22, 2023 at 7:04 am*
-
 **Major Additions:**
 - Added capitulation
  - When you conquer the whole of a country, you can use the `-annex` command to take 90% of their money and all their inventory
@@ -130,7 +129,6 @@ Initial release of War Bot Real
   - Syntax: `-deploy <ship> <territory> <(optional amount)>`
   - Do `-navy` to check all your deployed ships
   - Do `-checkload` to check the loads of your destroyers and carriers
-
 **Minor Additions & Changes**
 - `-mytroops` changed to `-army`
 - To check both army and navy, do `-forces`
@@ -221,7 +219,6 @@ Initial release of War Bot Real
 - Area
   - Every territory now has an area! View all nations by area by doing `-top area`
 - Two new provinces! One in Czechoslovakia the other in Romania
-
 - `-terrinfo` - View all stats related to a specific territory.
 - `-maps` - List of map types if you ever forget!
 - `-reset` - Reset command for admins only. Makes my life easier :)
@@ -524,3 +521,11 @@ Ladies and gentlemen, **autotax** is here!
 - fixed political power display issues
 - fixed issue with `-sell` command
 - resource reserves added to `-terrinfo`
+
+### Update 1.4.2.9
+*Aug 2, 11:36 am*
+- rearranged error handling in `-deploy`
+- fixed attacking from carriers
+- optimized `-deploy` by making it only search your territories, allowing for less specific names to be specified 
+- added cooldown checks to `-unload` and `-load`
+
