@@ -20,7 +20,12 @@ fetch('history.txt')
 
       const name = rawName.replace(/[*#]/g, '').trim()
       const date = rawDate.replace(/\*/g, '').trim()
-      const content = rawContent.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>').trim()
+      rawContent = rawContent.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>').trim()
+      
+      boldSplit = rawContent.split("**")
+      rawContent = enclose(boldSplit, "<b>", "</b>")
+      commandSplit = rawContent.split("`")
+      const content = enclose(commandSplit, '<span class="command">', "</span>")
 
       updates.push(new Update(name, date, content))
       console.log(content.length)
@@ -72,7 +77,7 @@ fetch('history.txt')
           accordionItem += `
               <div class="col-${widths[row[r].name]}">
                 <div class="card h-100">
-                  <div class="card-body d-flex flex-column justify-content-center">
+                  <div class="card-body">
                     <h5 class="card-title text-center">${row[r].name}</h5>
                     <h6 class="card-subtitle mb-2 text-center">${row[r].date}</h6>
                     <p class="card-text text-center">${row[r].content}</p>
@@ -96,4 +101,20 @@ function getWidth(update){
   if (length > 400) return 6
   if (length > 200) return 4
   return 3
+}
+
+function enclose(array, prefix, suffix){
+  str = ""
+  for (let i = 0; i < array.length - 1; i++) {
+    str += array[i];
+    if (i % 2 == 0) {
+      str += prefix;
+    } else {
+      str += suffix;
+    }
+  }
+  if (array.length > 0) {
+    str += array[array.length - 1];
+  }
+  return
 }

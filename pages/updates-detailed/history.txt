@@ -357,7 +357,7 @@ Ladies and gentlemen, **autotax** is here!
 # Update 1.4 - Power & Principle
 *Jul 20, 9:22 am*
 **The long awaited Update 1.4 is here, reshaping international power dynamics and allowing you to shape the future of your country. Three major additions- formables, ideologies, and resources- plus tons of other changes will certainely make this update live up to the hype.**
-## Major Additions
+**Major Additions**
 - Formables
   - You can now form nations greater than their current meek form.
   - To view your formables, do `-form`
@@ -380,7 +380,7 @@ Ladies and gentlemen, **autotax** is here!
   - The above rates are every tax cooldown (so 30 minutes as of now), per fuel refinery.
   - All natural and manufactured resources are automatically added to your inventory
   - View a map of naturally occuring resources by doing `-resmap <resource>`
-## Other Additions/Changes
+**Other Additions/Changes**
 - Political Power: a new stat that is used to switch ideologies. It, like stability, decreases as the tax rate increases
 - Battleships no longer require Ammunition, and the bugs surrounding them have been patched, hopefully
 - Copius Amounts of gasoline has been removed from the market. To scorch a province, 20 fuel is required. Scorching also gets rid of all buildings, so if you're being conquered and have vital buildings you dont want to give your enemy access to, scorch the province.
@@ -528,3 +528,7 @@ Ladies and gentlemen, **autotax** is here!
 - fixed attacking from carriers
 - optimized `-deploy` by making it only search your territories, allowing for less specific names to be specified 
 - added cooldown checks to `-unload` and `-load`
+
+### Update 1.4.2.10
+*Aug 2, 5:15 pm*
+- Lighter color bug on map commands now fixed
