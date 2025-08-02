@@ -22,24 +22,8 @@ fetch('history.txt')
       const date = rawDate.replace(/\*/g, '').trim()
       const content = rawContent.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>').trim()
 
-      //width determining algorithm below
-
       updates.push(new Update(name, date, content))
       console.log(content.length)
-      const accordionItem = `
-        <div class="row g-4 mb-4">
-          <div class="col-12">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">${name}</h5>
-                <h6 class="card-subtitle mb-2">${date}</h6>
-                <p class="card-text">${content}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-      container.insertAdjacentHTML('beforeend', accordionItem)
     }
     let row = [];
 
@@ -82,6 +66,24 @@ fetch('history.txt')
         console.log("Adjusted widths:", widths);
         console.log("Sum after:", sumWidths());
 
+        accordionItem = '<div class="row g-4 mb-4">'
+        for(r in row){
+          accordionItem += `
+            <div class="row g-4 mb-4">
+              <div class="col-${widths[r.name]}">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">${r.name}</h5>
+                    <h6 class="card-subtitle mb-2">${r.date}</h6>
+                    <p class="card-text">${r.content}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+        }
+        accordionItem += '</div>'
+        container.insertAdjacentHTML('beforeend', accordionItem)
         row = [item];
         console.log('');
         }
