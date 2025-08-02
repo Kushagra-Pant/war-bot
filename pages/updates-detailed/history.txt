@@ -528,4 +528,3 @@ Ladies and gentlemen, **autotax** is here!
 - fixed attacking from carriers
 - optimized `-deploy` by making it only search your territories, allowing for less specific names to be specified 
 - added cooldown checks to `-unload` and `-load`
-
