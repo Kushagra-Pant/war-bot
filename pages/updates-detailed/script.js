@@ -116,5 +116,5 @@ function enclose(array, prefix, suffix){
   if (array.length > 0) {
     str += array[array.length - 1];
   }
-  return
+  return str
 }
