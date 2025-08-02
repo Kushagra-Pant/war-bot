@@ -26,6 +26,7 @@ fetch('history.txt')
       console.log(content.length)
     }
     let row = [];
+    let widths = {};
 
     for (let i = 0; i < updates.length; i++) {
       let item = updates[i];
@@ -41,7 +42,6 @@ fetch('history.txt')
         let rankedrow = row.slice().sort((a, b) => b.length - a.length);
         console.log(rankedrow);
 
-        let widths = {};
         row.forEach(r => {
           widths[r.name] = getWidth(r);
         });
@@ -54,6 +54,7 @@ fetch('history.txt')
           return sum;
         };
 
+        console.log("Widths before:", widths);
         console.log("Sum before:", sumWidths());
 
         let num = 0;
@@ -66,32 +67,31 @@ fetch('history.txt')
         console.log("Adjusted widths:", widths);
         console.log("Sum after:", sumWidths());
 
-        accordionItem = '<div class="row g-4 mb-4">'
-        for(r in row){
+        let accordionItem = '<div class="row g-4 mb-4">'
+        for(let r = 0; r < row.length; r++){
           accordionItem += `
-            <div class="row g-4 mb-4">
-              <div class="col-${widths[r.name]}">
+              <div class="col-${widths[row[r].name]}">
                 <div class="card h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">${r.name}</h5>
-                    <h6 class="card-subtitle mb-2">${r.date}</h6>
-                    <p class="card-text">${r.content}</p>
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title text-center">${row[r].name}</h5>
+                    <h6 class="card-subtitle mb-2 text-center">${row[r].date}</h6>
+                    <p class="card-text text-center">${row[r].content}</p>
                   </div>
                 </div>
               </div>
-            </div>
           `
         }
         accordionItem += '</div>'
         container.insertAdjacentHTML('beforeend', accordionItem)
-        row = [item];
-        console.log('');
+        row = [item]
+        widths = {}
+        console.log('')
         }
       }
   });
 
 function getWidth(update){
-  length = update.length
+  length = update.content.length
   if (length > 750) return 12
   if (length > 400) return 6
   if (length > 200) return 4
