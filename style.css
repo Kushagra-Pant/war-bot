@@ -111,3 +111,7 @@ p{
 a {
   color: #0DCAF0;
 }
+
+th, td {
+  vertical-align: middle;
+}

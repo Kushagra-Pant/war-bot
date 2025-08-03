@@ -20,11 +20,12 @@ fetch('history.txt')
 
       const name = rawName.replace(/[*#]/g, '').trim()
       const date = rawDate.replace(/\*/g, '').trim()
-      rawContent = rawContent.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/ -/g, '◦').replace(/\n/g, '<br>').trim()
+      rawContent = rawContent.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>').trim()
       
-      bulletSplit = rawContent.split("-")
       boldSplit = rawContent.split("**")
       rawContent = enclose(boldSplit, "<b>", "</b>")
+      italicSplit = rawContent.split("*")
+      rawContent = enclose(italicSplit, "<i>", "</i>")
       commandSplit = rawContent.split("`")
       const content = enclose(commandSplit, '<span class="command">', "</span>")
 
