@@ -11,6 +11,10 @@ img {
   margin: 1em auto 1em auto;
 }
 
+.southeast-asia{
+  margin-block: 2em;
+}
+
 .card-header{
   font-size: 20px;
 }
