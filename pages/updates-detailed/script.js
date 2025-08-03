@@ -10,7 +10,7 @@ fetch('history.txt')
   .then(response => response.text())
   .then(text => {
     const container = document.getElementById('updates-container')
-    const lines = text.split('\n\n')
+    const lines = text.trim().split('\n\n')
     const updates = [];
     for (block of lines){
       l = block.split('\n')
