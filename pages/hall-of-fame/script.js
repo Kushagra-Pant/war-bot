@@ -10,7 +10,7 @@ fetch('winners.txt')
   .then(response => response.text())
   .then(text => {
     const container = document.getElementById('winners-container')
-    const lines = text.split('\n\n')
+    const lines = text.trim().split('\n\n')
     const games = [];
     for (block of lines){
       l = block.split('\n')
@@ -27,11 +27,11 @@ fetch('winners.txt')
     }
     var msg = ""
     for(i = 0; i < games.length; i++){
-      if(i%4 == 0){
+      if(i%3 == 0){
         msg += `<div class="row g-4 mb-4">` 
       }
       msg += `
-        <div class="col-3">
+        <div class="col-4">
           <div class="card">
             <div class="card-header">
               <b>${games[i].date}</b>
@@ -52,7 +52,7 @@ fetch('winners.txt')
           </div>
         </div>
       `
-      if(i%4 == 3){
+      if(i%3 == 2){
         msg += "</div>"
       }
     }
