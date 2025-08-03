@@ -23,7 +23,7 @@ fetch('winners.txt')
           nation: l[i+1]
         })
       }
-      games.unshift(Game(name, date, rankings))
+      games.unshift(new Game(name, date, rankings))
     }
     var msg = ""
     for(i = 0; i < games.length; i++){
@@ -31,7 +31,7 @@ fetch('winners.txt')
         msg += `<div class="row g-4 mb-4">` 
       }
       msg += `
-        <div class="col-4">
+        <div class="col-4 card-group">
           <div class="card">
             <div class="card-header">
               <b>${games[i].date}</b>
