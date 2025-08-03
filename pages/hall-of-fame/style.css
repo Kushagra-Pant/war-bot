@@ -1,0 +1,52 @@
+.card {
+  padding: 0%
+}
+
+img {
+  border-radius: 25px;
+  border: 2px black solid;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 1em auto 1em auto;
+}
+
+.card-header{
+  font-size: 20px;
+}
+
+h1{
+  margin: 0px;
+  padding: 1%;
+}
+
+.card-body{
+  padding: 0;  
+}
+
+.first-place{
+  background-color: #ffd90094;
+  font-size: 50px;
+}
+
+.second-place{
+  background-color: #80808094;
+  font-size: 35px;
+}
+
+.third-place{
+  background-color: #CD7F3294;
+  font-size: 20px;
+}
+
+.nation {
+  font-size: 20px;
+  color: rgb(99, 99, 99);
+  font-weight: 500;
+  display: block;
+  margin-top: 0.2em;
+}
+
+.title{
+  padding-block: 2%;
+}

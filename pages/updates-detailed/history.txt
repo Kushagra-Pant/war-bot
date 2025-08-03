@@ -547,3 +547,4 @@ Ladies and gentlemen, **autotax** is here!
 ### Update 1.4.2.10
 *Aug 2, 2025, 5:15 pm*
 - Lighter color bug on map commands now fixed
+
