@@ -81,12 +81,16 @@ h1{
 }
 
 #winners-table thead .sorting:after,
+#winners-table thead .sorting:before,
 #winners-table thead .sorting_asc:after,
-#winners-table thead .sorting_desc:after {
+#winners-table thead .sorting_asc:before,
+#winners-table thead .sorting_desc:after,
+#winners-table thead .sorting_desc:before {
   position: relative;
-  left: 4px;
   right: auto;
-  float: none;
-  display: inline-block;
-  vertical-align: middle;
+}
+
+h4{
+  padding-top: 1%;
+  padding-bottom: 0.5%
 }
