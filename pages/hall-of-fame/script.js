@@ -10,8 +10,10 @@ fetch('winners.txt')
   .then(response => response.text())
   .then(text => {
     const container = document.getElementById('winners-container')
+    const table = document.getElementById('winners-table')
     const lines = text.trim().split('\n\n')
-    const games = [];
+    const games = []
+    var players = {} //In the format of {player: (gold, silver, bronze), player: (gold, silver, bronze), etc} - player is a string
     for (block of lines){
       l = block.split('\n')
       const name = l.shift()
@@ -22,9 +24,16 @@ fetch('winners.txt')
           name: l[i],
           nation: l[i+1]
         })
+        player = l[i].replace(/[🏆🥈🥉]/g, '').trim()
+        if(!(player in players)){
+          players[player] = [0, 0, 0]
+        }
+        console.log([Math.floor(i / 2)])
+        players[player][Math.floor(i / 2)] += 1
       }
       games.unshift(new Game(name, date, rankings))
     }
+    console.log(players)
     var msg = ""
     for(i = 0; i < games.length; i++){
       if(i%3 == 0){
@@ -60,4 +69,5 @@ fetch('winners.txt')
       msg += "</div>"
     }
     container.insertAdjacentHTML('beforeend', msg)
+    tablemsg = ""
   });
