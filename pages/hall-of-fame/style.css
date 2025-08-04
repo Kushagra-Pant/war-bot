@@ -58,3 +58,7 @@ h1{
 .player{
   color: darkgray;
 }
+
+.card-text{
+  padding-inline: 5%;
+}
