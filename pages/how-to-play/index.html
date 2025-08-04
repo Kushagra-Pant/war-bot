@@ -87,6 +87,12 @@
             <li>
               <a href="#railways" class="text-info">Railways</a>
             </li>
+            <li>
+              <a href="#buildings" class="text-info">Buildings</a>
+            </li>
+            <li>
+              <a href="#resources" class="text-info">Resources</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -239,7 +245,67 @@
             <br>
             As stated, cooldowns from hauling are significantly less than regular movement, plus require a lot less planning. You can also build railways in unintegrated territories, allowing for deeper and faster expansion into other nations.
             <br>
-            To pave a railroad between two territories or view the prices, use <a href="../command-list/index.html#pave"><span class="command">-pave</span></a> <br>. To view all your railways, do <span class="command">-rails</span>. To view a map of railways, do <span class="command">-railmap &lt;'all' / nation &gt;</span>
+            To pave a railroad between two territories or view the prices, use <a href="../command-list/index.html#pave"><span class="command">-pave</span></a>.
+            <br>
+            To view all your railways, do <span class="command">-rails</span>. To view a map of railways, do <span class="command">-railmap &lt;'all' / nation &gt;</span>
+            <br>
+            To find the shortest path from one territory to another, do <a href="../command-list/index.html#pathfrom"><span class="command">-pathfrom</span></a> This is useful either for deciding where to build rail or how to transport units.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="buildings">
+          <h5 class="card-title">Buildings</h5> <br>
+          <p class="card-text">
+            Buildings are listed in <span class="command">-shop</span> as a separate category. To build something, you must first buy it so that it is in your inventory. Then, do <span class="command">-build &lt;territory&gt; &lt;building&gt;</span>. Each territory can have a maximum of 1 of each type of building.
+            The purpose of each building is as follows:
+            <table class="table text-center">
+              <tbody>
+                <tr>
+                  <th>Fortress</th>
+                  <td>Provides x2 defense to your troops (before squaring). So, 1 tank vs 2 light infantry is a 9 v 4. But, 1 tank vs 2 light infantry and a fort is a 9 v 16.</td>
+                </tr>
+                <tr>
+                  <th>Railway Station</th>
+                  <td>Used for railways. View the <a href="#railways">Railways Section</a> for a more detailed explanation.</td>
+                </tr>
+                <tr>
+                  <th>Radar Station</th>
+                  <td>Detects all enemy troops on the borders of the territories upon which it is placed, except for submarines. To use, do <span class="command">-scan</span>; all your radar stations will scan everything automatically.</td>
+                </tr>
+                <tr>
+                  <th>Oil Drill</th>
+                  <td>Used to extract oil from a territory. Extracts all the oil that is listed there every tax cycle. View the <a href="#resources">Resources Section</a> for a more detailed explanation.</td>
+                </tr>
+                <tr>
+                  <th>Fuel Refinery</th>
+                  <td>Used to convert either coal or oil to fuel. Has a maximum intake of 1 of either resources. 1 Coal -> 0.5 Fuel, while 1 Oil -> 1.5 Fuel. View the <a href="#resources">Resources Section</a> for a more detailed explanation.</td>
+                </tr>
+                <tr>
+                  <th>Statues</th>
+                  <td>Gives you a certain amount of stability per tax cycle. When the territory its on is captured by enemies, it works to negate their stability. View the <a href="../updates-overview/#statue">Statue Update</a> for more details</td>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="resources">
+          <h5 class="card-title">Resources</h5> <br>
+          <p class="card-text">
+            There are two resources in the game, Coal and Oil. Both are used for fuel production, which is neccessary for motorized infantry, artillery, tanks, rails, and a navy. <br> <br>
+            You can view a map of resources by doing <span class="command">-resmap &lt; coal / oil &gt;</span>. You can also view the top countries by resource reserves by doing <span class="command">-top &lt; coal / oil &gt;</span>. Resource reserves are also listed in <span class="command">-terrinfo &lt;territory&gt;</span>.<br>
+            Coal is produced automatically. Every tax cycle, you gain the amount listed in <span class="command">-resmap coal</span> or <span class="command">-terrinfo</span> for that territory. For example, if the tax cycle is 30 minutes, and your coal reserves for a territory are listed as 0.3, you gain 0.3 coal per 30 minutes.
+            Oil is the same, except you require an Oil Drill to begin production. Contrary to real life, these resources are infinite and never run out. <br> <br>
+            To convert Coal or Oil into Fuel, you need to build a Fuel Refinery using the <a href="../command-list/index.html#build"><span class="command">-build</span></a> command. The fuel refinery has a maximum intake of 1 resource per tax cycle, no matter the resource type, nation stability, ideology, etc.
+            As you can probably guess, Coal is less efficient than Fuel. Every 1 Coal convert to 0.5 Fuel, while every 1 Oil converts to 1.5 Fuel. 
           </p>
         </div>
       </div>
