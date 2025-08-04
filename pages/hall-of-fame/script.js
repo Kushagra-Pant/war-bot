@@ -10,7 +10,7 @@ fetch('winners.txt')
   .then(response => response.text())
   .then(text => {
     const container = document.getElementById('winners-container')
-    const table = document.getElementById('winners-table tbody')
+    const table = document.getElementById('winners-table-body')
     const lines = text.trim().split('\n\n')
     const games = []
     var players = {} //In the format of {player: (gold, silver, bronze), player: (gold, silver, bronze), etc} - player is a string
@@ -80,9 +80,7 @@ fetch('winners.txt')
       `
     }
     table.insertAdjacentHTML('beforeend', tablemsg)
-  });
-
-  
-  $(document).ready(function() {
-    $('#winners-table').DataTable();
+    $('#winners-table').DataTable({
+      dom: 't',
+    });
   });
