@@ -70,4 +70,15 @@ fetch('winners.txt')
     }
     container.insertAdjacentHTML('beforeend', msg)
     tablemsg = ""
+    for(i in players){
+      tablemsg += `
+        <tr>
+          <th class="player">${i}</th>
+          <td>${players[i][0]}</td>
+          <td>${players[i][1]}</td>
+          <td>${players[i][2]}</td>
+        </tr>
+      `
+    }
+    table.insertAdjacentHTML('beforeend', tablemsg)
   });
