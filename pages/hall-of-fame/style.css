@@ -62,3 +62,15 @@ h1{
 .card-text{
   padding-inline: 5%;
 }
+
+.gold{
+  background-color: #ffd90094;
+}
+
+.silver{
+  background-color: #80808094;
+}
+
+.bronze{
+  background-color: #CD7F3294;
+}

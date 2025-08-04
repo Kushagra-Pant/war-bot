@@ -28,7 +28,6 @@ fetch('winners.txt')
         if(!(player in players)){
           players[player] = [0, 0, 0]
         }
-        console.log([Math.floor(i / 2)])
         players[player][Math.floor(i / 2)] += 1
       }
       games.unshift(new Game(name, date, rankings))
@@ -74,9 +73,9 @@ fetch('winners.txt')
       tablemsg += `
         <tr>
           <th class="player">${i}</th>
-          <td>${players[i][0]}</td>
-          <td>${players[i][1]}</td>
-          <td>${players[i][2]}</td>
+          <td class="gold">${players[i][0]}</td>
+          <td class="silver">${players[i][1]}</td>
+          <td class="bronze">${players[i][2]}</td>
         </tr>
       `
     }
