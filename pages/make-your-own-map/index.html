@@ -48,12 +48,83 @@
 
             
             <li class="nav-item">
-              <a class="nav-link disabled text-danger" href="../past-versions/">Past Versions</a>
+              <a class="nav-link active text-light" href="../past-versions/">Past Versions</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%">
+          <h5 class="card-title main">Make your own Map!</h5> <br>
+          <p class="card-text">This is a guide on how to create your own map. Some people have taken interest in creating one, which is why I've made this page.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 2%">
+          <h5 class="card-title">Step 1: Find a blank map online</h5> <br>
+          <p class="card-text">
+            You should try to find a blank map of the region you want online. <a href="https://www.mapchart.net/">This site</a> is a great resource for this. The map must be a raster image (meaning pixelated, don't make an SVG file), and ideally should be pure black and white, so that if I fill a province at 0% tolerance it will fill everything up till the black borders. (If you are having trouble with this part, you can send me the image and I will try my best to make it fill these criteria)<br>
+            You could alternatively make your own blank map, but this requires finding a decent map online that you can either trace or remove color from. If you do go down this route, the software I recommend using is Paint.NET. It is free and easy to learn and use.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 2%">
+          <h5 class="card-title">Step 2: Use Map Builder software to create text files</h5> <br>
+          <p class="card-text">
+            War Bot stores information using text files. There are several different properties for each territory, sea, nation, formable, and troop. There are dozens of properties in total, so instead of writing each out by hand you can use Yasin Elkadri's <a href="https://github.com/YasinElkadri/War-Bot-Real-Map-Builder">Map Builder</a> program. <br>
+            There are detailed step-by-step instructions in the README of the project, but I will give you an oversimplification here. First, download the github project as a zip file. Extract all (don't worry, it won't give you a virus, and the code is all open source anyway in case you'd like to check). Then, replace blank_map.png with the map you created in Step 1.
+            After that, open the Map Builder Application where you will see a main menu. From there, it's pretty self explanatory. Left click is to add, right click is to remove. This applies for everything, adding coordinates to territories (one territory can have multiple coordinates, for islands and such), adding  borders to territories, adding territories to formables, etc. If you are in the "edit territory" section, use your scroll wheel to switch territories. <br>
+            <b>Important Note:</b> If you want to include a nation, population, and resource figures for each territory in the program, go ahead. However, I find it much easier to just leave them blank, then add them in a spreadsheet program (Step 4). 
+          </p>
+        </div>
+        <img src="../../images/map_builder_menu.PNG" class="ms-3" style="border-radius: 25px; border: black solid 3px">
+      </div>
+    </div>
+    
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 2%">
+          <h5 class="card-title">Step 3: Making Seas?</h5> <br>
+          <p class="card-text">
+            So we don't actually have a user friendly program for this <i>yet</i>. If you understand programming well I'll send you a program that I use to create the seas text file. All it does is optimize the sea-making process as much as a Command Line Interface can. If you don't understand programming well, don't worry, I will create the seas for you. If the demand is there for one, I will create a user-friendly program for making seas, so stay tuned for that!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 2%">
+          <h5 class="card-title">Step 4: Use Spreadsheet to organize your map's files (optional)</h5> <br>
+          <p class="card-text">
+            This step is completely optional. You could create everything on the Map Builder software, then send me it. But I like to keep my data organized, and so I have a spreadsheet containing the information for each map. <br>
+            From the Map Builder program, copy the Nations, Formables, and Territories text files and paste them into separate spreadsheets. From there, you can run some edits, including making resources more fair, sorting them by population and balancing that out, etc.
+            Then once that is complete, you can copy each spreadsheet into its own new text file.
+          </p>
+        </div>
+      </div>
+    </div>    
+    
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 2%">
+          <h5 class="card-title">Step 5: Send me the completed files</h5> <br>
+          <p class="card-text">
+            The final step is to send me the completed text files and your blank map. I may make some changes from here, probably changing the initial coordinate of each capital and other minor changes. And boom! I will probably implement your map as soon as possible, as you worked hard on it and it deserves to be played a few times! Plus, it gives the players a variety and change for once.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
