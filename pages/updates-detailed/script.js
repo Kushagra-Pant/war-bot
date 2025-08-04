@@ -10,27 +10,29 @@ fetch('history.txt')
   .then(response => response.text())
   .then(text => {
     const container = document.getElementById('updates-container')
-    const lines = text.trim().split('\n\n')
+    const lines = text.split('\n\n')
     const updates = [];
     for (block of lines){
-      l = block.split('\n')
-      rawName = l.shift()
-      rawDate = l.shift()
-      rawContent = l.join("\n")
+      if (block.trim() != ""){
+        l = block.split('\n')
+        rawName = l.shift()
+        rawDate = l.shift()
+        rawContent = l.join("\n")
 
-      const name = rawName.replace(/[*#]/g, '').trim()
-      const date = rawDate.replace(/\*/g, '').trim()
-      rawContent = rawContent.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>').trim()
-      
-      boldSplit = rawContent.split("**")
-      rawContent = enclose(boldSplit, "<b>", "</b>")
-      italicSplit = rawContent.split("*")
-      rawContent = enclose(italicSplit, "<i>", "</i>")
-      commandSplit = rawContent.split("`")
-      const content = enclose(commandSplit, '<span class="command">', "</span>")
+        const name = rawName.replace(/[*#]/g, '').trim()
+        const date = rawDate.replace(/\*/g, '').trim()
+        rawContent = rawContent.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>').trim()
+        
+        boldSplit = rawContent.split("**")
+        rawContent = enclose(boldSplit, "<b>", "</b>")
+        italicSplit = rawContent.split("*")
+        rawContent = enclose(italicSplit, "<i>", "</i>")
+        commandSplit = rawContent.split("`")
+        const content = enclose(commandSplit, '<span class="command">', "</span>")
 
-      updates.push(new Update(name, date, content))
-      console.log(content.length)
+        updates.push(new Update(name, date, content))
+        console.log(content.length)
+      }
     }
     let row = [];
     let widths = {};

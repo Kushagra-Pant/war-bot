@@ -1,6 +1,6 @@
 # War Bot Beta 
 *Dec 18, 2023, 11:09 am*
-War Bot Beta to players released for the purpose of finding and reporting errors
+War Bot Beta made available to players released for the purpose of finding and reporting errors
 
 # War Bot Beta II 
 *Dec 19, 2023, 4:33 pm*
@@ -309,7 +309,7 @@ Ladies and gentlemen, **autotax** is here!
   - Collect tax by doing `-collect`
     - This will collect all tax even while you were inactive. You can do it a minimum of every 30 minutes (which can of course change through master settings)
     - Additionally, the longer you wait the less you will collect per hour
-- Along with this, there were many, many bug fixes...
+**Along with this, there were many, many bug fixes…**
   - Fixed a bug with the `-fuelreq` command and added a few things to `-help` (probably not enough)
   - Fixed border mismatches between Transcarpathia and North Transylvania as well as between Moselland and Hessen
   - Fixed a market bug. Now, when a nation is conquered, items they put up for sale go to the victor nation as looted items
@@ -547,4 +547,15 @@ Ladies and gentlemen, **autotax** is here!
 ### Update 1.4.2.10
 *Aug 2, 2025, 5:15 pm*
 - Lighter color bug on map commands now fixed
+
+### Update 1.4.2.11
+*Aug 3, 8:48 am*
+- Fixed `-load` and `unload` cooldown checks
+
+### Update 1.4.2.12
+*Aug 4, 4:14 pm*
+- fixed cooldown display for `-unload`
+- fixed `-map` command when mapping countries
+- fixed `-borders` display for occupied seas
+
 
