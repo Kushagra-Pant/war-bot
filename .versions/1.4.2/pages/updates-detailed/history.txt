@@ -558,18 +558,4 @@ Ladies and gentlemen, **autotax** is here!
 - fixed `-map` command when mapping countries
 - fixed `-borders` display for occupied seas
 
-## Update 1.4.3 - The Revolution Update!
-*Aug 6, 9:59 am*
-- New command: `-revolt <ideology>`!
-   - This allows you to change ideologies, at a cost of 1/3 your stability. (If you have negative stability, you go 1/3 deeper into negatives).
-   - This also makes national headlines
-- Some changes & bug fixes
-   - Changed statue stability formula to be rooted. So 1 statue = + 0.05 stability, 4 statues = +0.1 stability, 9 statues = +0.15 stability, etc
-   - Enemy statues, however, are still linear! So, 3 enemy statues are -0.15 stability.
-   - Added initial balance to `-top power`. 
-   - Changed method of naval battle, to ensure the more ships you have, the less casualties you will amass
-   - Buffed how many people bombardment kills (view #tutorial)
-   - Changed some ideology settings
-   - Changed `-buy` confirmation message to have cleaner looking numbers
-   - fixed `-bombard` bug where battleship could bombard any coastal province
 

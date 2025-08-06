@@ -64,7 +64,7 @@ unitcooldowns			-unitcooldowns <unit type>	Returns the unit type's cooldowns by 
 getterrainmap		Admin Only		Paints a map of all terrains
 terrainmap				Displays a map of all terrains. The image is saved beforehand for higher response speeds.
 legendmap	lmap		-lmap <nation / territory / 'all'>	Displays a labelled map of whatever specified.
-railmap			-railmap <nation / territory / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
+railmap			-railmap <nation / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
 maps				Tells you all types of maps and their syntaxes
 market				Displays the market. The difference between the market and the shop is that on the market, things are sold by users. When buying something off the market you are giving another nation money.
 order			-order <item id> <(optional amount)>	Buys an item off the market.
@@ -80,12 +80,11 @@ formreq			-formreq <formable>	Returns the requirements to form a specific formab
 formlist				A list of all formables in the game.
 ideologies				A list of all ideologies in the game
 viewide			-viewide <ideology>	All the specs of the specified ideology
-setide			-setide <ideology>	Changes your nation's ideology to what you specified, if you have the political power and if you meet the prerequisite
+setide			-setide <ideology>	Changes your nation's ideology to what you specified, if you have the political power
 setnews		Admin Only	-setnews	Sets the news channel to wherever the command is run.
 setcapital			-setcapital <territory / 'costs'>	Sets your capital to the territory specified. If "cost" is specified, it displays the cost of changing the capital to each territory.
 econboost			-econboost	Displays the boost to a territory's tax revenue each building gives.
 popmap				A heatmap of each territory by population
 statues				A list of all statues within your territory, and statues built by you abroad
 bulldoze			-bulldoze <territory> <building>	Removes a building from the specified territory. To view the cost, run `-bulldoze help`.
-revolt			-revolt <ideology>	Changes your ideology to any other ideology in the game. No political power nor prerequisite required, but has grave stability consequences
 reset		Admin Only		Resets the game back to starting positions. 

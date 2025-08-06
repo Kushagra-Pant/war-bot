@@ -1,0 +1,96 @@
+.card {
+  padding: 0%
+}
+
+img {
+  border-radius: 25px;
+  border: 2px black solid;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 1em auto 1em auto;
+}
+
+.southeast-asia{
+  margin-block: 2em;
+}
+
+.card-header{
+  font-size: 20px;
+}
+
+h1{
+  margin: 0px;
+  padding: 1%;
+}
+
+.card-body{
+  padding: 0;  
+}
+
+.first-place{
+  background-color: #ffd90094;
+  font-size: 40px;
+}
+
+.second-place{
+  background-color: #80808094;
+  font-size: 30px;
+}
+
+.third-place{
+  background-color: #CD7F3294;
+  font-size: 20px;
+}
+
+.nation {
+  font-size: 20px;
+  color: rgb(99, 99, 99);
+  font-weight: 500;
+  display: block;
+  margin-top: 0.2em;
+}
+
+.title{
+  padding-block: 2%;
+}
+
+.player{
+  color: darkgray;
+}
+
+.card-text{
+  padding-inline: 5%;
+}
+
+.gold{
+  background-color: #ffd90094;
+}
+
+.silver{
+  background-color: #80808094;
+}
+
+.bronze{
+  background-color: #CD7F3294;
+}
+
+#winners-table th {
+  text-align: center;
+  position: relative;
+}
+
+#winners-table thead .sorting:after,
+#winners-table thead .sorting:before,
+#winners-table thead .sorting_asc:after,
+#winners-table thead .sorting_asc:before,
+#winners-table thead .sorting_desc:after,
+#winners-table thead .sorting_desc:before {
+  position: relative;
+  right: auto;
+}
+
+h4{
+  padding-top: 1%;
+  padding-bottom: 0.5%
+}
