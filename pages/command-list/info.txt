@@ -88,4 +88,8 @@ popmap				A heatmap of each territory by population
 statues				A list of all statues within your territory, and statues built by you abroad
 bulldoze			-bulldoze <territory> <building>	Removes a building from the specified territory. To view the cost, run `-bulldoze help`.
 revolt			-revolt <ideology>	Changes your ideology to any other ideology in the game. No political power nor prerequisite required, but has grave stability consequences
+broadcast			-broadcast <(optional 'cost')> <message>	Broadcasts a message to the public advertisements channel. To view the cost of a message but not send it, specify "cost" before the message
+setAd		Admin Only		Sets the channel the command is run in to the official advertisement channel
+cleanTroops		Admin Only		Removes all troops from the text files whose nations don't exist (bug-fixing only)
+refresh		Admin Only		Restarts the bot without resetting statistics.
 reset		Admin Only		Resets the game back to starting positions. 
