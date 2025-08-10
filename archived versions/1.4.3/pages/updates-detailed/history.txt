@@ -573,15 +573,3 @@ Ladies and gentlemen, **autotax** is here!
    - Changed `-buy` confirmation message to have cleaner looking numbers
    - fixed `-bombard` bug where battleship could bombard any coastal province
 
-## Update 1.4.4 - The Advertisement Update
-*Aug 10, 10:40 am*
-- A new Advertisement Channel, #advertisements, and a command to go with it: `-broadcast <message>`. To view the cost of a potential message, do `-broadcast cost <message>`
-  - You can only  broadcast once every 8 hours, to not clog the channel. I can change this.
-- Additionally, I integrated AI (yes, Artificial Intelligence) into the `-help` command. Now it won't be broken whenever you ask it questions!
-- Some more admin-only commands made:
-  - `-setad`: Sets the channel for the ad
-  - `-cleantroops`: Removes every troop not part of a nation that exists
-  - `-refresh`: restarts the bot
-- Changed some ideology properties 
-- Reworked some internal organization
-
