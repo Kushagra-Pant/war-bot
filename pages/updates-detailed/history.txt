@@ -582,6 +582,7 @@ Ladies and gentlemen, **autotax** is here!
   - `-setad`: Sets the channel for the ad
   - `-cleantroops`: Removes every troop not part of a nation that exists
   - `-refresh`: restarts the bot
+  - And, a new log channel added that logs all information about attacks, so I can identify bugs more easily
 - Changed some ideology properties 
 - Reworked some internal organization
 
