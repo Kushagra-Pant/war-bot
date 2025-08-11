@@ -115,3 +115,12 @@ a {
 th, td {
   vertical-align: middle;
 }
+
+.badge {
+  border-radius: 15px;
+  margin: 1%;
+}
+
+.AdminOnly {
+  background-color: red;
+}
