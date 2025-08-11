@@ -586,3 +586,11 @@ Ladies and gentlemen, **autotax** is here!
 - Changed some ideology properties 
 - Reworked some internal organization
 
+### Update 1.4.4.1
+*Aug 10, 4:26 pm*
+- Upgraded `-help` AI by switching models and adding more detailed query
+
+### Update 1.4.4.2
+*Aug 11, 1:24pm*
+- Internally reworked `-settax` and `-collect` commands, making it easier for me to change and hopefully more accurate
+
