@@ -1,4 +1,4 @@
-help				The help command. Type a sentence after `-help` and the bot will try its best to find what problem you're having and how to solve it.
+help			-help <query>	An AI-assisted help command. Type your problem/question after `-help` and the bot will answer you. The model used is Groq's meta-llama/llama-4-scout-17b-16e-instruct.
 players	p			List of all nations in the game, the ruler, and their ideology.
 shop				A list of all items and their prices.
 settax			-settax <rate>	Sets your national tax rate. The higher the tax rate, the higher the income and stability loss.
