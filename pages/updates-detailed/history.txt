@@ -594,3 +594,8 @@ Ladies and gentlemen, **autotax** is here!
 *Aug 11, 1:24pm*
 - Internally reworked `-settax` and `-collect` commands, making it easier for me to change and hopefully more accurate
 
+### Update 1.4.4.3
+*Aug 13, 9:05am*
+- reduced capital changing costs
+- added integration checks to `-distribute`
+
