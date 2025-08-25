@@ -1,0 +1,95 @@
+help			-help <query>	An AI-assisted help command. Type your problem/question after `-help` and the bot will answer you. The model used is Groq's meta-llama/llama-4-scout-17b-16e-instruct.
+players	p			List of all nations in the game, the ruler, and their ideology.
+shop				A list of all items and their prices.
+settax			-settax <rate>	Sets your national tax rate. The higher the tax rate, the higher the income and stability loss.
+collect				Collects the income you've generated since the last `-collect`.
+deploy			-deploy <unit> <territory> <(optional amount)>	Deploys a unit in one of your territories
+navy	n			Shows all your boats and where they're located
+army				Shows all your ground forces and where they're located
+forces				Shows all your combined naval and ground forces and where they're located
+commands				Links to this very page
+bal				Displays your balance
+buy			-buy <item> <(optional quantity)>	Buys an item from the shop
+register		Admin Only	-register <user> <country>	Registers someone as a country
+channel		Admin Only	-channel <nation>	Changes the channel of the nation to the one the command is run in
+inv				Displays your inventory
+territories	t		-territories <(optional nation)>	Displays the territories of the nation specified. Displays your territories if left unspecified
+top			-top <pop / area / coal / oil>	Displays the top countries by one of the following categories: population, area, coal production, or oil production.
+population			-population <nation>	Returns the population of the nation specified
+save				Hard saves the current round, in case anything goes wrong and data is wiped.
+declarewar			-declarewar <nation>	Declares war on a nation
+wars				Displays all currently ongoing wars
+peace			-peace <nation> <clauses>	Offers a peace treaty to a nation
+resign				Removes you as the leader of your nation
+accept			-accept <treaty number>	Accepts a peace treaty
+reject			-reject <treaty number>	Rejects a peace treaty
+treaties				Displays all treaties to and from you, and their respective numbers
+attack			-attack <territory> <unit ids separated by space>	Attacks the specified territory with all units mentioned. The attack does not commence unless all units are valid and yours and eligible to attack.
+give			-give <nation> <amount of money> <(optional message)>	Gives a nation some amount of money, with an optional message attached
+fortify			-fortify <territory>	Builds a fortress on a territory that you own
+borders	b		-borders <territory>	Returns the territories that border the specified territory
+bordersnat	bnat		-bordersnat <territory>	Returns the territories that border the specified nation
+seamap				Returns a labelled map of the sea
+unitinfo			-unitinfo <unit id>	Returns all information relating to a unit you own
+rename			-rename <unit id> <new id>	Renames a unit to whatever you specify. Restrictions apply
+cede			-cede <territory> <nation>	Cedes a territory to the nation specified. You cannot cede to a nation you're at war with. You also cannot cede your capital or your final territory.
+move	m		-move <unit id> <territory>	Move the specified unit to the specified territory
+merge			-merge <unit ids separated by space>	Merges the specified units into a single division. They must be of the same type and in the same territory upon merging.
+split			-split <unit id> <(optional amount)>	Splits a unit into as many divisions as you specify. If no number is specified, 2 is assumed.
+disband			-disband <unit id>	Eliminates the unit specified, if it's yours
+map			-map <nation / territory / 'all'> <(optional specification: 'nat' for nation, 'terr' for territory)>	Displays a map of the specified nation or territory, or 'all' if specified. 
+warmap				Displays a map of all nations you are at war with
+cooldowns			-cooldowns <unit / int for integration>	Displays all the cooldowns, for either your units or for territory integration
+multimap			-multimap <nations separated by space>	Maps several nations at once
+scorch			-scorch <territory>	Scorches a territory. This reduces the population by half and removes all buildings from the territory. 20 fuel is required to scorch a province
+settruce		Admin Only	-settruce <duration in format "#h #m">	Sets a global truce, where no nation can attack another. Often done at the start of games, to give preparation time to everybody.
+z				Returns a simple message. Exists to test whether the bot is online at the moment.
+upgrade			-upgrade <territory / 'cost'>	Upgrades one of your territories. If you specify 'cost', it will display the cost to upgrade each.
+bombard			-bombard <territory> <(optional battleship id)>	Bombards a province with one of your battleships.
+myseas				Displays the seas you currently occupy
+terrinfo			-terrinfo <territory>	Displays all information pertaining to the territory specified. If you own the territory, it also shows the units stationed in it.
+weights				Displays the weight per unit for each unit type
+load	l		-load <carrier id> <unit ids separated by space>	Loads a carrier with the specified units. You cannot load a submarine or battleship onto a carrier. Each carrier has a capacity of 10 weight.
+checkload				Displays the units currently on each carrier you own and how much space is available
+unload				Unloads all units aboard a carrier
+build			-build <territory> <building>	Builds a building in a specified territory.
+pave			-pave <territory1> <territory2>	Paves a railroad between two adjacent territories.
+fuelreq			-fuelreq	Displays the fuel required for each unit type, for both movement and attacking
+haul			-haul <unit id> <territory>	Hauls a unit via rail to another rail station.
+rails				Shows all your rails
+pathfrom			-pathfrom <territory1> <territory2> <(optional additional settings)>	Finds the shortest distance between territory1 and territory2. Additional settings are 'nation' if you would like to keep it in a nation, and 'rail' if you would like to only consider railroads. You may use them both at the same time. They are both by default false.
+distribute			-distribute <(optional 'strategic')>	Distributes 1 troop division in all your territories. If 'strategic' is specified, it only distributes them in territories that border another nation, reducing the cost
+mappoint		Admin Only	-mappoint <coordinate>	Paints a point on a map and fills it using the default tolerance. Mostly used for testing issues
+unitcooldowns			-unitcooldowns <unit type>	Returns the unit type's cooldowns by terrain. If you are a nation, it bases them off your stability. If you aren't, it bases them off a modest 60% stability.
+getterrainmap		Admin Only		Paints a map of all terrains
+terrainmap				Displays a map of all terrains. The image is saved beforehand for higher response speeds.
+legendmap	lmap		-lmap <nation / territory / 'all'>	Displays a labelled map of whatever specified.
+railmap			-railmap <nation / territory / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
+maps				Tells you all types of maps and their syntaxes
+market				Displays the market. The difference between the market and the shop is that on the market, things are sold by users. When buying something off the market you are giving another nation money.
+order			-order <item id> <(optional amount)>	Buys an item off the market.
+sell			-sell <item> <price> <(optional quantity)> <(optional description)> <(optional "bulkOnly")>	Puts an item on the market. If no quantity is specified, 1 is assumed. If bulkOnly not specified, it is assumed that single units can be bought. The price is for all of them together, unless "each" is specified after like so: `-sell tank 5000e 6`. If the item has a space, you should use an underscore in place of it.
+rescind			-rescind <item id>	Rescinds an item you tried to sell off the market.
+scan			-scan	Scans the bordering territories of all your territories with a Radar Station for enemy troops. Tells you the exact amount and the type, except if it's a Submarine.
+getterr			-getterr <nations separated by space>	Returns the territories of all nations specified in python list format. Mostly used by the developer when creating formables.
+form			-form <(optional formable)>	If no formable is specified, it lists all the formables you can potentially form. If a formable is specified, it attempts to transform you into that formable.
+formable			-formable <formable>	Returns information and a map of the specified formable.
+buildmap			-buildmap <building>	Displays a map with all territories containing the specified building highlighted
+resmap			-resmap <coal / oil>	Returns a map of the resource specified
+formreq			-formreq <formable>	Returns the requirements to form a specific formable, including territory and ideology prerequisites
+formlist				A list of all formables in the game.
+ideologies				A list of all ideologies in the game
+viewide			-viewide <ideology>	All the specs of the specified ideology
+setide			-setide <ideology>	Changes your nation's ideology to what you specified, if you have the political power and if you meet the prerequisite
+setnews		Admin Only	-setnews	Sets the news channel to wherever the command is run.
+setcapital			-setcapital <territory / 'costs'>	Sets your capital to the territory specified. If "cost" is specified, it displays the cost of changing the capital to each territory.
+econboost			-econboost	Displays the boost to a territory's tax revenue each building gives.
+popmap				A heatmap of each territory by population
+statues				A list of all statues within your territory, and statues built by you abroad
+bulldoze			-bulldoze <territory> <building>	Removes a building from the specified territory. To view the cost, run `-bulldoze help`.
+revolt			-revolt <ideology>	Changes your ideology to any other ideology in the game. No political power nor prerequisite required, but has grave stability consequences
+broadcast			-broadcast <(optional 'cost')> <message>	Broadcasts a message to the public advertisements channel. To view the cost of a message but not send it, specify "cost" before the message
+setAd		Admin Only		Sets the channel the command is run in to the official advertisement channel
+cleanTroops		Admin Only		Removes all troops from the text files whose nations don't exist (bug-fixing only)
+refresh		Admin Only		Restarts the bot without resetting statistics.
+reset		Admin Only		Resets the game back to starting positions. 

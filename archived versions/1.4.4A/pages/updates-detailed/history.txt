@@ -549,7 +549,7 @@ Ladies and gentlemen, **autotax** is here!
 - Lighter color bug on map commands now fixed
 
 ### Update 1.4.2.11
-*Aug 3, 2025, 8:48 am*
+*Aug 3, 8:48 am*
 - Fixed `-load` and `unload` cooldown checks
 
 ### Update 1.4.2.12
@@ -568,7 +568,7 @@ Ladies and gentlemen, **autotax** is here!
    - Enemy statues, however, are still linear! So, 3 enemy statues are -0.15 stability.
    - Added initial balance to `-top power`. 
    - Changed method of naval battle, to ensure the more ships you have, the less casualties you will amass
-   - Buffed how many people bombardment kills
+   - Buffed how many people bombardment kills (view #tutorial)
    - Changed some ideology settings
    - Changed `-buy` confirmation message to have cleaner looking numbers
    - fixed `-bombard` bug where battleship could bombard any coastal province
@@ -598,8 +598,4 @@ Ladies and gentlemen, **autotax** is here!
 *Aug 13, 9:05am*
 - reduced capital changing costs
 - added integration checks to `-distribute`
-
-### Update 1.4.4.4
-*Aug 15, 12:25am*
-- patched log issue that interfered with naval battles
 

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet"></link>
+    <link href="style.css" rel="stylesheet"></link>
+  </head>
+  <body class="bg-red">
+    <nav class="navbar navbar-expand-lg bg-secondary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="../../">Overview</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="../how-to-play/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                How to Play
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item disabled" href="../how-to-play">How to Play</a></li>
+                <li><a class="dropdown-item" href="../command-list/">List of Commands</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="../updates-overview/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Updates
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../updates-overview/">Overview</a></li>
+                <li><a class="dropdown-item" href="../updates-detailed/">Detailed</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="pages/maps/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Maps
+              </a>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item " href="../maps/">Official Maps</a></li>
+                <li><a class="dropdown-item" href="../make-your-own-map/">Make your own Map Guide</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="../hall-of-fame/">Hall of Fame</a>
+            </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="../past-versions/">Past Versions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%">
+          <h5 class="card-title main">How to Play</h5> <br>
+          <p class="card-text">This is the go-to page for begginers, explaining how to play.</p>
+          <h2>Contents</h2>
+          <ul>
+            <li>
+              <a href="#nation" class="text-info">Exploring your Nation</a>
+            </li>
+            <li>
+              <a href="#income" class="text-info">Collecting Income</a>
+            </li>
+            <li>
+              <a href="#shop" class="text-info">Buying Things</a>
+            </li>
+            <li>
+              <a href="#deploy" class="text-info">Deploying Units</a>
+            </li>
+            <li>
+              <a href="#units" class="text-info">Organizing Units</a>
+            </li>
+            <li>
+              <a href="#attack" class="text-info">Attacking</a>
+            </li>
+            <li>
+              <a href="#naval-warfare" class="text-info">Naval Warfare</a>
+            </li>
+            <li>
+              <a href="#railways" class="text-info">Railways</a>
+            </li>
+            <li>
+              <a href="#buildings" class="text-info">Buildings</a>
+            </li>
+            <li>
+              <a href="#resources" class="text-info">Resources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="nation">
+          <h5 class="card-title">Exploring your nation</h5> <br>
+          <p class="card-text">
+            First thing you'll want to do is get familiar with what you're ruling over! Some commands that can help you do that are: <br>
+            <span class="command">-map &lt;your nation&gt;</span> – maps your nation out, so you know where you're located! To view full syntax, <a href="../command-list/#map">click here</a>! <br>
+            <span class="command">-territories</span> – A list of your territories, in descending order of population. <a href="../command-list/#territories">Full syntax here</a> <br>
+            <span class="command">-legendmap &lt;your nation&gt;</span> – A labelled map of all your territories. <a href="../command-list/#legendmap">Full syntax here</a> <br>
+            <span class="command">-seamap</span> – A labelled map of all seas in the game. Useful if you are a seafaring nation. No other syntax is required.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="income">
+          <h5 class="card-title">Collecting Income</h5> <br>
+          <p class="card-text">
+            Money makes the world go round, and it's no different for War Bot. Do <span class="command">-settax &lt;rate&gt;</span> to set your tax rate, then do <span class="command">-collect</span> to collect your income. You can collect once every tax cycle, which is currently set to 30 minutes.
+            The higher your tax rate, the greater your stability loss will be.
+            The more frequently you collect, the more money you will get, though you will continue collecting even when afk.
+            Income is affected by stability, population size, integration, and infrastructure. To view the effects of the latter two, do <span class="command">-econboost</span>.
+          </p>
+        </div>
+      </div>
+    </div>    
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="shop">
+          <h5 class="card-title">Buying Things</h5> <br>
+          <p class="card-text">
+            Do <span class="command">-shop</span> to view all items in the shop. Items are cheaper during global truces. To buy an item, do <span class="command">-buy &lt;item&gt; &lt;(optional quantity)&gt;</span>.
+            <br>
+            The items in the market are infinite - you can buy as many as you'd like. The player-run market is different though. 
+            <br>
+            To view the market, you must do <span class="command">-market</span>. To buy something off the market, do <span class="command">-order &lt;item id&gt; &lt;(optional quantity)&gt;</span>. These items are finite, and by ordering something you will be giving money to another nation in exchange for their product.
+            To put something onto the market, do <span class="command">-sell &lt;item&gt; &lt;price&gt;</span>. There are additional settings, which to view <a href="../command-list/#sell">go here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="deploy">
+          <h5 class="card-title">Deploying Units</h5> <br>
+          <p class="card-text">
+            Just because you've bought troops, doesn't mean they're immediately on the frontlines. They must be <b>deployed</b> to a specific <b>territory</b>. The syntax for the command can be found <a href="../command-list/#deploy">here</a>.  
+            <br> <b>For Naval Units: </b>
+            There is an extra complexity for naval units. They must still be deployed on coastal provinces, which you can see visually through <a href="../command-list/#legendmap"><span class="command">-legendmap</span></a> or though all territories with an anchor system in <a href="../command-list/#territories"><span class="command">-territories</span></a>. You cannot deploy naval units on seas!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="units">
+          <h5 class="card-title">Organizing Units</h5> <br>
+          <p class="card-text">
+            Rename units with the <a href="../command-list/#rename"><span class="command">-rename</span></a> command. <br>
+            Split units into multiple divisions with the <a href="../command-list/#split"><span class="command">-split</span></a> command. <br>
+            Merge multiple divisions into one with the <a href="../command-list/#merge"><span class="command">-merge</span></a> command. <br>
+            Move units to a neighbouring territory with the <a href="../command-list/#move"><span class="command">-move</span></a> command.
+            You cannot move naval units to inland territories, and likewise cannot move ground units to seas. Additionally, moving most units requires fuel. To view how much fuel each unit requires, do <span class="command">-fuelreq</span> <br>
+            To view all your units, you can either do <span class="command">-army</span> (for ground forces), <span class="command">-navy</span> (for naval forces), or <span class="command">-forces</span> (for all forces).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="attack">
+          <h5 class="card-title">Attacking</h5> <br>
+          <p class="card-text">
+            To attack with units, use the <a href="../command-list/#attack"><span class="command">-attack</span></a> command. You can only attack nations you're at war with, and can only attack bordering territories and with units that aren't on cooldowns.
+            Attacking either requires the same amount or more fuel than simply moving. To view fuel requirements, do <span class="command">-fuelreq</span>.
+            The way land battles work, is each ground unit has an attack and defense value. They are shown below:
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Unit Type</th>
+                <th scope="col">Attack Strength</th>
+                <th scope="col">Defense Strength</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Light Infantry</th>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">Motorized Infantry</th>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">Artillery</th>
+                <td>5</td>
+                <td>0.1</td>
+              </tr>
+              <tr>
+                <th scope="row">Tank</th>
+                <td>3</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            These are added up for your total army strength. Then, it is squared, and chances are calculated based off that. For example, 1 light infantry vs 1 tank is a 1v9 in terms of strength, so the light infantry has a 10% chance of winning. But 2 light infantry vs 1 tank is a 4v9 in terms of strength, so a ~31% chance of winning.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="naval-warfare">
+          <h5 class="card-title">Naval Warfare</h5> <br>
+          <p class="card-text">
+            Naval warfare also utilizes the <a href="../command-list/#attack"><span class="command">-attack</span></a> command. With naval units, you can attack either a coastal province or a sea. As well, each naval unit has a unique property. <br>
+            <b>Submarines: </b> They sink all other ships, including submarines. They also can't be detected by radar stations. <br>
+            <b>Battleships: </b> These are ships that bombard ground, coastal units. They can sink carriers, but are sunk by submarines. <br>
+            <b>Carriers: </b> These are ships that carry troops across a sea. To put troops on a carrier, you must use the <a href="../command-list/#load"><span class="command">-load</span></a> command.
+            To remove all troops off of a carrier, you would use <a href="../command-list/#unload"><span class="command">-unload</span></a>. To check the units on every one of your carriers as well as how much space is left on each, you would do <span class="command">-checkload</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="railways">
+          <h5 class="card-title">Railways</h5> <br>
+          <p class="card-text">
+            Railways are used to reduce troop cooldowns and move units (including ships) from one side of the country to another. However, they are quite expensive to build. They do provide an economic boost to the territory they're in, however.
+            <br>
+            There are 2 components to railways: The Railway Stations and the rails. Each railway must have 2 railway stations and have them connected via rails. Only then can troops be hauled between them.
+            <br>
+            As stated, cooldowns from hauling are significantly less than regular movement, plus require a lot less planning. You can also build railways in unintegrated territories, allowing for deeper and faster expansion into other nations.
+            <br>
+            To pave a railroad between two territories or view the prices, use <a href="../command-list/#pave"><span class="command">-pave</span></a>.
+            <br>
+            To view all your railways, do <span class="command">-rails</span>. To view a map of railways, do <span class="command">-railmap &lt;'all' / nation &gt;</span>
+            <br>
+            To find the shortest path from one territory to another, do <a href="../command-list/#pathfrom"><span class="command">-pathfrom</span></a> This is useful either for deciding where to build rail or how to transport units.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="buildings">
+          <h5 class="card-title">Buildings</h5> <br>
+          <p class="card-text">
+            Buildings are listed in <span class="command">-shop</span> as a separate category. To build something, you must first buy it so that it is in your inventory. Then, do <span class="command">-build &lt;territory&gt; &lt;building&gt;</span>. Each territory can have a maximum of 1 of each type of building.
+            The purpose of each building is as follows:
+            <table class="table text-center">
+              <tbody>
+                <tr>
+                  <th>Fortress</th>
+                  <td>Provides x2 defense to your troops (before squaring). So, 1 tank vs 2 light infantry is a 9 v 4. But, 1 tank vs 2 light infantry and a fort is a 9 v 16.</td>
+                </tr>
+                <tr>
+                  <th>Railway Station</th>
+                  <td>Used for railways. View the <a href="#railways">Railways Section</a> for a more detailed explanation.</td>
+                </tr>
+                <tr>
+                  <th>Radar Station</th>
+                  <td>Detects all enemy troops on the borders of the territories upon which it is placed, except for submarines. To use, do <span class="command">-scan</span>; all your radar stations will scan everything automatically.</td>
+                </tr>
+                <tr>
+                  <th>Oil Drill</th>
+                  <td>Used to extract oil from a territory. Extracts all the oil that is listed there every tax cycle. View the <a href="#resources">Resources Section</a> for a more detailed explanation.</td>
+                </tr>
+                <tr>
+                  <th>Fuel Refinery</th>
+                  <td>Used to convert either coal or oil to fuel. Has a maximum intake of 1 of either resources. 1 Coal -> 0.5 Fuel, while 1 Oil -> 1.5 Fuel. View the <a href="#resources">Resources Section</a> for a more detailed explanation.</td>
+                </tr>
+                <tr>
+                  <th>Statue</th>
+                  <td>Gives you a certain amount of stability per tax cycle. When the territory its on is captured by enemies, it works to negate their stability. View the <a href="../updates-overview/#statue">Statue Update</a> for more details</td>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card page-header">
+      <div class="d-flex flex-row align-items-center">
+        <div class="card-body" style="padding: 3%" id="resources">
+          <h5 class="card-title">Resources</h5> <br>
+          <p class="card-text">
+            There are two resources in the game, Coal and Oil. Both are used for fuel production, which is neccessary for motorized infantry, artillery, tanks, rails, and a navy. <br> <br>
+            You can view a map of resources by doing <span class="command">-resmap &lt; coal / oil &gt;</span>. You can also view the top countries by resource reserves by doing <span class="command">-top &lt; coal / oil &gt;</span>. Resource reserves are also listed in <span class="command">-terrinfo &lt;territory&gt;</span>.<br>
+            Coal is produced automatically. Every tax cycle, you gain the amount listed in <span class="command">-resmap coal</span> or <span class="command">-terrinfo</span> for that territory. For example, if the tax cycle is 30 minutes, and your coal reserves for a territory are listed as 0.3, you gain 0.3 coal per 30 minutes.
+            Oil is the same, except you require an Oil Drill to begin production. Contrary to real life, these resources are infinite and never run out. <br> <br>
+            To convert Coal or Oil into Fuel, you need to build a Fuel Refinery using the <a href="../command-list/#build"><span class="command">-build</span></a> command. The fuel refinery has a maximum intake of 1 resource per tax cycle, no matter the resource type, nation stability, ideology, etc.
+            As you can probably guess, Coal is less efficient than Fuel. Every 1 Coal convert to 0.5 Fuel, while every 1 Oil converts to 1.5 Fuel. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
