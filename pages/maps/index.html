@@ -62,7 +62,7 @@
           <h5 class="card-title">Europe</h5>
           <p class="card-text fs-4">
             This was the first ever map, and was used for the vast majority of the game, from Update 1.0 to Update 1.4.1, when a new map was introduced. It is a map of Europe set in 1990-1991, after the Unification of Germany and before the dissolution of Czechoslovakia and Yugoslavia. It excludes Scandinavia and the former Soviet Union.
-            The map has 21 countries, 190 territories, 40 seas, and 26 formables.
+            The map has 21 countries, 190 territories (188 before Update 1.3), 40 seas, and 26 formables.
           </p>
         </div>
 
@@ -136,7 +136,9 @@
         <div class="card-body" style="flex: 1; min-width: 250px;">
           <h5 class="card-title">Southeast Asia</h5>
           <p class="card-text fs-4">
-            This is the current map, in play since Update 1.4.2. It has different terrain types than the past two, replacing Hilly Arid and Hilly Subpolar with Forest and Jungle biomes. It is jam-packed with seas to maximize naval warfare and has areas where ground warfare is also neccessary. It is also the first map built with Yasin Elkadri's <a class="text-info" href="https://github.com/YasinElkadri/War-Bot-Real-Map-Builder">Map Builder</a> program.
+            This is the third map, in a completely foreign region. It was in play between Update 1.4.2 and 1.4.5. It has different terrain types than the past two, replacing Hilly Arid and Hilly Subpolar with Forest and Jungle biomes. It is jam-packed with seas to maximize naval warfare and has areas where ground warfare is also neccessary. It is also the first map built with Yasin Elkadri's <a class="text-info" href="https://github.com/YasinElkadri/War-Bot-Real-Map-Builder">Map Builder</a> program.
+            After the map was done being used, a poll was done, and the map recieved an average score of 3.2 out of 5.
+            <br>
             The map has 19 nations, 168 territories, 45 seas, and 19 formables.
           </p>
         </div>
@@ -159,6 +161,44 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#SouthEastAsia" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card p-4 page-header">
+      <div class="d-flex flex-row flex-wrap align-items-center justify-content-between">
+        
+        <div class="card-body" style="flex: 1; min-width: 250px;">
+          <h5 class="card-title">Expanded Europe</h5>
+          <p class="card-text fs-4">
+            This is the current map, in play since Update 1.4.5. It is an expanded version of the previous Europe map that was very well recieved.
+            It is the largest map yet, with 33 nations, 319 territories, 59 seas, and 40 formables. Despite the large number of seas, naval warfare is not as essential as in the Southeast Asia Map due to most landmasses being connected by land, with the notable exception of the British Isles, Scandinavia, and Mediterranean Islands.
+          </p>
+        </div>
+
+        <div class="ms-4" style="width: 400px; height: 350px;">
+          <div id="ExpandedEurope" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100 rounded-4 overflow-hidden">
+              <div class="carousel-item active h-100">
+                <img src="expanded-europe/map.png" class="d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="expanded-europe/terrainmap.png" class="mx-auto d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="expanded-europe/labelledSeas.png" class="mx-auto d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#ExpandedEurope" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#ExpandedEurope" data-bs-slide="next">
               <span class="carousel-control-next-icon"></span>
               <span class="visually-hidden">Next</span>
             </button>

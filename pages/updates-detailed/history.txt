@@ -553,13 +553,13 @@ Ladies and gentlemen, **autotax** is here!
 - Fixed `-load` and `unload` cooldown checks
 
 ### Update 1.4.2.12
-*Aug 4, 4:14 pm*
+*Aug 4, 2025, 4:14 pm*
 - fixed cooldown display for `-unload`
 - fixed `-map` command when mapping countries
 - fixed `-borders` display for occupied seas
 
 ## Update 1.4.3 - The Revolution Update!
-*Aug 6, 9:59 am*
+*Aug 6, 2025, 9:59 am*
 - New command: `-revolt <ideology>`!
    - This allows you to change ideologies, at a cost of 1/3 your stability. (If you have negative stability, you go 1/3 deeper into negatives).
    - This also makes national headlines
@@ -574,7 +574,7 @@ Ladies and gentlemen, **autotax** is here!
    - fixed `-bombard` bug where battleship could bombard any coastal province
 
 ## Update 1.4.4 - The Advertisement Update
-*Aug 10, 10:40 am*
+*Aug 10, 2025, 10:40 am*
 - A new Advertisement Channel, #advertisements, and a command to go with it: `-broadcast <message>`. To view the cost of a potential message, do `-broadcast cost <message>`
   - You can only  broadcast once every 8 hours, to not clog the channel. I can change this.
 - Additionally, I integrated AI (yes, Artificial Intelligence) into the `-help` command. Now it won't be broken whenever you ask it questions!
@@ -587,19 +587,41 @@ Ladies and gentlemen, **autotax** is here!
 - Reworked some internal organization
 
 ### Update 1.4.4.1
-*Aug 10, 4:26 pm*
+*Aug 10, 2025, 4:26 pm*
 - Upgraded `-help` AI by switching models and adding more detailed query
 
 ### Update 1.4.4.2
-*Aug 11, 1:24pm*
+*Aug 11, 2025, 1:24pm*
 - Internally reworked `-settax` and `-collect` commands, making it easier for me to change and hopefully more accurate
 
 ### Update 1.4.4.3
-*Aug 13, 9:05am*
+*Aug 13, 2025, 9:05am*
 - reduced capital changing costs
 - added integration checks to `-distribute`
 
 ### Update 1.4.4.4
-*Aug 15, 12:25am*
+*Aug 15, 2025, 12:25am*
 - patched log issue that interfered with naval battles
+
+## Update 1.4.5 - Financial Centers
+*Aug 28, 2025, 11:28*
+- New Building: **Financial Center**
+  - doubles tax income generated from the province its built in
+  - halves territory prices for upgrading and setcapital
+  - but at a steep cost of $120,000
+- Many changes and bug fixes
+  - made all commands case insensitive
+  - changed formula for upgrading
+  - changed formula for `-setcapital`, reducing the impact of density and adding the distance to your current capital as a factor
+  - reduced motorized infantry costs
+  - fixed issue with anonomous broadcasting
+  - fixed bug: annexing countries no longer gives you their money if it's negative 
+  - the official weight unit is now a kilotonne. this doesnt actually change anything practical, its just a wording change
+  - fixed carrier loading bug
+  - fixed an issue with logging battles which made carriers immune if stationed in a territory
+  - changed oil drill emoji
+  - ceding territories to nations at war is no longer allowed
+- And a new map: **Expanded Europe**
+  - A very familiar map for us
+  - Terrains were changed to fit the map
 
