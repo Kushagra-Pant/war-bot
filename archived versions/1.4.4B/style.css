@@ -1,0 +1,126 @@
+body {
+  background-color: #2f3136;
+}
+
+a {
+  font-weight: bolder;
+  color: white;
+}
+
+.card {
+  border-radius: 25px;
+  padding-block: 2%;
+  padding-inline: 1%;
+}
+
+.card-title.main{
+  font-size: 60px;
+}
+
+.card-title{
+  font-size: 40px
+}
+
+.card-subtitle{
+  font-size: 20px
+}
+
+
+.rounded-circle{
+  border: 3px black solid;
+}
+
+.command {
+  background-color: #2f31369c;
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-family: monospace;
+  font-size: 0.95em;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.bg-skyblue{
+  background-color: #00BAFF;
+}
+
+.bg-turquoise{
+  background-color: #00BEB6;
+}
+
+.bg-red{
+  background-color: #9e2d2d
+}
+
+.bg-pinkred{
+  background-color: #FF5569
+}
+
+.bg-mudgreen{
+  background-color: #6C7A00;
+}
+
+.bg-darkgray{
+  background-color: #3b3b3b;
+}
+
+.innerbody{
+  padding-inline: 3%;
+}
+
+p{
+  font-size: 20px
+}
+
+#accordionExample {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-radius: 25px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-item:first-child {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.accordion-item:last-child {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.nav-item{
+  font-size: 20px;
+  margin-inline: 5px;
+}
+
+.dropdown-item{
+  font-size: 16px;
+}
+
+.page-header{
+  margin: 5%;
+  padding-block: 1%;
+}
+
+a {
+  color: #0DCAF0;
+}
+
+th, td {
+  vertical-align: middle;
+}
+
+.badge {
+  border-radius: 15px;
+  margin: 1%;
+}
+
+.AdminOnly {
+  background-color: red;
+}
