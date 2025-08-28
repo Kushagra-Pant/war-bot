@@ -625,3 +625,7 @@ Ladies and gentlemen, **autotax** is here!
   - A very familiar map for us
   - Terrains were changed to fit the map
 
+### Update 1.4.5.1
+*Aug 28, 7:26 pm*
+- `-territories` now displays capitals with a star emoji
+
