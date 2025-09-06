@@ -107,10 +107,19 @@ Timor Leste -> United Timor (Capital: Jakarta)
 Sulawesi
 
 Aug 25, 2025
-1.4.4 Game 3
+1.4.4 Game 4
 🏆 PumkinSquash
 Sumatra (Capital: Dhaka)
 🥈 Nayan
 Bangladesh (Capital: Bangka)
 🥉 SimplyAFryGuy
 Sulawesi -> Sultanate of Gowa (Capital: Pekanburu)
+
+Sept 1, 2025
+1.4.5 Game 1
+🏆 PumkinSquash
+Ukraine -> United Eastern Bloc (Capital: Muntenia)
+🥈 Yasin
+Turkey (Capital: Batman)
+🥉 Nayan
+Germany -> German Empire (Capital: Brussels)
