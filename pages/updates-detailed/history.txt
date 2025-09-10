@@ -558,7 +558,7 @@ Ladies and gentlemen, **autotax** is here!
 - fixed `-map` command when mapping countries
 - fixed `-borders` display for occupied seas
 
-## Update 1.4.3 - The Revolution Update!
+## Update 1.4.3 - The Revolution Update
 *Aug 6, 2025, 9:59 am*
 - New command: `-revolt <ideology>`!
    - This allows you to change ideologies, at a cost of 1/3 your stability. (If you have negative stability, you go 1/3 deeper into negatives).
