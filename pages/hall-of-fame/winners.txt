@@ -111,7 +111,7 @@ Aug 25, 2025
 🏆 PumkinSquash
 Sumatra (Capital: Dhaka)
 🥈 Nayan
-Bangladesh (Capital: Kuala Lumpur)
+Bangladesh (Capital: Bangka)
 🥉 SimplyAFryGuy
 Sulawesi -> Sultanate of Gowa (Capital: Pekanburu)
 
@@ -123,3 +123,12 @@ Ukraine -> United Eastern Bloc (Capital: Muntenia)
 Turkey (Capital: Batman)
 🥉 Nayan
 Germany -> German Empire (Capital: Brussels)
+
+Oct 15, 2025
+1.4.5 Game 2
+🏆 SimplyAFryGuy
+Romania -> Balkan Federation
+🥈 Scityher
+Germany -> German Empire
+🥉 Yasin
+Spain -> Iberian Union
