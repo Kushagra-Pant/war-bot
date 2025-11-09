@@ -632,3 +632,7 @@ Ladies and gentlemen, **autotax** is here!
 ### Update 1.4.5.2
 *Oct 13, 8:40 pm*
 - Fixed bug where naval unit could move to any coastal province
+
+### Update 1.4.5.3
+*Nov 9, 10:42 am*
+- changed capital and financial center upgrade discounts to 25% each
