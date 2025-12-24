@@ -122,4 +122,18 @@ function renderRow(row, container){
   accordionItem += '</div>'
   container.insertAdjacentHTML('beforeend', accordionItem)
   console.log('')
+
+  const hash = window.location.hash;
+  if (hash !== "") {
+    const target = document.querySelector(hash);
+    const button = target?.querySelector('button[data-bs-toggle="collapse"]');
+
+    if (target && button) {
+      button.click();
+
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 200); 
+    }
+  }
 }
