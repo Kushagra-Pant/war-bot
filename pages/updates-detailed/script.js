@@ -108,7 +108,7 @@ function renderRow(row, container){
   let accordionItem = '<div class="row g-4 mb-4">'
   for(let r = 0; r < row.length; r++){
     accordionItem += `
-        <div class="col-${widths[row[r].name]}">
+        <div class="col-${widths[row[r].name]}" id="${row[r].name.split(" ")[1]}">
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title text-center">${row[r].name}</h5>
