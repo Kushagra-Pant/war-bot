@@ -1,3 +1,8 @@
 li a {
   font-size: 25px;
 }
+
+.card-subtitle{
+  font-weight: bolder;
+  font-size: 25px;
+}
