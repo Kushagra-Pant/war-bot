@@ -122,13 +122,5 @@ th, td {
 }
 
 .AdminOnly {
-  background-color: rgb(6, 48, 138);
-}
-
-.DELETED {
   background-color: red;
-}
-
-.Map {
-  background-color: green;
 }

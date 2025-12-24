@@ -626,88 +626,13 @@ Ladies and gentlemen, **autotax** is here!
   - Terrains were changed to fit the map
 
 ### Update 1.4.5.1
-*Aug 28, 2025, 7:26 pm*
+*Aug 28, 7:26 pm*
 - `-territories` now displays capitals with a star emoji
 
 ### Update 1.4.5.2
-*Oct 13, 2025, 8:40 pm*
+*Oct 13, 8:40 pm*
 - Fixed bug where naval unit could move to any coastal province
 
 ### Update 1.4.5.3
-*Nov 9, 2025, 10:42 am*
+*Nov 9, 10:42 am*
 - changed capital and financial center upgrade discounts to 25% each
-
-# Update 1.5 - The Diplomacy Update
-*Dec 19, 2025 12:38 pm*
-## Major Additions
-- Diplomacy
-  - Alliances
-     - An alliance is a type of relationship with another nation where you will be called into all their defensive wars, and they will be called into all your defensive wars. You are not allowed to declare war on allies.
-    - Request/Accept an alliance with `-ally <nation>`
-    - Cancel an alliance or alliance request with `-cancel ally <nation>`
-    - You may call in allies into offensive wars. Do this with `-callin <nation> <war>`
-      - To join a war you've been called into, do `-joinwar <war>`
-  - Non-Aggression Pacts
-    - A non-aggression pact (or NAP for short) is a type of relation where you will not be allowed to declare war on them and vice versa. 
-    - This is unless you have the ideology of fascism, which allows you to break NAPs without consequence
-    - Request/Accept an NAP with `-nap <nation>`
-    - Cancel an NAP or NAP request with `-cancel nap <nation>`
-  - There is a 6 hour truce after breaking an alliance or NAP
-  - View all allies and NAPs with `-diplomacy`
-  - View all alliance, NAP, and call to war requests with `-offers`
-- Peace Treaties
-  - Treaties got a complete revamp this game. This means `-peace`, `-accept`, `-reject`, and `-treaties` were all removed.
-  - The command for creating a peace treaty is `-draft`. That is all. Then follow the instructions the bot gives you.
-    - Treaties have 3 main components: post-war borders, reparations, and truce time. To change any aspect of a peace treaty, do `-amend <treaty name>`, then follow the instructions
-    - To publish a peace treaty, which notifies all participants and allows them to ratify it, do `-publish <treaty name>` 
-  - To view all your treaties, do `-treaty`. To view the terms of a specific peace treaty, you can do `-treaty <treaty name>`
-  - To agree to the terms of a peace treaty, do `-ratify <treaty name>`. You may unratify a treaty by doing `-cancel ratify <treaty name>`
-  - This is the logic on if non-player nations will accept a treaty or not:
-    - If at least one player nation has not accepted the treaty yet, they will not accept.
-    - If they have lost their capital, they will accept a treaty which sets the borders to the current frontlines
-    - If they have not lost their capital, they will only accept White Peace
-  - The White Peace treaty reverts back to pre-war territory and sets a 2 hour truce. It is auto-generated upon war declaration and is not changeable.
-- Truces & Reparations
-  - They exist as a result of treaties
-  - To view all truces, do `-trucelist`. This will include the global truce.
-     - While you can't declare war on someone while still in truce with them, you can still be at war with them. This happens in the case that you are called into war and the leader of the enemy side is not at truce with you, but others on their side are.
-  - To view all your debts, do `-debts`. These are automatically paid, so you don't need to worry about it.
-- Automatic Population Growth
-  - Say goodbye to `-upgrade`! Now, your population grows automatically, depending on factors such as the buildings in your province and a new stat called **War Devastation**!
-    - War Devastation is worsened by battles, bombardments, and scorches.
-  - To view how much each building aids in population growth, do `-popboost`
-  - The War Devastation of a specific territory is included in `-terrinfo <territory>`
-  - To view a map of territories colored by their growth rate, do `-growthmap`
-## Minor Additions/Changes
-- View the participants of a specific war with `-warinfo`
-- If you cede someone a territory it now notifies them
-- `-warmap` has been massively upgraded, and now displays your allies, truces, and NAPs alongside enemies.
-
-### Update 1.5.0.1
-*Dec 19, 2025, 11:51 pm*
-- Fixed annexation logic
-- Updated `-save` command
-- Fixed population updates
-
-### Update 1.5.0.2
-*Dec 20, 2025, 9:51 pm*
-- Fixed non-aggression pact world news logic
-- Fixed `-diplomacy` formatting
-
-### Update 1.5.0.3
-*Dec 21, 2025, 5:35 pm*
-- Patched ideology check when declaring war
-
-### Update 1.5.0.4
-*Dec 22, 2025, 12:08 pm*
-- fixed midnight truce issue permanently 
-- fixed `-wars` display
-- cut `-broadcast` prices by 60%
-- hopefully patched the map render issue, where very light territories would be colored white
-- cleaned up declare war when an NAP is broken
-- formatted market numbers more nicely
-
-### Update 1.5.0.5
-*Dec 22, 2025, 9:02 pm*
-- Fixed `-top power` for nations who have 0 area but are still in the game
-

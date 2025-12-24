@@ -93,12 +93,6 @@
             <li>
               <a href="#resources" class="text-info">Resources</a>
             </li>
-            <li>
-              <a href="#alliances" class="text-info">Alliances and Non-Aggression Pacts</a>
-            </li>
-            <li>
-              <a href="#treaties" class="text-info">Peace Treaties</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -316,97 +310,6 @@
             Oil is the same, except you require an Oil Drill to begin production. Contrary to real life, these resources are infinite and never run out. <br> <br>
             To convert Coal or Oil into Fuel, you need to build a Fuel Refinery using the <a href="../command-list/#build"><span class="command">-build</span></a> command. The fuel refinery has a maximum intake of 1 resource per tax cycle, no matter the resource type, nation stability, ideology, etc.
             As you can probably guess, Coal is less efficient than Fuel. Every 1 Coal convert to 0.5 Fuel, while every 1 Oil converts to 1.5 Fuel. 
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card page-header">
-      <div class="d-flex flex-row align-items-center">
-        <div class="card-body" style="padding: 3%" id="alliances">
-          <h5 class="card-title">Alliances and Non-Aggression Pacts</h5> <br>
-          <p class="card-text">
-            Alliances and Non-Aggression Pacts (abbreviated to NAPs) are two forms of diplomatic settings two nations can have in this game. Let's run through the difference between the two:
-          </p>
-          <br>
-          <p class="card-subtitle">Alliances</p>
-          <p class="card-text">
-            Allies cannot declare war on each other, and will be automatically called into each other's defensive wars. A nation can also call its allies into offensive wars, though they are not obliged to participate. <br>
-            To request or accept an alliance, do <span class="command">-ally &lt;nation&gt;</span> <br>
-            To call an ally into an offensive war, do <span class="command">-callin &lt;nation&gt; &lt;war&gt;</span> <br>
-            To join an ally's war, do <span class="command">-joinwar &lt;war&gt;</span>
-          </p>
-          <br>
-          <p class="card-subtitle">Non-Aggression Pacts</p>
-          <p class="card-text">
-            Two nations with an NAP cannot declare war on each other, but have no other obligations. It's basically a permanent truce between two nations. <br>
-            To request or accept an alliance, do <span class="command">-nap &lt;nation&gt;</span> 
-            <br> <br> <br>
-            As can be seen, alliances and NAPs are both requested and accepted with the same command. To view all alliance and NAP offers, as well as calls into war, the command to run is <span class="command">-offers</span>. <br>
-            Additionally, either an alliance or NAP can be broken with <a href="../command-list/#cancel"><span class="command">-cancel</span></a>. The penalty for breaking an alliance or Non-Aggression Pact is a truce for 6 hours. This has one notable exception: Fascist Nations who declare war on a nation they have an NAP with do not suffer this mandatory truce.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card page-header">
-      <div class="d-flex flex-row align-items-center">
-        <div class="card-body" style="padding: 3%" id="treaties">
-          <h5 class="card-title">Peace Treaties</h5> <br>
-          <p class="card-text">
-            Treaties are inherently complicated as they deal with post-war borders, reparations, and truce times at the same time. So the process for drafting, amending, and ratifying a treaty has been made as simple as possible. <br>
-          </p>
-          <p class="card-subtitle">Drafting Treaties</p>
-          <p class="card-text">
-            Drafting a treaty is the process of creating a potential peace treaty. The command is <span class="command">-draft</span>. That's all, no parameters. The bot will then prompt you on each of the 3 settings, telling you in what format to send them in and giving you examples if requested and ample time to respond.
-          </p>
-          
-          <p class="card-subtitle">Amending Treaties</p>
-          <p class="card-text">
-            Amending treaties is the process of changing a specific peace treaty. Keep in mind you can only amend treaties that you created. The command is <span class="command">-amend &lt;treaty name&gt;</span>, and similarly to draft, there are no other parameters. The bot will prompt you on what specifically you'd like to amend and will tell you in what format to send your response in.
-          </p>
-
-          <p class="card-subtitle">Publishing Treaties</p>
-          <p class="card-text">
-            Publishing treaties is the act of making a treaty no longer a draft. This can only be done once and notifies all other parties of the treaty's existence, and that they are allowed to ratify it. The command to publish a treaty is <span class="command">-publish &lt;treaty name&gt;</span>.
-          </p>
-
-          <p class="card-subtitle">Ratifying Treaties</p>
-          <p class="card-text">
-            The act of ratifying a treaty is agreeing to the contents of a treaty. You can do this by running <span class="command">-ratify &lt;treaty name&gt;</span>. You may cancel your ratification of a treaty through <span class="command">-cancel ratify &lt;treaty name&gt;</span>.
-          </p>
-          <div id="accordion">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <p>View logic on AIs accepting peace treaties</p>
-                    <p class="text-muted">(not strictly neccessary information)</p> 
-                  </button>
-                </h5>
-              </div>
-
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  Treaties are only applicable to AI nations if they have allies in the war or have some territory left. This is because if they don't have allies, upon collapse they are automatically annexed and their balance is split up by conquering nations as they cannot come back to life. <br>
-                  If not all player nations have ratified a treaty, the AI will not ratify. <br>
-                  If all players have ratified a treaty: <br>
-                  <ul>
-                    <li>
-                      If their capital has not been taken, the only treaty they will accept is a white peace.
-                    </li>
-                    <li>
-                      If their capital has been taken, they will accept a peace treaty on the current frontlines. 
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p class="card-subtitle">Viewing Treaties</p>
-          <p class="card-text">
-            You can view the contents of a treaty by running <span class="command">-treaty &lt;treaty name&gt;</span>. You may view a list of all your treaties by running <span class="command">-treaty</span> with no parameters or <span class="command">-treaties</span>.
           </p>
         </div>
       </div>

@@ -111,7 +111,7 @@ Aug 25, 2025
 🏆 PumkinSquash
 Sumatra (Capital: Dhaka)
 🥈 Nayan
-Bangladesh (Capital: Kuala Lumpur)
+Bangladesh (Capital: Bangka)
 🥉 SimplyAFryGuy
 Sulawesi -> Sultanate of Gowa (Capital: Pekanburu)
 
@@ -132,22 +132,3 @@ Romania -> Balkan Federation
 Germany -> German Empire
 🥉 Yasin Elkadri
 Spain -> Iberian Union
-
-Nov 17, 2025
-1.4.5 Game 3
-🏆 PumkinSquash
-Romania -> Balkan Federation
-🥈 Nayan
-Ukraine
-🥉 Scityher
-Turkey
-
-Dec 24, 2025
-1.5 Game 1
-🏆 Affrobo
-Poland
-🥈 Nayan
-France
-🥉 JSinghG
-Great Britain
-

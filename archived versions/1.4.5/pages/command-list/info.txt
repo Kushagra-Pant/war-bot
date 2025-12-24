@@ -19,17 +19,17 @@ population			-population <nation>	Returns the population of the nation specified
 save				Hard saves the current round, in case anything goes wrong and data is wiped.
 declarewar			-declarewar <nation>	Declares war on a nation
 wars				Displays all currently ongoing wars
-peace		DELETED	-peace <nation> <clauses>	Offers a peace treaty to a nation
+peace			-peace <nation> <clauses>	Offers a peace treaty to a nation
 resign				Removes you as the leader of your nation
-accept		DELETED	-accept <treaty number>	Accepts a peace treaty
-reject		DELETED	-reject <treaty number>	Rejects a peace treaty
-treaties				Displays all treaties to and from you, ordered by war
+accept			-accept <treaty number>	Accepts a peace treaty
+reject			-reject <treaty number>	Rejects a peace treaty
+treaties				Displays all treaties to and from you, and their respective numbers
 attack			-attack <territory> <unit ids separated by space>	Attacks the specified territory with all units mentioned. The attack does not commence unless all units are valid and yours and eligible to attack.
 give			-give <nation> <amount of money> <(optional message)>	Gives a nation some amount of money, with an optional message attached
 fortify			-fortify <territory>	Builds a fortress on a territory that you own
 borders	b		-borders <territory>	Returns the territories that border the specified territory
 bordersnat	bnat		-bordersnat <territory>	Returns the territories that border the specified nation
-seamap		Map		Returns a labelled map of the sea
+seamap				Returns a labelled map of the sea
 unitinfo			-unitinfo <unit id>	Returns all information relating to a unit you own
 rename			-rename <unit id> <new id>	Renames a unit to whatever you specify. Restrictions apply
 cede			-cede <territory> <nation>	Cedes a territory to the nation specified. You cannot cede to a nation you're at war with. You also cannot cede your capital or your final territory.
@@ -37,14 +37,14 @@ move	m		-move <unit id> <territory>	Move the specified unit to the specified ter
 merge			-merge <unit ids separated by space>	Merges the specified units into a single division. They must be of the same type and in the same territory upon merging.
 split			-split <unit id> <(optional amount)>	Splits a unit into as many divisions as you specify. If no number is specified, 2 is assumed.
 disband			-disband <unit id>	Eliminates the unit specified, if it's yours
-map		Map	-map <nation / territory / 'all'> <(optional specification: 'nat' for nation, 'terr' for territory)>	Displays a map of the specified nation or territory, or 'all' if specified. 
-warmap		Map		Displays a map of all nations you are allied to, have a truce with, have an NAP with, and are at war with
+map			-map <nation / territory / 'all'> <(optional specification: 'nat' for nation, 'terr' for territory)>	Displays a map of the specified nation or territory, or 'all' if specified. 
+warmap				Displays a map of all nations you are at war with
 cooldowns			-cooldowns <unit / int for integration>	Displays all the cooldowns, for either your units or for territory integration
-multimap		Map	-multimap <nations separated by space>	Maps several nations at once
+multimap			-multimap <nations separated by space>	Maps several nations at once
 scorch			-scorch <territory>	Scorches a territory. This reduces the population by half and removes all buildings from the territory. 20 fuel is required to scorch a province
 settruce		Admin Only	-settruce <duration in format "#h #m">	Sets a global truce, where no nation can attack another. Often done at the start of games, to give preparation time to everybody.
 z				Returns a simple message. Exists to test whether the bot is online at the moment.
-upgrade		DELETED	-upgrade <territory / 'cost'>	Upgrades one of your territories. If you specify 'cost', it will display the cost to upgrade each.
+upgrade			-upgrade <territory / 'cost'>	Upgrades one of your territories. If you specify 'cost', it will display the cost to upgrade each.
 bombard			-bombard <territory> <(optional battleship id)>	Bombards a province with one of your battleships.
 myseas				Displays the seas you currently occupy
 terrinfo			-terrinfo <territory>	Displays all information pertaining to the territory specified. If you own the territory, it also shows the units stationed in it.
@@ -62,9 +62,9 @@ distribute			-distribute <(optional 'strategic')>	Distributes 1 troop division i
 mappoint		Admin Only	-mappoint <coordinate>	Paints a point on a map and fills it using the default tolerance. Mostly used for testing issues
 unitcooldowns			-unitcooldowns <unit type>	Returns the unit type's cooldowns by terrain. If you are a nation, it bases them off your stability. If you aren't, it bases them off a modest 60% stability.
 getterrainmap		Admin Only		Paints a map of all terrains
-terrainmap		Map		Displays a map of all terrains. The image is saved beforehand for higher response speeds.
-legendmap	lmap	Map	-lmap <nation / territory / 'all'>	Displays a labelled map of whatever specified.
-railmap		Map	-railmap <nation / territory / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
+terrainmap				Displays a map of all terrains. The image is saved beforehand for higher response speeds.
+legendmap	lmap		-lmap <nation / territory / 'all'>	Displays a labelled map of whatever specified.
+railmap			-railmap <nation / territory / 'all'>	Displays a map of all rails and rail stations built in whatever specified.
 maps				Tells you all types of maps and their syntaxes
 market				Displays the market. The difference between the market and the shop is that on the market, things are sold by users. When buying something off the market you are giving another nation money.
 order			-order <item id> <(optional amount)>	Buys an item off the market.
@@ -74,8 +74,8 @@ scan			-scan	Scans the bordering territories of all your territories with a Rada
 getterr			-getterr <nations separated by space>	Returns the territories of all nations specified in python list format. Mostly used by the developer when creating formables.
 form			-form <(optional formable)>	If no formable is specified, it lists all the formables you can potentially form. If a formable is specified, it attempts to transform you into that formable.
 formable			-formable <formable>	Returns information and a map of the specified formable.
-buildmap		Map	-buildmap <building>	Displays a map with all territories containing the specified building highlighted
-resmap		Map	-resmap <coal / oil>	Returns a map of the resource specified
+buildmap			-buildmap <building>	Displays a map with all territories containing the specified building highlighted
+resmap			-resmap <coal / oil>	Returns a map of the resource specified
 formreq			-formreq <formable>	Returns the requirements to form a specific formable, including territory and ideology prerequisites
 formlist				A list of all formables in the game.
 ideologies				A list of all ideologies in the game
@@ -84,30 +84,11 @@ setide			-setide <ideology>	Changes your nation's ideology to what you specified
 setnews		Admin Only	-setnews	Sets the news channel to wherever the command is run.
 setcapital			-setcapital <territory / 'costs'>	Sets your capital to the territory specified. If "cost" is specified, it displays the cost of changing the capital to each territory.
 econboost			-econboost	Displays the boost to a territory's tax revenue each building gives.
-popmap		Map		A heatmap of each territory by population
+popmap				A heatmap of each territory by population
 statues				A list of all statues within your territory, and statues built by you abroad
 bulldoze			-bulldoze <territory> <building>	Removes a building from the specified territory. To view the cost, run `-bulldoze help`.
 revolt			-revolt <ideology>	Changes your ideology to any other ideology in the game. No political power nor prerequisite required, but has grave stability consequences
 broadcast			-broadcast <(optional 'cost')> <message>	Broadcasts a message to the public advertisements channel. To view the cost of a message but not send it, specify "cost" before the message
-ally			-ally <nation>	Requests or accepts an alliance with the specified nation.
-nap			-nap <nation>	Requests or accepts a non-aggression pact with the specified nation.
-offers				Lists all alliance and NAP offers to you, in addition to calls to war
-callin			-callin <nation> <war>	Call an ally nation into a war
-joinwar			-joinwar <war>	Join a war. If conflicting offers exist, the bot will prompt you to specify which in a response
--diplomacy				View all your allies, NAPs, and those you're at war with.
-draft			-draft	Draft a peace treaty. There are no parameters as the bot prompts you through the process.
-amend			-amend <treaty name>	Amend a treaty. There are no other parameters as the bot prompts you through the process.
-publish			-publish <treaty name>	Publish a treaty, notifying all other parties of it's existence and allowing for ratification of the treaty.
-ratify			-ratify <treaty name>	Agree to the contents of a treaty. Once all parties have ratified, the treaty will be implemented.
-treaty			-treaty <(optional treaty name)>	View a specific treaty. If no treaty specified, it lists all your treaties.
-warinfo			-warinfo <war name>	View the participants of the specified war
-cancel			-cancel <'ally' / 'nap' / 'ratify'> <nation or treaty>	Cancel an alliance or NAP with a nation, or ratification of a treaty. For examples, run `-cancel help`.
-trucelist				A list of all ongoing truces, including the global truce and truces your nation isn't affected by
-debts				A list of all money you owe through reparations
-popboost				A list of the population boost each building gives
-growthmap		Map		A heatmap of each territory by population growth. Gray always represents 0% growth.
-add_money		Admin Only	-add_money <nation>	Adds money to a specific nation. Only used during testing.
-growthrates		Admin Only	-growthrates <nation>	Displays the growth rates of each territory of the specified nation
 setAd		Admin Only		Sets the channel the command is run in to the official advertisement channel
 cleanTroops		Admin Only		Removes all troops from the text files whose nations don't exist (bug-fixing only)
 shift		Admin Only	-shift <territory> <number + u/d/l/r>	Shifts the main point of a territory in the direction specified. u,d,l, and r are up, down, left, and right respectively. For example, 3u moves the point 3 up. The main point is useful when labelling the territory.
