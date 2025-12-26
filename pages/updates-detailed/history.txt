@@ -639,7 +639,7 @@ Ladies and gentlemen, **autotax** is here!
 
 # Update 1.5 - The Diplomacy Update
 *Dec 19, 2025 12:38 pm*
-## Major Additions
+**Major Additions**
 - Diplomacy
   - Alliances
      - An alliance is a type of relationship with another nation where you will be called into all their defensive wars, and they will be called into all your defensive wars. You are not allowed to declare war on allies.
@@ -678,7 +678,7 @@ Ladies and gentlemen, **autotax** is here!
   - To view how much each building aids in population growth, do `-popboost`
   - The War Devastation of a specific territory is included in `-terrinfo <territory>`
   - To view a map of territories colored by their growth rate, do `-growthmap`
-## Minor Additions/Changes
+**Minor Additions/Changes**
 - View the participants of a specific war with `-warinfo`
 - If you cede someone a territory it now notifies them
 - `-warmap` has been massively upgraded, and now displays your allies, truces, and NAPs alongside enemies.
@@ -710,4 +710,18 @@ Ladies and gentlemen, **autotax** is here!
 ### Update 1.5.0.5
 *Dec 22, 2025, 9:02 pm*
 - Fixed `-top power` for nations who have 0 area but are still in the game
+
+### Update 1.5.0.6
+*Dec 25, 2025, 11:10 am*
+- changed tax formula over time, halved tax income
+- AIs no longer auto accept NAPs
+- fixed input and formatting issues in `-build`
+- cleaned up number formatting in `-buy`
+- fixed `-upgrade` message
+- changed `-wars` formatting to include allies
+- allies joining wars is now displayed in world news
+
+### Update 1.5.0.7
+*Dec 25, 2025, 3:16 pm*
+- Excluded current balance from`-top power` calculation
 
