@@ -82,5 +82,11 @@ fetch('winners.txt')
     table.insertAdjacentHTML('beforeend', tablemsg)
     $('#winners-table').DataTable({
       dom: 't',
+      pageLength: 25,
+      order: [
+        [1, 'desc'], // 1 = gold column
+        [2, 'desc'], // 2 = silver column
+        [3, 'desc']  // 3 = bronze column
+      ]
     });
   });
