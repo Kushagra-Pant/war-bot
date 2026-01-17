@@ -725,3 +725,46 @@ Ladies and gentlemen, **autotax** is here!
 *Dec 25, 2025, 3:16 pm*
 - Excluded current balance from`-top power` calculation
 
+## Update 1.5.1 - Diplomacy Extended
+*Jan 9, 2026, 4:09 pm*
+**The promised extension to the previous Diplomacy Update is here!**
+### Major Additions:
+- Partial Treaties
+  - You can now exit a war with the permission of everyone involved in the treaty. Involvement means anyone who pays or receives reparations, loses or gains territory, or the leader of the opposite side of war.
+  - In a partial treaty, any specified truce will only be between the parties of the treaty.
+  - To create one, you do not need to specify anything extra, it is built in as a prompt of the `-draft` command. Leaders of a side of war cannot create a partial treaty.
+- Trusted
+  - You can now trust other nations, which means allow their troops into your land and allowing them to use your railways. This is not reciprocal; they do not need to accept, they just get a notification telling them they can move troops into your nation now.
+  - You cannot go to war with nations you trust. You can go to war with nations that trust you. 
+  - You can cancel a nation's trusted status with `-cancel trust <nation>`
+    - Upon breaking trust with a nation, there is a 10 hour truce (10 hours after 8am if you break it during the midnight truce), *only if they had troops in your territory*. 
+    - This is a special truce where they are allowed to still move troops within your territory in order to evacuate.
+    - After this truce is over, the nation that the territory belongs to is allowed to **disband your troops**.
+    - This special truce is indicated in `-trucelist`
+  - Trusted is overriden by alliances. If someone you trust declares war on an ally, your trust breaks.
+  - If two nations who are at war have troops in the same territory, the game automatically detects it and commences a battle.
+### Minor Additions / Changes / Patches
+- New command: `-nation <nation>`, which gives you general and diplomatic information about the specified nation.
+- Significantly reduced the economic gain of buildings to almost 0. This excludes financial centers. Economic Boosts can be viewed with `-econboost`.
+- There is now a limit on financial centers. All limits can be viewed with a new command, `-fincenters`. It's also listed in the `-nation` command. (The only way to exceed this limit would be to conquer other nation's financial centers).
+- Added 3 new provinces, to avoid a previously possible naval cheat. The additions can be found in France, Sweden, and Finland.
+- As a territory's population exceeds 10 million people, its growth rate grows closer to 0
+- Truces now apply to belligerents in the same side of war as well
+- Rewrote parts of the attack command to suit multi-nation defenses
+- Patched `-rails`
+- Removed coal from top power calculations
+- Small wording changes here and there
+- Fixed bugs relating to alliances, NAPs, wars, and treaty display
+
+### Update 1.5.1.1
+*Jan 11, 12:51 pm*
+- Fixed a prevelant mistake with sending messages to channels that don't exist, which should fix the lack of responses from commands like `-attack` or -`build`
+
+### Update 1.5.1.2 
+*Jan 13, 6:13 pm*
+- Fixed attacking in the very specific scenario where the defender has ships but the attacker does not
+
+### Update 1.5.1.3 
+*Jan 13, 7:03 pm*
+- Moved overlapping troop resolving function to the very end of the declarewar logic (I'm pretty sure this was causing every issue thus far from the slow speed to the attack problems)
+
