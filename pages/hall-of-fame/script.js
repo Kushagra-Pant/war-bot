@@ -74,7 +74,7 @@ class TeamGame {
   getTeamMembersHtml(input){
     let formatted = ""
     for(let i of input.slice(1)){
-      formatted += `<div class="nation">${i.name}: ${i.nation} </div>`
+      formatted += `<div class="nation"><b>${i.name}:</b> ${i.nation} </div>`
     }
     return formatted
   }
