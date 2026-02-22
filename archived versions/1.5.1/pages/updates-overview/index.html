@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet"></link>
+  </head>
+  <body class="bg-skyblue">
+    <nav class="navbar navbar-expand-lg bg-secondary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="../../">Overview</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="../how-to-play/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                How to Play
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../how-to-play">How to Play</a></li>
+                <li><a class="dropdown-item" href="../command-list/">List of Commands</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="../updates-overview/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Updates
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item disabled" href="../updates-overview/">Overview</a></li>
+                <li><a class="dropdown-item" href="../updates-detailed/">Detailed</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="pages/maps/index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Maps
+              </a>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item " href="../maps/">Official Maps</a></li>
+                <li><a class="dropdown-item" href="../make-your-own-map/">Make your own Map Guide</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="../hall-of-fame/">Hall of Fame</a>
+            </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="../past-versions/">Past Versions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="innerbody">
+      <div class="card page-header">
+        <div class="d-flex flex-row align-items-center">
+
+          <div class="card-body">
+            <h1 class="text-center card-title main">Updates Overview</h1>
+            <p class="text-center">
+              This overview highlights the most impactful updates that War Bot has seen.
+              Each update shown here reworks a specific aspect of the game, opening the door to new strategies, varied play styles, and evolving tactics. They give players more choice on what to purchase, and really consider what values they hold.
+              Smaller patches are excluded from this section, but can be found in the <a href="../updates-detailed/">Detailed Updates</a> page.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Release 1.0</h5>
+          <h6 class="card-subtitle mb-2 text-center">Dec 20, 2023</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/Tanks_Destroyed_Sinai.jpg" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This was the initial release of the game. It started off as a fun passion project. I learned how to make discord bots earlier in the year with my Stock Trading bot, and now wanted to create something more advanced. This update took 1 month, from the inception of the bot to it's initial release.
+              <br>
+              At this time, it was a fairly simple game. There were just three types of troops: Light Infantry, Motorized Infantry, and Medical Units. Apart from these, there were only two other things in the shop, a fortress and gasoline to burn a province down to rubble.
+              <br>
+              There were 4 types of taxes: minimum, moderate, maximum, and evil. You could declare war and make peace. You could also rename your divisions. 
+              <br>
+              There was a functioning map command, to map either a nation, a territory, or all the nations. 
+              <br>
+              Apart from all this, there wasn't much else. It was a much simpler time. There was only land warfare, and the only real strategy was spam troops and send them to the frontlines. It was a humble beggining for a game which would soon expand in so many different fronts. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Update 1.1</h5>
+          <h6 class="card-subtitle mb-2 text-center">Dec 22, 2023</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/unrest.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This was the first major update of the War Bot. Between 1.0 and 1.1, there were many small updates, like the addition of <span class="command">-message</span>, <span class="command">-disband</span>, and <span class="command">-multimap</span> commands. But this update would add many new features, all at once, hence being considered a major update.
+              <br>
+              It added capitulation and the ability to seize your enemy's treasury with the <span class="command">-annex</span> command. It added integration, restricting your ability to deploy in newly conquered territories.
+              It also added the <span class="command">-upgrade</span> command to increase a territory's population, and this command in particular would cause me a headache as users exploited it and their populations soared to unreasonable levels.
+              <br>
+              Other bug fixes and small additions also happened in this update. All in all, this update allowed games to last longer, and while most additions had to be tweaked or later removed, one that aged incredibly well was the concept of integration.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Update 1.2 – The Naval Update</h5>
+          <h6 class="card-subtitle mb-2 text-center">Feb 3, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/battleship.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This update took by far the most time to make, as I was essentially creating a new front of war. While I wasn't working on this for the entire year between 1.1 and 1.2, it still was a lot of work and often times demotivated me. But at last, it was eventually released.
+              <br>
+              As apparent by the name, a new front of war was added: the seas. 3 ship types were added: Submarines, Destroyers (now Battleships), and Carriers. These ships explicitly only operated on seas. Submarines sank other ships, Destroyers bombarded coasts, and Carriers carried troops across the sea.
+              <br>
+              That's really all there was to this update, and yet it took the longest time to make. Other updates felt like a walk in the park compared to this one.
+            </p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Update 1.3 – The Mechanization Update</h5>
+          <h6 class="card-subtitle mb-2 text-center">Feb 18, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/artillery.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This update was all about advancing ground warfare. There were 2 new ground units: Artillery and Tanks. Artillery were great at offense but lacking in defense. Tanks were great at both.
+              The update also added fuel: tanks required the most fuel, followed by artillery, and then Motorized Infantry. Light Infantry required no fuel.
+              <br>
+              Rails were also added. These allowed for the quick transport of troops, even to unintegrated areas, but at a high cost. A second building was added, a Railway Station, and the shop layout was also changed in favour of a more organized look.
+              And finally, terrain was added, with more mountainous terrain having higher cooldowns for troops and trains. A map to view this terrain was also added.
+              <br>
+              This update opened up more strategies a player could use, and also gave different strengths to different nations. Germany would most likely use tanks as they were surrounded by flat terrain. Artillery would be most useful in fighting non-player countries, as they couldn't retaliate.
+            </p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Update 1.3.1 – The Market Update</h5>
+          <h6 class="card-subtitle mb-2 text-center">Jul 2, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/market.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This update was in between a major update and a simple patch update / one command addition, as it added one feature with several commands to work with it. It still had the potential to change the way players played the game.
+              <br>
+              This update added a market, with 4 commands (<span class="command">-market</span>, <span class="command">-sell</span>, <span class="command">-order</span>, and <span class="command">-rescind</span>) to interact with the market.
+              <br>
+              While seeming simple, it actually required a bit of time to code, much more than a regular small addition. I also solidified the naming standards from this update onwards, explained in Updates > Detailed. The market was unused at first, as there wasn't really much to sell, but after 1.4 it became much more used to conduct sales of manufactured goods.
+            </p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Update 1.3.2 – The Radar Update</h5>
+          <h6 class="card-subtitle mb-2 text-center">Jul 7, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/radar.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              While taking much less work than the Market Update, this update would go on to be much more used.
+              <br>
+              This update added a building called Radar Stations, which detects all enemy forces on bordering territories and seas, with the exception of Submarines. They were very useful and eventually the price of them had to be hiked as they were too popular.
+              This update also changed the name of Destroyers to Battleships to reflect accuracy, among other small changes. 
+            </p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Update 1.3.3 – The Tax Revamp</h5>
+          <h6 class="card-subtitle mb-2 text-center">Jul 11, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/money.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This update completely changed the way taxation worked. Since it's inception, there was a major power imbalance between those who had lots of time to devote to War Bot and those who didn't. This may have intimated new players into not playing, as they didn't have the time to keep up. But after this update, this would all change.
+              This update created the autotax, which is just as it sounds: players collect tax 24/7, even when they're offline.
+              This update also gave more tax freedom. Players set their own tax rate. This eliminated the need for the tax levels in play since Update 1.0.
+              After this update, there was a boost in the amount of players, more players than the game had ever seen before.  
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">Update 1.4 – Power & Principle</h5>
+          <h6 class="card-subtitle mb-2 text-center">Jul 20, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/oil drill.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This was a major update for the game. It created 3 major additions for the game, reshaping how the game would be played.
+              <br>
+              The first addition was resources. Two, to be precise: Coal and Oil. Coal was automatically extracted, while for Oil you had to buy an Oil Drill. To convert either into fuel, you need a Fuel Refinery. Oil is more efficient than Coal, and so a Fuel Refinery would prioritize oil over coal. Each territory has a predetermined amount of reserves, creating more depth to countries' power dynamics.
+              <br>
+              The second addition was ideologies. For this, a new stat was added: Political Power. Political Power was deliberately hard to lose, to encourage ideology switching. 10 ideologies were created, and each had their own perks and negatives, pertaining to income, attack strength, defense, stability, etc.  
+              <br>
+              The third addition was formables. When you acquire the required territories, and became the required ideology, you could transform into a different, grander country. For example, the Roman Empire, the European Union, or the Carloginian Empire. Each country would have different formables available to them. This added an overall goal for each country.
+              <br>
+              Other changes were also bundled in this update, for example Battleships not requiring Ammunition anymore and the addition of a news channel. All in all, this completely reshaped the game. Different ideologies encouraged different play styles; the manufacturing of fuel created use for the market.
+           </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header">
+        <div class="card-body text-center">
+          <h5 class="card-title">Update 1.4.1 – The Capital Update</h5>
+          <h6 class="card-subtitle mb-2">Jul 25, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/paris.jpg" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This update gave every nation their own capital. This gave strategic significance to a territory in every nation, mimicking real life. Capitals were cheaper to upgrade and gave a tax boost, but when lost would reduce a nation's stability by 10% - a major reduction.
+              <br>
+              Speaking of tax boost, tax was now calculated differently. It would be calculated on a territory by territory basis instead of at the national level. This allowed for another change to be made this update: each building would now give a revenue boost for that specific territory. This would lead to buildings being built for the sole purpose of inflating the revenue, however, and so in future updates prices of buildings would have to be hiked.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card page-header" id="statue">
+        <div class="card-body text-center">
+          <h5 class="card-title">Update 1.4.2 – The Statue Update</h5>
+          <h6 class="card-subtitle mb-2">Jul 28, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/statue of liberty.jpg" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              Ever since the autotax update, players were complaining that stability increases were too slow, and I needed to change them. Not wanting to upset the delicate balance, I approached this in another way: a building that increases your stability.
+              This is essentially what a statue does. For a steep price, the stability gain per hour of a nation is increased. This rate is also influenced by ideologies, with some ideologies boosting the stability gain of statues even more.
+              The cool thing about a statue, though, is that when an enemy captures it, it doesn't add to their stability but instead takes away from it. The only way to get rid of the negative effects is to bulldoze the statue, which has its price.
+              Speaking of which, bulldozing a building was introduced this update as well and has backwards compatability with other buildings.
+           </p>
+          </div>
+        </div>
+      </div> 
+
+      <div class="card page-header" id="statue">
+        <div class="card-body text-center">
+          <h5 class="card-title">Update 1.4.3 – The Revolution Update</h5>
+          <h6 class="card-subtitle mb-2">Aug 6, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/revolution.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              The gap between this smaller update and the previous update is explained by the fact that I was working on this website. Anyway, this update added revolutions, a small feature that allows you to switch to any other ideology in the game, bypassing the prerequisite, for a cost of 1/3 of your stability. If you have negative stability, you just go 1/3 deeper into the negatives.
+              This revolution is then broadcast to the global news channel.
+              To cause a revolution to your own country, you simply have to do <span clas="command">-revolt &lt;ideology&gt;</span> 
+              <br>
+              Many other features were added, including a small reworking of naval combat, inclusion of current balance in <span class="command">-top power</span>, a change to the stability gain formula of statues, and a bombardment buff. 
+              You can view these in more detail in <a href="../../pages/updates-detailed/">Detailed Updates</a>.
+           </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header" id="statue">
+        <div class="card-body text-center">
+          <h5 class="card-title">Update 1.4.4 – The Advertisement Update</h5>
+          <h6 class="card-subtitle mb-2">Aug 10, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/shopping.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This update added Advertisements, which are paid broadcasts to a brand new, public, view-only channel called #advertisements. While meant for telling people to buy your products, you could broadcast any message you'd like, including victory messages.
+              You send these messages via the <span class="command">-broadcast</span> command.
+              <br>
+              This update also integrated AI to the <span class="command">-help</span> command, as I noticed many new players would ask me questions when I wasn't online, which would hinder their ability to play the game.
+              I used an AI model developed by Groq (Not Grok!) for this, who offer very generous free tiers.
+           </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header" id="statue">
+        <div class="card-body text-center">
+          <h5 class="card-title">Update 1.4.5 – Financial Centers</h5>
+          <h6 class="card-subtitle mb-2">Aug 28, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/finance.png" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              Previously, no updates were promised between 1.4.4 and 1.5. However, the game was getting stale and 1.5 development was taking a long time. So, it was decided that a Tier 3 update would be added to reinvigorate the game.
+              <br>
+              This update added Financial Centers, which are buildings that double territorial tax revenue, and halve it's <span class="command">-upgrade</span> and <span class="command">-setcapital</span> prices.
+              However, like all things useful, they are very pricey, and at the time of update were the most expensive item in the game by a long shot.
+              <br>
+              Additionally, this update added a new map, <a href="../maps/index#ExpandedEuropeCard">Expanded Europe</a>, which was used in the following game.
+              <br>
+              Formulas for <span class="command">-setcapital</span> and <span class="command">-upgrade</span> were also changed. 
+              <br>
+              Most of the time spent on this update was spent on making the new map, with the actual content (the financial centers) taking a relatively short amount of time to develop.
+           </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card page-header" id="diplomacy">
+        <div class="card-body text-center">
+          <h5 class="card-title">Update 1.5 – The Diplomacy Update</h5>
+          <h6 class="card-subtitle mb-2">Dec 19, 2025</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/diplomacy.jpg" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This was a long-promised update that took a while to release due to it's inherent modifications of the war structure. It added alliances, non-aggression pacts, peace treaties to end wars, which dictate post-war borders, reparations, and truces, and automatic population growth. <br>
+              An immediate effect of this update was that it widened the gap between strong and weak countries. Because <span class="command">-upgrade</span> was removed, smaller nations actually had to invest in costly infrastructure to gain population. <br>
+            </p>
+          </div>
+        </div>
+      </div>
+
+            <div class="card page-header" id="diplomacy">
+        <div class="card-body text-center">
+          <h5 class="card-title">Update 1.5.1 – Diplomacy Extension</h5>
+          <h6 class="card-subtitle mb-2">Jan 9, 2026</h6>
+        </div>
+
+        <div class="d-flex flex-row align-items-center">
+          <img src="../../images/diplomacy.jpg" class="rounded-circle ms-3" style="width: 200px; height: 200px; object-fit: cover; margin: 2%;">
+
+          <div class="card-body">
+            <p class="card-text text-center">
+              This update built off of the previous update, as implied by the title. It added partial treaties and trusted status, features that were supposed to come out in the previous update but didn't.
+              It also fixed many of the bugs associated with the previous update, capped financial centers, and near-eliminated the economic gain coming from other buildings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,770 @@
+# War Bot Beta 
+*Dec 18, 2023, 11:09 am*
+War Bot Beta made available to players released for the purpose of finding and reporting errors
+
+# War Bot Beta II 
+*Dec 19, 2023, 4:33 pm*
+Second edition of War Bot Beta available to players for testing purposes
+
+# Release 1.0
+*Dec 20, 2023 at 7:30 am*
+Initial release of War Bot Real
+**The available commands are as follows:**
+Purchase Commands: `-tax`, `-shop`, `-buy`, `-inv`
+Information Commands: `-map`, `-territories`, `-borders`, `-bordersnat`, `-wars`, `-toppop`, `-population`
+Army Commands: `-deploy`, `-mytroops`, `-rename`, `-split`, `-merge`, `-move`, `-unitinfo`, `-fortify`
+War Commands: `-declarewar`, `-attack`, `-cede`, `-scorch`
+Treaty Commands: `-peace`, `-treaties`, `-accept`, and `-reject`
+Admin Commands: `-register`
+
+**Update 1.0.1**
+*Dec 20, 2023 at 11:50 am*
+- Added `-give` command; messages can now be sent to other countries via war bot
+
+**Update 1.0.2**
+*Dec 20, 2023 at 1:51 pm*
+- Patched fortify
+
+**Update 1.0.3** 
+*Dec 20, 2023 at 2:05 pm*
+- Patched unitinfo
+
+**Update 1.0.4**
+*Dec 20, 2023 at 2:12 pm*
+- Made 100 the max stability
+
+**Update 1.0.5** 
+*Dec 20, 2023 at 2:26 pm*
+- Patched Cataluña, Toulon, and Max stability
+
+**Update 1.0.6** 
+*Dec 20, 2023 at 5:15 pm*
+- Patched encirclements
+- Added `-disband` command
+
+**Update 1.0.7**
+*Dec 20, 2023 at 7:25 pm*
+- Added `-multimap` command
+
+**Update 1.0.8**
+*Dec 20, 2023 at 10:54 pm*
+- Fixed Denmark's internal and external borders
+
+**Update 1.0.9**
+*Dec 21, 2023 at 10:26 am*
+- Patched Macedonia, Kosovo, and Shkodër borders
+- Patched fortify command
+
+**Update 1.0.10**
+*Dec 21, 2023 at 3:57 pm*
+- The discord bot can now send discord messages over the character limit
+
+**Update 1.0.11**
+*Dec 21, 2023 at 4:11 pm*
+- Patched attack command
+
+# Update 1.1
+*Dec 22, 2023 at 7:04 am*
+**Major Additions:**
+- Added capitulation
+ - When you conquer the whole of a country, you can use the `-annex` command to take 90% of their money and all their inventory
+- Added integration
+ - You won't be able to deploy in newly conquered territories immediately, there is a cooldown dependant on your stability
+ - Non-integrated provinces show up as lighter on the map, thank NeonFish
+- Added upgrading cities with the `-upgrade` command
+ - These boost the population and therefore tax income of your state
+**Minor Additions:**
+- Added `-players` command to view every player
+**Minor fixes/patches**
+- Changed the `-deploy` confirmation message
+- Patched `-merge` confirmation message
+- Internally reworked `-declarewar` command
+- Changed tax formula
+- Fixed attack command
+- Patched Encirclements
+
+**Update 1.1.1**
+*Dec 22, 2023 at 8:44 am*
+- Patched `-upgrade`
+
+**Update 1.1.2**
+*Dec 22, 2023 at 10:30 am*
+- Reduced the time `-move` takes for Light Infantry and Medical units
+
+**Update 1.1.3**
+*Dec 22, 2023 at 3:45 pm*
+- Patched scorching
+
+**Update 1.1.4**
+*Dec 22, 2023 at 7:10 pm*
+- Patched `-move` cooldown issues
+- Reworked capitulation
+ - Removed the `-annex` command. Now you automatically get the loot after fully conquering a nation.
+
+**Update 1.1.5**
+*Dec 22, 2023 at 8:20 pm*
+- Added `-distribute` command
+
+**Update 1.1.6**
+*Dec 23, 2023 at 2:00 pm*
+- Added `-warmap` command
+- Patched `-attack`
+
+**Update 1.1.7**
+*Dec 25, 2023 at 8:57 am*
+- Bot will now never go offline
+
+**Update 1.1.8**
+*Dec 26, 2023 at 9:04 am*
+- Finally patched capitulation
+- Hopefully patched troops
+
+**Update 1.1.9**
+*Dec 26, 2023 at 6:06 pm*
+- Patched yet another capitulation bug (should be good now for real this time)
+
+**Update 1.1.10**
+*Dec 29, 2023 at 8:14 pm*
+- Changed `-save` command to back up files better
+
+# Update 1.2 - Naval Update
+*Feb 3, 2025 at 7:09 am*
+**Major Additions**
+- **Carriers:** Are capable of carrying troops across a sea. Have no attacking capabilites
+  - `-load <carrier> <units separated by a space>`: Loads a carrier with the units you specify. (Must all be on the same coastal province)
+  - `-unload <carrier>`: Unloads all units of a carrier to the territory you're on. (Must be on a coastal province)
+  - `-weights`: The weights of every unit that can be placed on a carrier
+- **Destroyers:** Sink carriers, are sunk by submarines, can bombard coastal provinces which kills both civilians and troops.
+  - `-load <number>`: Loads the amount of ammo onto the destroyer specified. They can't be taken out 
+  - `-bombard <territory>`: Bombs a territory that the destroyer is on or beside.
+- **Submarines:** Sink destroyers and carriers
+- **Seas:** A new front of the game where naval battles happen. Islands are no longer immune from war!
+  - `-seamap`: Map of all seas
+- **Deploying Ships:** You must deploy on a coastal province. **You can't deploy in the middle of the sea!** 
+  - Syntax: `-deploy <ship> <territory> <(optional amount)>`
+  - Do `-navy` to check all your deployed ships
+  - Do `-checkload` to check the loads of your destroyers and carriers
+**Minor Additions & Changes**
+- `-mytroops` changed to `-army`
+- To check both army and navy, do `-forces`
+- removed many unnecessary properties of territories and nations
+- Added an admin-only command to change the channel of a nation
+- Coastal Provinces now displayed with an :anchor: when `-t` or `-territories` called
+- You can no longer rename your division to include asterisks
+
+**Update 1.2.0.1**
+*Feb 3, 2025 at 4:11 pm*
+- Fixed move command for provinces with underscores
+- Fixed province borders
+- Made it so other players can't see where your submarines are
+
+**Update 1.2.0.2**
+*Feb 3, 2025 at 7:18 pm*
+- fixed borders
+- fixed attacking
+
+**Update 1.2.0.3**
+*Feb 3, 2025 at 7:33 pm*
+- fixed the Wash borders
+
+**Update 1.2.0.4**
+*Feb 3, 2025 at 9:10 pm*
+- fixed `-warmap`
+
+**Update 1.2.1**
+*Feb 5, 2025 at 7:15 am*
+- renamed Crete to Kriti to avoid confusion with a similarly named sea
+- patched `-attack`
+- patched Irish provinces
+- increased the rate that medical units save troops
+- added integration when ceding territories
+
+**Update 1.2.2**
+*Feb 6, 2025, 7:18 am*
+- patched several provinces 
+- renamed natoulonra to navarre
+- allowed non-participants to run `-top`
+- reduced `-upgrade` boosts from 20 - 40% to 5 - 15%
+- added `-cooldowns` command so you can check your cooldowns. do `-help cooldowns` to see how it works
+
+**Update 1.2.2.1**
+*Feb 6, 2025, 4:26 pm*
+- Renamed Coast of Galicia to Marisco Coast to avoid confusion with the province of Galicia
+
+**Update 1.2.3** 
+*Feb 10, 2025, 2:24 pm*
+- Every nation now has troops to begin with. No code was added for this update
+
+**Update 1.2.4**
+*Feb 14, 2025, 8:25 am*
+- Patched balkan borders, finally? please don't break again
+- Removed all special characters
+- Renamed Eastern and Western Swiss Alps to Grisons and Valais respectively
+
+**Update 1.2.4.1**
+*Feb 15, 2025, 1:44 pm*
+- Patched deploying on islands while ships of other nations occupy it
+
+## Update 1.3 Beta - Mechanization Update
+*Feb 17, 2025 at 8:20 am*
+*Available only to beta testers*
+
+## Update 1.3 - Mechanization Update 
+*Feb 18, 2025, 7:06 am*
+**Major Additions**
+- New Units!
+  - Artillery
+    - Capable of attacking but not defense
+  - Tanks
+     - Very fast on flatter terrains
+   - Fuel is also now a shop item, required for the above two as well as other pre-existing units. To view fuel requirements by type do `-fuelreq`
+- Rails
+  - Transport units from one station to another, if they're connected by rails
+  - To view your rails, do `-rails`
+  - To pave a railroad, do `-pave <territory1> <territory2>`. To view the prices do `-pave <territory> prices`
+  - To move a unit from one rail station to another do `-haul <unit> <destination>`. This includes naval units! (Though moving a naval unit inland will render it useless until its moved out again)
+  - To view a map of all railroads in either a nation or the world, do `-railmap <all/nation>`
+  - To build a railway station do `-build <territory> Railway Station` or `-build <territory> rail`. (This command is mostly for future buildings, but has been made to include forts as well. regardless, `-fortify` still exists)
+  - To find the shortest path from one territory to another, do `-pathfrom <territory1> <territory2> <(optional settings)>`.  Optional settings are `nation` (path will be contained in a nation) and `rail` (path is only between rail stations). This is useful either for deciding where to build rail or how to transport units
+- Terrain
+  - Affect cooldown and railroad price. To view all terrains do `-terrainmap`. 
+  - To view the cooldown times by terrain for a specific unit, do `-unitcooldowns <unit>`
+- Legend Map
+  - Map with a legend! `-legendmap <all/nation/territory>` or `-lmap <all/nation/territory>`
+- Area
+  - Every territory now has an area! View all nations by area by doing `-top area`
+- Two new provinces! One in Czechoslovakia the other in Romania
+- `-terrinfo` - View all stats related to a specific territory.
+- `-maps` - List of map types if you ever forget!
+- `-reset` - Reset command for admins only. Makes my life easier :)
+**Minor Changes**
+- Reduced cooldowns for naval units to hopefully get more use out of them. Submarines are the fastest, followed by destroyers, followed by carriers. All were reduced by some amount
+- Changed how the shop looks
+- Changed tax formula
+- Removed `-toppop`. It's now `-top pop`
+- Overhauled how cooldowns work. Unit cooldown based on attacking/movement is now calculated at the start instead of at the end, meaning a unit will be able to attack and move at the same time. As such, `-cooldowns att` and `-cooldowns move` have been replaced by just `-cooldowns unit`
+- You can no longer cede provinces with units on it
+- `-inv` will no longer display items you have 0 of
+- Prices for upgrading are now based on density and terrain
+- Price changes in the shop
+**Bug Fixes**
+- Fixed the naval win/lose message, hopefully
+- You can no longer move ships to landlocked provinces
+- Fixed a bug that's always existed that nobody miraculously found, where you could fortify another nation's territory
+- Patched fort error message
+
+**Update 1.3.0.1**
+*Feb 22, 2025, 8:55 pm*
+- Patched an issue with the splitting of tanks
+
+**Update 1.3.0.2**
+*Feb 24, 2025, 7:04 am*
+- Made it so troops are included in `-reset`, so I no longer have to restart the bot when resetting (More of an update for my end)
+
+## Update 1.3.1 - Market Update!
+*Jul 2, 2025, 1:30 pm*
+- 4 new commands related to shop
+  - `-sell <item> <price>` to place an item on the market. To see more options available, do `-sell help`
+  - `-market` to view all items on the market and their IDs
+  - `-order <item id>` to buy an item off of the market
+  - `-rescind <item id>` to rescind an item you put on the market off of it
+- `-reset` and other commands set up to work with the new market
+
+**Update 1.3.1.1**
+*Jul 4, 2025, 2:08 pm*
+- patched haul help message
+- patched reset
+- made train stations and railways more expensive 
+- fixed many carrier issues
+- fixed a mismatch between `-pave <terr> prices` and the actual price
+
+**Update 1.3.1.2**
+*Jul 4, 2025, 2:31 pm*
+- doubled the price to upgrade territories
+
+**Update 1.3.1.3**
+*Jul 5, 2025, 9:42 am*
+- added a cool banner to the bot
+
+## Update 1.3.2 - The Radar Update
+*Jul 7, 2025, 11:50 am*
+- New building: **Radar Stations!**
+  - They detect all forces on bordering territories
+  - To build: `-build <territory> radar`
+  - To use: `-scan`
+  - They are unable to detect submarines
+- Additional changes 
+  - Destroyers renamed to Battleship to reflect accuracy (Thank Brian)
+  - Submarines are now slower and Battleships are now faster to reflect accuracy (Thank Brian)
+  - Rails are 20% faster than last game and 2x slower than 2 games ago (hopefully the sweet spot)
+  - Tanks and Artillery are faster on mountainous terrain now
+
+## Update 1.3.3 - The Tax Revamp
+*Jul 11, 2025, 5:26 pm*
+Ladies and gentlemen, **autotax** is here!
+- You will now collect tax even when you're inactive
+  - Set the tax by doing `-settax <tax rate>`
+    - There is no longer min, mod, max, or evil - you pick your people's tax rate!
+    - Must be a positive integer
+  - Collect tax by doing `-collect`
+    - This will collect all tax even while you were inactive. You can do it a minimum of every 30 minutes (which can of course change through master settings)
+    - Additionally, the longer you wait the less you will collect per hour
+**Along with this, there were many, many bug fixes…**
+  - Fixed a bug with the `-fuelreq` command and added a few things to `-help` (probably not enough)
+  - Fixed border mismatches between Transcarpathia and North Transylvania as well as between Moselland and Hessen
+  - Fixed a market bug. Now, when a nation is conquered, items they put up for sale go to the victor nation as looted items
+  - Fixed a bug that occured when nations would get annexed but still have ships 
+    - If these ships are carriers aboard which there are ground forces, the nation still lives to fight another day. If not, the winning nation seizes all defendant ships
+  - Fixed a bug; now when a carrier is sunk, all troops on it are sunk as well (can't believe it took this long to find)
+  - Fixed submarine attack cooldowns, which were non existent 
+  - Fixed `-wars` breaking whenever a nation is annexed
+  - Seamap updated
+- Some minor changes made as well
+  - Upgrade costs increased by 10x (you earn a lot more money with autotax)
+  - restricted ceding to nations you're at war with
+  - some shop items changed prices
+  - reduced message sizes of `-give`
+
+### Update 1.3.3.1 
+*Jul 13, 2025, 1:31 pm*
+- Fixed a border issue in many Southern Spanish provinces by renaming the seas 
+- Fixed a capitulation bug
+- Pegged the casualties to the units and not the number of troops/tanks/artillery
+- Added a 🕑 symbol beside each unit that is on cooldown in `-army`, `-navy`, and `-forces`
+- Buffed medical units, and renamed them to Medical & Repair Units since they can fix tanks and artillery as well
+- Reduced Motorized Infantry Division cooldown in mountainous terrain
+- Changed internal file management
+
+### Update 1.3.3.2
+*Jul 13, 2025, 1:49 pm*
+- Halved upgrade costs
+
+### Update 1.3.3.3
+*Jul 14, 2025, 9:41 pm*
+- Patched the `-order` command
+
+### Update 1.3.3.4
+*Jul 16, 2025, 8:46 am*
+- additions and changes
+  - completely reworked casualty determination
+  - allowed for armies to auto-retreat to carriers as a last resort
+  - added a global truce between 12 am and 8 am to promote healthy sleeping habits
+  - there is now a 20% discount for shop items during truce times
+  - renamed Medical & Repair Units back to Medical Units, and made them only treat Light Infantry Divs
+- bug fixes
+  - fixed kriti borders 
+  - fix southern spanish sea names for real this time
+
+### Update 1.3.3.5
+*Jul 17, 2025, 10:50 am*
+- fixed attack message between 12 and 8 am
+- removed trailing 0 in shop prices
+- patched scan
+
+### Update 1.3.3.6
+*Jul 17, 2025, 10:58 am*
+- fixed `-shop` for real this time
+
+### Update 1.3.3.7
+*Jul 17, 2025, 4:16 pm*
+- Fixed a bug. Now encircled troops will retreat to your carriers in the same territory
+
+# Update 1.4 - Power & Principle
+*Jul 20, 2025, 9:22 am*
+**The long awaited Update 1.4 is here, reshaping international power dynamics and allowing you to shape the future of your country. Three major additions- formables, ideologies, and resources- plus tons of other changes will certainely make this update live up to the hype.**
+**Major Additions**
+- Formables
+  - You can now form nations greater than their current meek form.
+  - To view your formables, do `-form`
+  - To become a formable, do `-form <formable>`. You will then adopt the name and flag of this new nation
+    - You must hold onto all its territory, be at peace, and follow the ideology if any
+    - You will gain much needed stability, and instant integration
+  - To view a map of the formable as well as additional information, do `-formable <formable>`
+  - To view the requirements needed for a formable (most notably, all its territories needed), do `-formreq <formable>`
+- Ideologies
+  - There are 10 ideologies in the game, each of which have certain buffs and debuffs. 
+  - To view all ideologies, do `-ideologies`
+  - To view the specifics of a single ideology, do `-viewide <ideology>`
+  - To set your ideology, do `-setide <ideology>`. This costs 250 political power
+- Resources
+  - There are two types of naturally occuring resources in the game: Oil and Coal
+  - Coal is produced automatically. Oil however requires an **Oil Drill** to be built on the province that has the oil
+  - Coal and Oil must be processed in a **Fuel Refinery** to be converted into fuel. 
+    - 1 Coal -> 0.5 Fuel
+    - 1 Oil -> 1.5 Fuel
+  - The above rates are every tax cooldown (so 30 minutes as of now), per fuel refinery.
+  - All natural and manufactured resources are automatically added to your inventory
+  - View a map of naturally occuring resources by doing `-resmap <resource>`
+**Other Additions/Changes**
+- Political Power: a new stat that is used to switch ideologies. It, like stability, decreases as the tax rate increases
+- Battleships no longer require Ammunition, and the bugs surrounding them have been patched, hopefully
+- Copius Amounts of gasoline has been removed from the market. To scorch a province, 20 fuel is required. Scorching also gets rid of all buildings, so if you're being conquered and have vital buildings you dont want to give your enemy access to, scorch the province.
+- Due to the additions of Fuel Refineries, the initial price of Fuel has been raised to $600. Better get those factories running quick!
+- Added a news channel, #world-news 
+- You can no longer cede your final province
+- `-t` territories are now sorted by descending population
+- oil and coal have been added as options to `-top`
+- Annexing a country results in stability gain except if you're a democracy
+- New command,`-buildmap <building>`, that shows all buildings built so far
+
+### Update 1.4.0.1
+*Jul 20, 2025, 11:59 pm*
+- Added symbols in `-viewide` to make the pros and cons more apparent
+- Fixed an issue with fuel collecting 
+- Ideology Buffs and Debuffs
+  - Gave buffs to several aspects of Socialism and Communism
+  - Added a slight military cost buff to Nationalism and Fascism
+  - Removed the Integrated Land Defense boost for Liberalism and Democracy. This may be readded next game, if I reduce the tax gains 
+  - Updated `-maps` to include `-resmap` and `-buildmap`
+- Tanks are now 3x attack and 3x defense, and artillery are 5x attack and 0.1x defense
+
+### Update 1.4.0.2
+*Jul 21, 2025, 8:53 am*
+- Fixed another bug with fuel collecting
+
+### Update 1.4.0.3
+*Jul 21, 2025, 7:00 pm*
+- Fixed an issue with movement of units
+- Fixed a market and formable bug
+
+### Update 1.4.0.4
+*Jul 22, 2025, 11:54 am*
+- Made `-map` significantly faster
+- Added formations to world news
+
+### Update 1.4.0.5
+*Jul 22, 2025, 12:28 pm*
+- Fixed the display of integration in `-map all`
+- Switched to a different hosting server
+
+## Update 1.4.1 - The Capital Update
+*Jul 25, 2025, 10:45 am*
+- Every nation now has a capital!
+  - To view your capital, do `-setcapital`
+  - To change your capital, do `-setcapital <territory>`
+  - To view the costs for changing your capital, do `-setcapital costs`
+    - Unintegrated territories cost 5x more to set as capital
+    - Changing capitals during war is 40% more expensive
+- Reworked tax income calculation
+  - revenue is now calculated on a territory per territory basis. 
+  - buildings and statuses (such as integrated and capital) now give an economic boost. to view all of them do `-econboost`
+- Removd fuel from the market
+  - The only way to produce fuel now is with a fuel refinery
+- Other changes/bug fixes
+  - Fixed communism spelling mistake
+  - Ceding now adds onto integration time
+  - The closer a territory is to integrating, the closer it is to your color on the map
+  - Changed upgrading cost and its yield
+  - Changed many ideology consequences
+  - Removed peace requirement for formations
+- A new map - as voted by the people, it is Southern Ontario. Enjoy!
+
+### Update 1.4.1.1
+*Jul 25, 2025, 11:10 am*
+- Added a check in `-setcapital` to notify you if you're setting your capital to the current capital
+
+### Update 1.4.1.2
+*Jul 25, 2025, 11:21 am*
+- Changed the capital symbol on the map to a font with 5 points on the asterisk instead of 6, to look more like a star
+
+### Update 1.4.1.3
+*Jul 26, 2025, 12:57 pm*
+- Fixed a bug with the attack command
+
+## Update 1.4.2 - The Statue Update
+*Jul 28, 2025, 8:40 am*
+- Added statues
+  - Buy them in the shop, build them using the `-build` command
+  - Each statue boosts your stability by 0.05 / tax cycle (30 minutes)
+  - When captured by an enemy, they reduce the enemy's stability by 0.05 / tax cycle
+  - Ideology buffs apply for statues
+ - New `-bulldoze` command
+  - Removes any one building from a province, for a cost of $20,000.
+  - Syntax is `-bulldoze <territory> <building>`
+  - View all your statues with `-statues`
+- Ideology changes
+  - New ideology: **Theocracy**!
+    - An upper-tier ideology with Monarchy as it's prerequisite
+    - Required for some formables this round
+  - Also increased Monarchy political power gain
+- New `-popmap` command displays a heatmap of territories by population - just a cool cosmetic command!
+- Changes & Bug fixes
+  - Terrain now gives a defensive buff
+  - Made it so that the bot changes the channel name when I register someone, saving me a lot of effort
+  - In the register command, I also don't have to type out the whole name of the country now
+  - Fixed a bombard issue, now only battleships can bombard
+- And of course we can't forget, new map! This time the setting is Southeast Asia!
+  - Since this is a new map, there may be bugs in the territory borders. Please let me know asap if any arise.
+  - Terrains have been altered to suit this tropical zone
+
+### Update 1.4.2.1 
+*Jul 28, 2025, 9:42 am*
+- Fixed the location of capital cities on the map
+
+### Update 1.4.2.2
+*Jul 28, 2025, 9:06 pm*
+- Fixed the `-build` command to allow for multi-word territory names
+
+### Update 1.4.2.3
+*Jul 29, 2025, 7:43 pm*
+- Patched stability loophole where if you attacked your capital you gained stability, even if you didn't gain it
+- All commands involving territories should be fixed. Just use _ as a substitute for a space
+
+### Update 1.4.2.4
+*Jul 30, 2025, 9:24 am*
+- fixed formable message in `-form` to never consider if at peace
+- fixed political power gain display in `-collect`
+
+### Update 1.4.2.5
+*Jul 30, 2025, 12:27 pm*
+- fixed `-scan` command to properly scan seas
+
+### Update 1.4.2.6
+*Jul 31, 2025, 9:20 am*
+- updated shop prices
+- changed tax formula
+
+### Update 1.4.2.7
+*Jul 31, 2025, 1:56 pm*
+- changed political power formula
+- statues now also give political power
+- fixed `-build`
+- integration cooldowns now sorted by duration in `-cooldowns` command
+
+### Update 1.4.2.8
+*Aug 1, 2025, 9:24 am*
+- fixed political power display issues
+- fixed issue with `-sell` command
+- resource reserves added to `-terrinfo`
+
+### Update 1.4.2.9
+*Aug 2, 2025, 11:36 am*
+- rearranged error handling in `-deploy`
+- fixed attacking from carriers
+- optimized `-deploy` by making it only search your territories, allowing for less specific names to be specified 
+- added cooldown checks to `-unload` and `-load`
+
+### Update 1.4.2.10
+*Aug 2, 2025, 5:15 pm*
+- Lighter color bug on map commands now fixed
+
+### Update 1.4.2.11
+*Aug 3, 2025, 8:48 am*
+- Fixed `-load` and `unload` cooldown checks
+
+### Update 1.4.2.12
+*Aug 4, 2025, 4:14 pm*
+- fixed cooldown display for `-unload`
+- fixed `-map` command when mapping countries
+- fixed `-borders` display for occupied seas
+
+## Update 1.4.3 - The Revolution Update!
+*Aug 6, 2025, 9:59 am*
+- New command: `-revolt <ideology>`!
+   - This allows you to change ideologies, at a cost of 1/3 your stability. (If you have negative stability, you go 1/3 deeper into negatives).
+   - This also makes national headlines
+- Some changes & bug fixes
+   - Changed statue stability formula to be rooted. So 1 statue = + 0.05 stability, 4 statues = +0.1 stability, 9 statues = +0.15 stability, etc
+   - Enemy statues, however, are still linear! So, 3 enemy statues are -0.15 stability.
+   - Added initial balance to `-top power`. 
+   - Changed method of naval battle, to ensure the more ships you have, the less casualties you will amass
+   - Buffed how many people bombardment kills
+   - Changed some ideology settings
+   - Changed `-buy` confirmation message to have cleaner looking numbers
+   - fixed `-bombard` bug where battleship could bombard any coastal province
+
+## Update 1.4.4 - The Advertisement Update
+*Aug 10, 2025, 10:40 am*
+- A new Advertisement Channel, #advertisements, and a command to go with it: `-broadcast <message>`. To view the cost of a potential message, do `-broadcast cost <message>`
+  - You can only  broadcast once every 8 hours, to not clog the channel. I can change this.
+- Additionally, I integrated AI (yes, Artificial Intelligence) into the `-help` command. Now it won't be broken whenever you ask it questions!
+- Some more admin-only commands made:
+  - `-setad`: Sets the channel for the ad
+  - `-cleantroops`: Removes every troop not part of a nation that exists
+  - `-refresh`: restarts the bot
+  - And, a new log channel added that logs all information about attacks, so I can identify bugs more easily
+- Changed some ideology properties 
+- Reworked some internal organization
+
+### Update 1.4.4.1
+*Aug 10, 2025, 4:26 pm*
+- Upgraded `-help` AI by switching models and adding more detailed query
+
+### Update 1.4.4.2
+*Aug 11, 2025, 1:24pm*
+- Internally reworked `-settax` and `-collect` commands, making it easier for me to change and hopefully more accurate
+
+### Update 1.4.4.3
+*Aug 13, 2025, 9:05am*
+- reduced capital changing costs
+- added integration checks to `-distribute`
+
+### Update 1.4.4.4
+*Aug 15, 2025, 12:25am*
+- patched log issue that interfered with naval battles
+
+## Update 1.4.5 - Financial Centers
+*Aug 28, 2025, 11:28*
+- New Building: **Financial Center**
+  - doubles tax income generated from the province its built in
+  - halves territory prices for upgrading and setcapital
+  - but at a steep cost of $120,000
+- Many changes and bug fixes
+  - made all commands case insensitive
+  - changed formula for upgrading
+  - changed formula for `-setcapital`, reducing the impact of density and adding the distance to your current capital as a factor
+  - reduced motorized infantry costs
+  - fixed issue with anonomous broadcasting
+  - fixed bug: annexing countries no longer gives you their money if it's negative 
+  - the official weight unit is now a kilotonne. this doesnt actually change anything practical, its just a wording change
+  - fixed carrier loading bug
+  - fixed an issue with logging battles which made carriers immune if stationed in a territory
+  - changed oil drill emoji
+  - ceding territories to nations at war is no longer allowed
+- And a new map: **Expanded Europe**
+  - A very familiar map for us
+  - Terrains were changed to fit the map
+
+### Update 1.4.5.1
+*Aug 28, 2025, 7:26 pm*
+- `-territories` now displays capitals with a star emoji
+
+### Update 1.4.5.2
+*Oct 13, 2025, 8:40 pm*
+- Fixed bug where naval unit could move to any coastal province
+
+### Update 1.4.5.3
+*Nov 9, 2025, 10:42 am*
+- changed capital and financial center upgrade discounts to 25% each
+
+# Update 1.5 - The Diplomacy Update
+*Dec 19, 2025 12:38 pm*
+**Major Additions**
+- Diplomacy
+  - Alliances
+     - An alliance is a type of relationship with another nation where you will be called into all their defensive wars, and they will be called into all your defensive wars. You are not allowed to declare war on allies.
+    - Request/Accept an alliance with `-ally <nation>`
+    - Cancel an alliance or alliance request with `-cancel ally <nation>`
+    - You may call in allies into offensive wars. Do this with `-callin <nation> <war>`
+      - To join a war you've been called into, do `-joinwar <war>`
+  - Non-Aggression Pacts
+    - A non-aggression pact (or NAP for short) is a type of relation where you will not be allowed to declare war on them and vice versa. 
+    - This is unless you have the ideology of fascism, which allows you to break NAPs without consequence
+    - Request/Accept an NAP with `-nap <nation>`
+    - Cancel an NAP or NAP request with `-cancel nap <nation>`
+  - There is a 6 hour truce after breaking an alliance or NAP
+  - View all allies and NAPs with `-diplomacy`
+  - View all alliance, NAP, and call to war requests with `-offers`
+- Peace Treaties
+  - Treaties got a complete revamp this game. This means `-peace`, `-accept`, `-reject`, and `-treaties` were all removed.
+  - The command for creating a peace treaty is `-draft`. That is all. Then follow the instructions the bot gives you.
+    - Treaties have 3 main components: post-war borders, reparations, and truce time. To change any aspect of a peace treaty, do `-amend <treaty name>`, then follow the instructions
+    - To publish a peace treaty, which notifies all participants and allows them to ratify it, do `-publish <treaty name>` 
+  - To view all your treaties, do `-treaty`. To view the terms of a specific peace treaty, you can do `-treaty <treaty name>`
+  - To agree to the terms of a peace treaty, do `-ratify <treaty name>`. You may unratify a treaty by doing `-cancel ratify <treaty name>`
+  - This is the logic on if non-player nations will accept a treaty or not:
+    - If at least one player nation has not accepted the treaty yet, they will not accept.
+    - If they have lost their capital, they will accept a treaty which sets the borders to the current frontlines
+    - If they have not lost their capital, they will only accept White Peace
+  - The White Peace treaty reverts back to pre-war territory and sets a 2 hour truce. It is auto-generated upon war declaration and is not changeable.
+- Truces & Reparations
+  - They exist as a result of treaties
+  - To view all truces, do `-trucelist`. This will include the global truce.
+     - While you can't declare war on someone while still in truce with them, you can still be at war with them. This happens in the case that you are called into war and the leader of the enemy side is not at truce with you, but others on their side are.
+  - To view all your debts, do `-debts`. These are automatically paid, so you don't need to worry about it.
+- Automatic Population Growth
+  - Say goodbye to `-upgrade`! Now, your population grows automatically, depending on factors such as the buildings in your province and a new stat called **War Devastation**!
+    - War Devastation is worsened by battles, bombardments, and scorches.
+  - To view how much each building aids in population growth, do `-popboost`
+  - The War Devastation of a specific territory is included in `-terrinfo <territory>`
+  - To view a map of territories colored by their growth rate, do `-growthmap`
+**Minor Additions/Changes**
+- View the participants of a specific war with `-warinfo`
+- If you cede someone a territory it now notifies them
+- `-warmap` has been massively upgraded, and now displays your allies, truces, and NAPs alongside enemies.
+
+### Update 1.5.0.1
+*Dec 19, 2025, 11:51 pm*
+- Fixed annexation logic
+- Updated `-save` command
+- Fixed population updates
+
+### Update 1.5.0.2
+*Dec 20, 2025, 9:51 pm*
+- Fixed non-aggression pact world news logic
+- Fixed `-diplomacy` formatting
+
+### Update 1.5.0.3
+*Dec 21, 2025, 5:35 pm*
+- Patched ideology check when declaring war
+
+### Update 1.5.0.4
+*Dec 22, 2025, 12:08 pm*
+- fixed midnight truce issue permanently 
+- fixed `-wars` display
+- cut `-broadcast` prices by 60%
+- hopefully patched the map render issue, where very light territories would be colored white
+- cleaned up declare war when an NAP is broken
+- formatted market numbers more nicely
+
+### Update 1.5.0.5
+*Dec 22, 2025, 9:02 pm*
+- Fixed `-top power` for nations who have 0 area but are still in the game
+
+### Update 1.5.0.6
+*Dec 25, 2025, 11:10 am*
+- changed tax formula over time, halved tax income
+- AIs no longer auto accept NAPs
+- fixed input and formatting issues in `-build`
+- cleaned up number formatting in `-buy`
+- fixed `-upgrade` message
+- changed `-wars` formatting to include allies
+- allies joining wars is now displayed in world news
+
+### Update 1.5.0.7
+*Dec 25, 2025, 3:16 pm*
+- Excluded current balance from`-top power` calculation
+
+## Update 1.5.1 - Diplomacy Extended
+*Jan 9, 2026, 4:09 pm*
+**The promised extension to the previous Diplomacy Update is here!**
+### Major Additions:
+- Partial Treaties
+  - You can now exit a war with the permission of everyone involved in the treaty. Involvement means anyone who pays or receives reparations, loses or gains territory, or the leader of the opposite side of war.
+  - In a partial treaty, any specified truce will only be between the parties of the treaty.
+  - To create one, you do not need to specify anything extra, it is built in as a prompt of the `-draft` command. Leaders of a side of war cannot create a partial treaty.
+- Trusted
+  - You can now trust other nations, which means allow their troops into your land and allowing them to use your railways. This is not reciprocal; they do not need to accept, they just get a notification telling them they can move troops into your nation now.
+  - You cannot go to war with nations you trust. You can go to war with nations that trust you. 
+  - You can cancel a nation's trusted status with `-cancel trust <nation>`
+    - Upon breaking trust with a nation, there is a 10 hour truce (10 hours after 8am if you break it during the midnight truce), *only if they had troops in your territory*. 
+    - This is a special truce where they are allowed to still move troops within your territory in order to evacuate.
+    - After this truce is over, the nation that the territory belongs to is allowed to **disband your troops**.
+    - This special truce is indicated in `-trucelist`
+  - Trusted is overriden by alliances. If someone you trust declares war on an ally, your trust breaks.
+  - If two nations who are at war have troops in the same territory, the game automatically detects it and commences a battle.
+### Minor Additions / Changes / Patches
+- New command: `-nation <nation>`, which gives you general and diplomatic information about the specified nation.
+- Significantly reduced the economic gain of buildings to almost 0. This excludes financial centers. Economic Boosts can be viewed with `-econboost`.
+- There is now a limit on financial centers. All limits can be viewed with a new command, `-fincenters`. It's also listed in the `-nation` command. (The only way to exceed this limit would be to conquer other nation's financial centers).
+- Added 3 new provinces, to avoid a previously possible naval cheat. The additions can be found in France, Sweden, and Finland.
+- As a territory's population exceeds 10 million people, its growth rate grows closer to 0
+- Truces now apply to belligerents in the same side of war as well
+- Rewrote parts of the attack command to suit multi-nation defenses
+- Patched `-rails`
+- Removed coal from top power calculations
+- Small wording changes here and there
+- Fixed bugs relating to alliances, NAPs, wars, and treaty display
+
+### Update 1.5.1.1
+*Jan 11, 12:51 pm*
+- Fixed a prevelant mistake with sending messages to channels that don't exist, which should fix the lack of responses from commands like `-attack` or -`build`
+
+### Update 1.5.1.2 
+*Jan 13, 6:13 pm*
+- Fixed attacking in the very specific scenario where the defender has ships but the attacker does not
+
+### Update 1.5.1.3 
+*Jan 13, 7:03 pm*
+- Moved overlapping troop resolving function to the very end of the declarewar logic (I'm pretty sure this was causing every issue thus far from the slow speed to the attack problems)
+
