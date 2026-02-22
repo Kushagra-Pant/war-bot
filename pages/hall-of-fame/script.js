@@ -34,13 +34,11 @@ class TeamGame {
   constructor(date, name, gold, silver, bronze){
     this.date = date
     if(name.includes(" - ")){
-      name = name.split(" - ")
-      this.imageName = name[0]
-      this.name = name[1]
+      this.imageName = name.split(" - ")[0]
     } else {
       this.imageName = name
-      this.name = name
     }
+    this.name = name
     this.gold = gold // List of players and their countries who got gold
     this.silver = silver // In the format [teamname, (name, nation), (name, nation)]
     this.bronze = bronze
