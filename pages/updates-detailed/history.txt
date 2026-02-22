@@ -757,14 +757,64 @@ Ladies and gentlemen, **autotax** is here!
 - Fixed bugs relating to alliances, NAPs, wars, and treaty display
 
 ### Update 1.5.1.1
-*Jan 11, 12:51 pm*
+*Jan 11, 2026, 12:51 pm*
 - Fixed a prevelant mistake with sending messages to channels that don't exist, which should fix the lack of responses from commands like `-attack` or -`build`
 
 ### Update 1.5.1.2 
-*Jan 13, 6:13 pm*
+*Jan 13, 2026, 6:13 pm*
 - Fixed attacking in the very specific scenario where the defender has ships but the attacker does not
 
 ### Update 1.5.1.3 
-*Jan 13, 7:03 pm*
+*Jan 13, 2026, 7:03 pm*
 - Moved overlapping troop resolving function to the very end of the declarewar logic (I'm pretty sure this was causing every issue thus far from the slow speed to the attack problems)
+
+## Update 1.5.2 - Command & Control
+*Feb 14, 2026, 2:48 pm*
+This update is an organizational revolution, feturing two new major additions: **Theaters** and **Military Groupings!**
+- Theaters
+  - These are a group of territories that you can use to focus on a specific front
+  - Commands associated with managing theaters are:
+    - `-theater` / `-theater help` - General information about theaters
+    -  `-theater list` / `-theaters` - A list of all your theaters
+    - `-theater <theater name>` - Information about a specific theater
+    - `-theater create` / `-theater c` - Create a theater (no other inputs required)
+    -  `-theater add <theater>` / `-theater a <theater>` - Add territories to a theater (no other inputs required)
+    -  `-theater remove <theater>` / `-theater r <theater>` - Remove territories from a theater (no other inputs required)
+    -  `-theater delete <theater name>` / `-theater d <theater name>` - Delete an entire theater
+  - The following commands have been modified to allow you to optionally specify a theater:
+    - `-territories` / `-t` - You can specify a theater to shorten the list of territories
+    - `-army` / `-navy` / `-forces` - You can specify a theater to shorten the list of units
+- Military Groupings
+   - These are groups of different types of units that move, attack, and retreat together.
+   - Commands associated with managing groups are:
+      - `-group` / `-group help` - General information about groups and a list of commands
+     - `-group <group name> <unit IDs separated by space>` - Create a new group or add units to an existing group
+     - `-ungroup <unit IDs or group names separated by space>` - Remove the units specified from their group, or removes the groups specified (does not delete the unit itself)
+     - `-groupinfo <group name>` - View information about a specific group.
+   - You cannot group ground troops and naval troops. You can group types within these domains though (e.g. Light Infantry and Tanks can be grouped)
+   - When moving, attacking, or hauling, you cannot specify a unit that is in a group with other units. The group moves together.
+### Minor Changes
+- Motorized Infantry are now slightly faster
+- Updated `-commands`
+- Updated the AI in`-help`
+
+### Update 1.5.2.1
+*Feb 14, 2026, 3:02 pm*
+- Removed a fallback during game save that checks over military groups
+
+### Update 1.5.2.2
+*Feb 14, 2026, 6:21 pm*
+- Fixed multi-line messages sent with `-give`
+
+### Update 1.5.2.3
+*Feb 15, 2026, 8:08 pm*
+- Fixed an issue with logging, which was disrupting many commands such as `-attack`
+
+### Update 1.5.2.4
+*Feb 20, 9:12 pm*
+- Patched ideology stability boost when winning a battle
+
+### Update 1.5.2.5
+*Feb 21, 6:56 am*
+- Made it so during the implementation of a treaty, nations do not retreat from territories ceded to trusted nations
 

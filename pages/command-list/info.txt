@@ -94,7 +94,7 @@ nap			-nap <nation>	Requests or accepts a non-aggression pact with the specified
 offers				Lists all alliance and NAP offers to you, in addition to calls to war
 callin			-callin <nation> <war>	Call an ally nation into a war
 joinwar			-joinwar <war>	Join a war. If conflicting offers exist, the bot will prompt you to specify which in a response
--diplomacy				View all your allies, NAPs, and those you're at war with.
+diplomacy				View all your allies, NAPs, and those you're at war with.
 draft			-draft	Draft a peace treaty. There are no parameters as the bot prompts you through the process.
 amend			-amend <treaty name>	Amend a treaty. There are no other parameters as the bot prompts you through the process.
 publish			-publish <treaty name>	Publish a treaty, notifying all other parties of it's existence and allowing for ratification of the treaty.
@@ -106,10 +106,21 @@ trucelist				A list of all ongoing truces, including the global truce and truces
 debts				A list of all money you owe through reparations
 popboost				A list of the population boost each building gives
 growthmap		Map		A heatmap of each territory by population growth. Gray always represents 0% growth.
+theater		Theaters	-theater <theater name / 'help'>	View a specific theater, or if 'help' is specified, get a list of commands
+theaters	theater list	Theaters	-theaters	List of all your theaters
+theater create		Theaters	-theater create	Create a theater, no other inputs required, the bot will prompt you.
+theater add		Theaters	-theater add <theater name>	Add territories to a theater. No other inputs required, the bot will prompt you.
+theater remove		Theaters	-theater remove <theater name>	Remove territories from a theater. No other inputs required, the bot will prompt you.
+theater delete		Theaters	-theater delete <theater name>	Delete an entire theater
+group		Groups	-group <groupname / 'help'> <unit IDs separated by space> 	Create a new group or add units to an existing group. If help or nothing is specified, it provides a list of commands associated with groups.
+ungroup		Groups	-ungroup <unit IDs or group names separated by space>	Remove the units specified from their group, or removes the groups specified (does not delete the unit itself)
+groupinfo		Groups	-groupinfo <group name>	View information about a specific group.
 add_money		Admin Only	-add_money <nation>	Adds money to a specific nation. Only used during testing.
 growthrates		Admin Only	-growthrates <nation>	Displays the growth rates of each territory of the specified nation
 setAd		Admin Only		Sets the channel the command is run in to the official advertisement channel
 cleanTroops		Admin Only		Removes all troops from the text files whose nations don't exist (bug-fixing only)
 shift		Admin Only	-shift <territory> <number + u/d/l/r>	Shifts the main point of a territory in the direction specified. u,d,l, and r are up, down, left, and right respectively. For example, 3u moves the point 3 up. The main point is useful when labelling the territory.
+add_fuel		Admin Only		Adds fuel to a nation
+remove_cooldown		Admin Only		Removes the cooldown of a unit
 refresh		Admin Only		Restarts the bot without resetting statistics.
 reset		Admin Only		Resets the game back to starting positions. 
