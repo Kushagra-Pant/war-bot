@@ -210,6 +210,40 @@
       </div>
     </div>
 
+    <div class="card p-4 page-header" id="ExpandedEuropeCard">
+      <div class="d-flex flex-row flex-wrap align-items-center justify-content-between">
+        
+        <div class="card-body" style="flex: 1; min-width: 250px;">
+          <h5 class="card-title">Expanded Europe (Historical)</h5>
+          <p class="card-text fs-4">
+            This is an extension to the Expanded Europe map, adapted for historical scenarios. It adds 13 russian cities, which function the same way as territories. Unlike the main versions of the game, this map is used exclusively for historical conflicts. These scenarios are played as team games, with alliances pre-determined to reflect the real-world situation at the time of conflict. Introduced in Update 1.5.2, the map has so far been used for World War 1 and the Napoleonic Wars.
+          </p>
+        </div>
+
+        <div class="ms-4" style="width: 400px; height: 350px;">
+          <div id="ExpandedEurope" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100 rounded-4 overflow-hidden">
+              <div class="carousel-item active h-100">
+                <img src="expanded-europe-historical/ww1.png" class="d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="expanded-europe-historical/napoleonic-wars.png" class="mx-auto d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#ExpandedEurope" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#ExpandedEurope" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content bg-dark">
