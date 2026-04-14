@@ -818,3 +818,104 @@ This update is an organizational revolution, feturing two new major additions: *
 *Feb 21, 6:56 am*
 - Made it so during the implementation of a treaty, nations do not retreat from territories ceded to trusted nations
 
+## Update 1.5.3 - Ground Warfare Update
+*Mar 26, 2026, 6:26 pm*
+### Major Additions
+- **Entrenchment**
+  - You can now entrench a ground unit / group to provide 1.5x defense to that one unit/group
+  - The command to entrench is `-entrench <unit id/group name>`
+  - Once you entrench, you can no longer move, attack, or haul the division
+  - The command to unentrench is `-activate <unit id/group name>`
+  - There is a 3 hour cooldown after unentrenching
+  - After retreating, the group is automatically activated without the 3 hour cooldown
+- **New Ground Units!**
+  - Mechanized Infantry: slower than Motorized, but 2x as strong
+  - Cavalry: Around the same speed as motorized (slower on flat terrain, even on mountainous), but require no fuel
+  - Tank split into Light and Heavy
+     - Light Tanks are faster and more fuel efficient
+     - Heavy tanks are stronger and more cost efficient
+  - One Medical Unit Division can save between 1,500 and 10,000 Light, Motorized, or Mechanized Infantry (this was the same as before, just expanded and clarified)
+- Support for **multinational rail** added, and alongside this you can now build rail in foreign countries provided they trust you.
+  - The way it works is they must trust you for you to build rail in them
+  - You then use `-pave` normally, but if the rail you wish to build is not in your land, you must ask them permission
+  - It will ask you how much of the funding you wish to contribute. This can be none, all, or somewhere in between, and accepts both percents and raw monetary amounts.
+  - Rail can be between two nations (multinational rail), or within the same foreign country
+- Admin & Player Settings
+  - There are current 3 admin settings and 2 player settings complete with description; view your settings with `-settings`, and set them with `-set <setting> <value>`
+### Minor Additions/Changes
+- Cooldowns no longer include the midnight truce
+   - This includes unit and territory cooldowns, as well as taxation times. Collecting tax from 11:30 pm to 8:30 am is only 1 hour of tax income
+- Added new command `-unittype`, replacing `-unitcooldowns` 
+  - Syntax: `-unittype <generic unit type>`, e.g. `-unittype light tank`
+  - This new command gives all information relating to a unit type, including cooldowns, whereas the former command just displayed cooldowns (which is why it was removed)
+  - It also provides information for every generic unit that matches, for example if you input tank it will provide information on both light and heavy tanks. 
+  - To avoid message spam, the generic unit type that you input must be at least 3 characters long
+- Made it so integration time will never shorten
+  - This means that when a scorched territory is captured, the game now keeps the longer integration time between the conquest timer and the scorch penalty
+- Changes to ideologies + existing units (info posted in #tutorial )
+- Also added retreat cooldowns, which are between 5 and 15 minutes, also posted in #tutorial 
+- Added command cooldowns, which are 5 seconds for `-attack` and 10 seconds for `-give` and `-map`
+- Added new theater command: `-theater map <theater>` or `-thmap <theater>`
+- War declarations now cost Political Power
+  - This is based on the nation's territory count, their power, your ideology, and their ideology
+  - You can view the costs with `-declarewar cost`
+- Also changed `-setcapital` to cost political power; the formula is still the same as before, but scaled down by an appropriate factor
+- made hauling use coal instead of fuel
+- Fixed the clearing of ratifications after a treaty has been amended
+- Fixed user input parsing, now putting multiple spaces in between each argument will not affect the outcome
+- Made Ground units use fuel during defense
+  - If you don't have enough fuel, their power decreases. e.g. if you only have 50% of the fuel required, the unit will operate at half power
+  - The bot also notifies you when this happens
+- Bug workaround: Changed `-rename` so it only searches through your troops, that way if two troops of different nations are named the same thing you're not locked out of using one and can rename it
+- Halved `-broadcast` costs
+- Reduced the cost of bulldozing
+  - To bulldoze a building is now $5,000
+  - To bulldoze a rail is now $3,000
+- Added block feature, allowing you to restrict the ability of a nation to send you messages or money through `-give`. The syntaxes are `-block <nation>` and `-unblock <nation`, and you can view blocked nations in `-diplomacy`
+### Code Changes
+- Moved all unit information to a JSON file to make it easier to edit
+- Commented out all general scaffolding code for the abandoned Generals Update
+- Changed nation author to store user IDs instead of usernames
+
+### Update 1.5.3.1
+*Mar 28, 2026, 8:54 pm*
+- Fixed using full name (e.g. light_tank) in `-deploy`
+- Added flags when receiving messages/money through `-give`
+- Fixed ideology military cost reduction
+
+### Update 1.5.3.2 
+*Mar 29, 2026, 10:44 am*
+- Fixed issue with entrenching and saving
+- Fixed issue with defending channels not getting messages for losing undefended territories
+- Added `-quicksave` command to allow quicker, less memory intensive game saving
+
+### Update 1.5.3.3
+*Apr 1, 2026, 8:17 pm*
+- Radar stations are now able to detect if a unit is entrenched or not
+- Democracies now lose stability on joining offensive wars
+- If you attack a territory with 25% or less of the divisions that the defender has, the battle is considered a skirmish and the defender consumes no fuel during defense (but still defends with all power)
+
+### Update 1.5.3.4
+*April 4, 2026, 9:08 am*
+- Fixed `-attack` skirmish check
+- Modified AI treaty acceptance logic so that if their capital is taken, they accept treaties that let them keep everything they currently have or more 
+- Fixed treaties being posted to world news once they have been accepted by everyone
+
+### Update 1.5.3.5
+*April 4, 2026, 3:14 pm*
+- Unit shortforms now work for `-buy` and `-unittype` (they are case insensitive, `ht` and `HT` both work)
+- New options to `-scan`
+  - `-scan allies` scans the borders of just your allies
+  - `-scan all` scans all borders (both you and your allies)
+  - `-scan` just scans your borders
+
+### Update 1.5.3.6
+*April 4, 2026, 3:39 pm*
+- New Setting: Scan includes allied units
+  - If true, `-scan allies` and `-scan all` will include allied units. If false, they won't
+- Fixed `-merge` confirmation message
+
+### Update 1.5.3.7 
+*April 5, 2026, 8:38 am*
+- Fixed haul response when you don't have enough fuel
+- Allowed nations to deploy ships in their territories whose coasts are occupied by nations who trust them, also changed the error message to clarify when they are allies but not trusted
