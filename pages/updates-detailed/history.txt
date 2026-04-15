@@ -811,16 +811,16 @@ This update is an organizational revolution, feturing two new major additions: *
 - Fixed an issue with logging, which was disrupting many commands such as `-attack`
 
 ### Update 1.5.2.4
-*Feb 20, 9:12 pm*
+*Feb 20, 2026, 9:12 pm*
 - Patched ideology stability boost when winning a battle
 
 ### Update 1.5.2.5
-*Feb 21, 6:56 am*
+*Feb 21, 2026, 6:56 am*
 - Made it so during the implementation of a treaty, nations do not retreat from territories ceded to trusted nations
 
 ## Update 1.5.3 - Ground Warfare Update
 *Mar 26, 2026, 6:26 pm*
-### Major Additions
+**Major Additions**
 - **Entrenchment**
   - You can now entrench a ground unit / group to provide 1.5x defense to that one unit/group
   - The command to entrench is `-entrench <unit id/group name>`
@@ -842,7 +842,7 @@ This update is an organizational revolution, feturing two new major additions: *
   - Rail can be between two nations (multinational rail), or within the same foreign country
 - Admin & Player Settings
   - There are current 3 admin settings and 2 player settings complete with description; view your settings with `-settings`, and set them with `-set <setting> <value>`
-### Minor Additions/Changes
+**Minor Additions/Changes**
 - Cooldowns no longer include the midnight truce
    - This includes unit and territory cooldowns, as well as taxation times. Collecting tax from 11:30 pm to 8:30 am is only 1 hour of tax income
 - Added new command `-unittype`, replacing `-unitcooldowns` 
@@ -872,7 +872,7 @@ This update is an organizational revolution, feturing two new major additions: *
   - To bulldoze a building is now $5,000
   - To bulldoze a rail is now $3,000
 - Added block feature, allowing you to restrict the ability of a nation to send you messages or money through `-give`. The syntaxes are `-block <nation>` and `-unblock <nation`, and you can view blocked nations in `-diplomacy`
-### Code Changes
+**Code Changes**
 - Moved all unit information to a JSON file to make it easier to edit
 - Commented out all general scaffolding code for the abandoned Generals Update
 - Changed nation author to store user IDs instead of usernames

@@ -192,8 +192,8 @@ Mar 29, 2026
 🏆 Allies
 - AceOfLies | France
 - Lfyin | Great Britain -> British Empire
-- _salty_cracker_ | Poland
-- JSinghG | Sweden
+- SaltyCracker | Poland
+- JsinghG | Sweden
 🥈 Switched Sides
 - SimplyAFryGuy | Yugoslavia
 
@@ -202,7 +202,7 @@ Apr 5, 2026
 1.5.3 Game 2 - World War 2
 🏆 Allies
 - SimplyAFryGuy | Poland
-- Peru | Britain
+- Nayan | Britain
 - JsinghG | France
 🥈 Switched Sides
 - AceOfLies | Germany
