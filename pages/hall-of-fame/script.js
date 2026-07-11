@@ -1,3 +1,11 @@
+class Medals {
+  constructor(gold = 0, silver = 0, bronze = 0) {
+    this.gold = gold;
+    this.silver = silver;
+    this.bronze = bronze;
+  }
+}
+
 class Game {
   constructor(date, name, rankings){
     this.date = date
@@ -80,6 +88,9 @@ class TeamGame {
   }
 }
 
+const tableBody = document.getElementById("winners-table-body");
+let winnersTable;
+
 fetch('winners.txt')
   .then(response => response.text())
   .then(text => {
@@ -87,7 +98,7 @@ fetch('winners.txt')
     const table = document.getElementById('winners-table-body')
     const lines = text.trim().split('\n\n')
     const games = []
-    var players = {} //In the format of {player: (gold, silver, bronze), player: (gold, silver, bronze), etc} - player is a string
+    var players = {} //In the format of {player: {individual: Medals, team: Medals}, player: {individual: Medals, team: Medals}, etc} - player is a string
     for (block of lines){
       l = block.split('\n')
       if (l[0] == "Team Game"){
@@ -117,20 +128,20 @@ fetch('winners.txt')
           i = i.join(" ").split(" | ")
           const data = {name: i[0], nation: i[1]}
           if(!(data.name in players)){
-            players[data.name] = [0, 0, 0]
+            players[data.name] = {individual: new Medals(), team: new Medals()}
           }
           switch(current){
             case("gold"):
               placements.gold.push(data)
-              players[data.name][0] += 1
+              players[data.name].team.gold += 1
               break
             case("silver"):
               placements.silver.push(data)
-              players[data.name][1] += 1
+              players[data.name].team.silver += 1
               break
             case("bronze"):
               placements.bronze.push(data)
-              players[data.name][2] += 1
+              players[data.name].team.bronze += 1
               break
             default:
               break
@@ -148,9 +159,19 @@ fetch('winners.txt')
           })
           player = l[i].replace(/[🏆🥈🥉]/g, '').trim()
           if(!(player in players)){
-            players[player] = [0, 0, 0]
+            players[player] = {individual: new Medals(), team: new Medals()}
           }
-          players[player][Math.floor(i / 2)] += 1
+          switch(Math.floor(i / 2)){
+            case 0:
+              players[player].individual.gold += 1
+              break
+            case 1:
+              players[player].individual.silver += 1
+              break
+            case 2:
+              players[player].individual.bronze += 1
+              break
+          }
         }
         games.unshift(new Game(date, name, rankings))
       }
@@ -166,23 +187,37 @@ fetch('winners.txt')
         msg += "</div>"
       }
     }
-    if(games.length%4 != 0){
+    if(games.length % 3 != 0){
       msg += "</div>"
     }
     container.insertAdjacentHTML('beforeend', msg)
     tablemsg = ""
     for(i in players){
+      const total = new Medals(
+        players[i].individual.gold + players[i].team.gold,
+        players[i].individual.silver + players[i].team.silver,
+        players[i].individual.bronze + players[i].team.bronze
+      );
+
       tablemsg += `
-        <tr>
-          <th class="player">${i}</th>
-          <td class="gold">${players[i][0]}</td>
-          <td class="silver">${players[i][1]}</td>
-          <td class="bronze">${players[i][2]}</td>
-        </tr>
-      `
+      <tr>
+        <th class="player">${i}</th>
+
+        <td>${total.gold}</td>
+        <td>${total.silver}</td>
+        <td>${total.bronze}</td>
+
+        <td>${players[i].individual.gold}</td>
+        <td>${players[i].individual.silver}</td>
+        <td>${players[i].individual.bronze}</td>
+
+        <td>${players[i].team.gold}</td>
+        <td>${players[i].team.silver}</td>
+        <td>${players[i].team.bronze}</td>
+      </tr>`;
     }
     table.insertAdjacentHTML('beforeend', tablemsg)
-    $('#winners-table').DataTable({
+    winnersTable = $('#winners-table').DataTable({
       dom: 't',
       pageLength: 25,
       order: [
@@ -191,4 +226,37 @@ fetch('winners.txt')
         [3, 'desc']  // 3 = bronze column
       ]
     });
+    showMedals("total");
   });
+
+function showMedals(mode) {
+    winnersTable.columns([1,2,3,4,5,6,7,8,9]).visible(false);
+
+    if (mode === "total") {
+        winnersTable.columns([1,2,3]).visible(true);
+        winnersTable.order([[1, "desc"], [2, "desc"], [3, "desc"]]);
+    }
+
+    if (mode === "individual") {
+        winnersTable.columns([4,5,6]).visible(true);
+        winnersTable.order([[4, "desc"], [5, "desc"], [6, "desc"]]);
+    }
+
+    if (mode === "team") {
+        winnersTable.columns([7,8,9]).visible(true);
+        winnersTable.order([[7, "desc"], [8, "desc"], [9, "desc"]]);
+    }
+
+    winnersTable.draw(false);
+    setActiveButton(mode + '-btn')
+}
+
+function setActiveButton(id) {
+    ["total-btn", "individual-btn", "team-btn"].forEach(btn => {
+        document.getElementById(btn).classList.remove("btn-primary");
+        document.getElementById(btn).classList.add("btn-outline-primary");
+    });
+
+    document.getElementById(id).classList.remove("btn-outline-primary");
+    document.getElementById(id).classList.add("btn-primary");
+}

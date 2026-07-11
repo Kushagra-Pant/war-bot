@@ -64,13 +64,29 @@
           <p class="card-text">
             This is the page documenting all winners of War Bot games. I have only been keeping track since update 1.3.3. Below is a summary of all players who have gotten in the Top 3 of a game.
           </p>
+
+          <div class="btn-group mb-3" role="group">
+            <button class="btn btn-primary active" id="total-btn" onclick="showMedals('total')">Total Medals</button>
+            <button class="btn btn-outline-primary" id="individual-btn" onclick="showMedals('individual')">Individual Medals</button>
+            <button class="btn btn-outline-primary" id="team-btn" onclick="showMedals('team')">Team Medals</button>
+          </div>
+
           <table class="table text-center" id="winners-table">
               <thead>
                 <tr>
                   <th>Player</th>
-                  <th>Gold</th>
-                  <th>Silver</th>
-                  <th>Bronze</th>
+
+                  <th>Total Gold</th>
+                  <th>Total Silver</th>
+                  <th>Total Bronze</th>
+
+                  <th>Individual Gold</th>
+                  <th>Individual Silver</th>
+                  <th>Individual Bronze</th>
+
+                  <th>Team Gold</th>
+                  <th>Team Silver</th>
+                  <th>Team Bronze</th>
                 </tr>
               </thead>
               <tbody id="winners-table-body">
