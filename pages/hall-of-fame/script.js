@@ -247,16 +247,16 @@ function showMedals(mode) {
         winnersTable.order([[7, "desc"], [8, "desc"], [9, "desc"]]);
     }
 
-    winnersTable.draw(false);
+    winnersTable.columns.adjust().draw(false);
     setActiveButton(mode + '-btn')
 }
 
 function setActiveButton(id) {
     ["total-btn", "individual-btn", "team-btn"].forEach(btn => {
-        document.getElementById(btn).classList.remove("btn-primary");
-        document.getElementById(btn).classList.add("btn-outline-primary");
+        document.getElementById(btn).classList.remove("btn-secondary");
+        document.getElementById(btn).classList.add("btn-outline-secondary");
     });
 
-    document.getElementById(id).classList.remove("btn-outline-primary");
-    document.getElementById(id).classList.add("btn-primary");
+    document.getElementById(id).classList.remove("btn-outline-secondary");
+    document.getElementById(id).classList.add("btn-secondary");
 }
