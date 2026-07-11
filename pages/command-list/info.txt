@@ -4,9 +4,9 @@ shop				A list of all items and their prices.
 settax			-settax <rate>	Sets your national tax rate. The higher the tax rate, the higher the income and stability loss.
 collect				Collects the income you've generated since the last `-collect`.
 deploy			-deploy <unit> <territory> <(optional amount)>	Deploys a unit in one of your territories
-navy	n			Shows all your boats and where they're located
-army				Shows all your ground forces and where they're located
-forces				Shows all your combined naval and ground forces and where they're located
+navy	n	Armed Forces View	-navy <(optional theater)>	Shows all your boats and where they're located. If a theater is specified, it limits the output to territories in that theater.
+army		Armed Forces View	-army <(optional theater)>	Shows all your ground forces and where they're located. If a theater is specified, it limits the output to territories in that theater.
+forces		Armed Forces View	-forces <(optional theater)>	Shows your combined naval, ground, and air forces and where they're located. If a theater is specified, it limits the output to territories in that theater.
 commands				Links to this very page
 bal				Displays your balance
 buy			-buy <item> <(optional quantity)>	Buys an item from the shop
@@ -33,7 +33,7 @@ seamap		Map		Returns a labelled map of the sea
 unitinfo			-unitinfo <unit id>	Returns all information relating to a unit you own
 rename			-rename <unit id> <new id>	Renames a unit to whatever you specify. Restrictions apply
 cede			-cede <territory> <nation>	Cedes a territory to the nation specified. You cannot cede to a nation you're at war with. You also cannot cede your capital or your final territory.
-move	m		-move <unit id> <territory>	Move the specified unit to the specified territory
+move	m		-move <unit id> <territory>	Move the specified unit to the specified territory or sea. You can only move ground units onto territories, ships onto seas or coastal territories, and air units onto territories with an airport or airstrip.
 merge			-merge <unit ids separated by space>	Merges the specified units into a single division. They must be of the same type and in the same territory upon merging.
 split			-split <unit id> <(optional amount)>	Splits a unit into as many divisions as you specify. If no number is specified, 2 is assumed.
 disband			-disband <unit id>	Eliminates the unit specified, if it's yours
@@ -121,6 +121,16 @@ setAd		Admin Only		Sets the channel the command is run in to the official advert
 cleanTroops		Admin Only		Removes all troops from the text files whose nations don't exist (bug-fixing only)
 shift		Admin Only	-shift <territory> <number + u/d/l/r>	Shifts the main point of a territory in the direction specified. u,d,l, and r are up, down, left, and right respectively. For example, 3u moves the point 3 up. The main point is useful when labelling the territory.
 add_fuel		Admin Only		Adds fuel to a nation
-remove_cooldown		Admin Only		Removes the cooldown of a unit
+airforce 	af	Armed Forces View		Displays the planes owned by you or in your nation. If a theater is specified, it limits the output to territories in that theater.
+bomb			-bomb <territory> <aircraft IDs separated by space>	Bombs a land or sea territory with the aircraft specified. Attackers and bombers will bomb, fighters are escorts for defending them from enemy forces. You can only bomb those you are at war with
+surveil			-surveil <territory> <aircraft IDs separated by space>	Surveils a land or sea territory, giving you information such as units present, cooldowns, entrenchment status, and income
+in			-in <time> <command>	Schedule a command for the future. for more info do -in help
+schedule				View your future schedule.
+battle			-battle <battle id>	View the details of a specific battle
+battles				View a list of all battles you've fought in
+equip			-equip <unit id> anti-air	Equip the specified ship with anti-air. The command is intentionally generic, to allow future additions/specifications.
+income				View a list of all your territories by income, as well as your national income, at your current tax rate.
+remove_cd		Admin Only		Removes the cooldown of a unit
+add_pp		Admin Only		Add political power to a country
 refresh		Admin Only		Restarts the bot without resetting statistics.
 reset		Admin Only		Resets the game back to starting positions. 

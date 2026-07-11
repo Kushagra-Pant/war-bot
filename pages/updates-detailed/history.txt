@@ -919,3 +919,74 @@ This update is an organizational revolution, feturing two new major additions: *
 *April 5, 2026, 8:38 am*
 - Fixed haul response when you don't have enough fuel
 - Allowed nations to deploy ships in their territories whose coasts are occupied by nations who trust them, also changed the error message to clarify when they are allies but not trusted
+
+## Update 1.6 Beta I
+*April 18, 2026, 9:22 am*
+*Available only to beta testers*
+
+## Update 1.6 Beta II
+*April 22, 2026, 6:11 pm*
+*Available only to beta testers*
+
+# Update 1.6 - The Air Update
+*Apr 27, 2026, 6:29 am*
+- A new domain of warfare: The skies!
+  - 4 types of aircraft
+    - Fighters: engage in air to air combat, best as escorts
+    - Bombers: engage in ground bombardment, effective against buildings and civilians
+    - Attackers: engage in ground bombardment, effective against naval forces
+    - Spy planes: give you vital information about a province such as its income, troop cooldowns, and entrenchment status. When used in battle, they give you information about enemy casualties.
+  - New commands related to air
+    - `-bomb`: Bomb a province from the sky using either attackers or bombers. Syntax is `-bomb <territory or sea> <(optional target)> <plane IDs separated by space>`. Optional targets include a specific building, a specific naval unit, the general navy, general ground forces, or civilians.
+    - `-surveil`: Spy on a province using spy planes. Surveilling gives you information such as territory income, troop cooldowns, and entrenchment status. Syntax is `-surveil <territory or sea> <plane IDs separated by space>` 
+- New buildings: Airport and Airstrip
+  - Aircraft are deployed in airports, and can be moved to airstrips, airports, or aircraft carriers
+- Scheduling commands
+  - do `-in <time> <command>` to run a command in the future
+  - do `-schedule` to view all your future commands
+- Battle recording
+  - Battles are now recorded, you can view your battles with `-battles`, and view a specific battle with `-battle <battle id>`
+  - It will show you your own casualties, and enemy casualties if you had a bordering radar station or spy plane.
+- Naval Additions
+  - Added new unit, Destroyers. Also changed Naval Combat. Destroyers hunt submarines, submarines hunt all, and there is a surface ship battle where battleships and destroyers fight each other (battleships are 2x as strong)
+  - Added Aircraft Carrier, which acts as a portable airstrip. Renamed the old Carrier to Transporter
+
+### Update 1.6.0.1
+*Apr 27, 5:30 pm*
+- Made ideology switching cost 250 political power
+- Set population before negative multipliers start applying to 30 million (this was 10 million before)
+
+### Update 1.6.0.2
+*Apr 28, 5:38 pm*
+- Cleaned up logic around `-equip`
+- Changed terrain labels and px to km conversion to be based around Southeast Asia
+- New command `-kmbetween` to see the distance in km between two territories
+- Implemented ideology financial center boosts
+
+### Update 1.6.0.3
+*May 8, 3:19 pm*
+- Fixed edge-case errors as well as formatting issues in `-attack`
+- Fixed `-surveil`, made its income statements more accurate and elaborate
+- Made it so that you can only view battle logs if you have intelligence (spy plane or bordering radar station), or are an admin
+- Reduced default price of Airport to $65,000
+
+### Update 1.6.0.4
+*Jun 27, 2026, 8:18 am*
+- Fixed issues with `-bomb`, `-surveil`, and `-battles` commands
+- Fixed the output of `-battle`
+- Added new `-income` command that lists all your territories by income
+
+### Update 1.6.0.5
+*Jun 28, 11:17 am*
+- Added specification on whether you have intelligence or not in `-battle`
+- Created temporary solution for units that have 0 units, which is to add a check in the admin-only `-cleantroops` command
+
+### Update 1.6.0.6
+*June 28, 12:38 pm*
+- Added extra checks so that you win battles in which all enemy troops die
+- Made it so you can't accept NAPs with countries you are at war with (overlooked edge case)
+
+### Update 1.6.0.7
+*Jul 3, 2026, 3:06 pm*
+- Fixed edge-case issues with bomb, load, and move commands
+
