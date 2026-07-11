@@ -220,6 +220,7 @@ fetch('winners.txt')
     winnersTable = $('#winners-table').DataTable({
       dom: 't',
       pageLength: 25,
+      autoWidth: false,
       order: [
         [1, 'desc'], // 1 = gold column
         [2, 'desc'], // 2 = silver column

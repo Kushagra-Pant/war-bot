@@ -130,6 +130,9 @@ battle			-battle <battle id>	View the details of a specific battle
 battles				View a list of all battles you've fought in
 equip			-equip <unit id> anti-air	Equip the specified ship with anti-air. The command is intentionally generic, to allow future additions/specifications.
 income				View a list of all your territories by income, as well as your national income, at your current tax rate.
+centralize				Centralize your nation, prioritizing population growth of capitals + territories with financial centers. View more detailed information with `-centralize help`
+decentralize				Decentralize your nation. Reverse of `-centralize`.
+unitmap		Map	-unitmap <unit type>	Display all your units of a specific type on a map.
 remove_cd		Admin Only		Removes the cooldown of a unit
 add_pp		Admin Only		Add political power to a country
 refresh		Admin Only		Restarts the bot without resetting statistics.
