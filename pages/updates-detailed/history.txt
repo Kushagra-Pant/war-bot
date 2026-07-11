@@ -728,7 +728,7 @@ Ladies and gentlemen, **autotax** is here!
 ## Update 1.5.1 - Diplomacy Extended
 *Jan 9, 2026, 4:09 pm*
 **The promised extension to the previous Diplomacy Update is here!**
-### Major Additions:
+**Major Additions**
 - Partial Treaties
   - You can now exit a war with the permission of everyone involved in the treaty. Involvement means anyone who pays or receives reparations, loses or gains territory, or the leader of the opposite side of war.
   - In a partial treaty, any specified truce will only be between the parties of the treaty.
@@ -948,7 +948,7 @@ This update is an organizational revolution, feturing two new major additions: *
   - Battles are now recorded, you can view your battles with `-battles`, and view a specific battle with `-battle <battle id>`
   - It will show you your own casualties, and enemy casualties if you had a bordering radar station or spy plane.
 - Naval Additions
-  - Added new unit, Destroyers. Also changed Naval Combat. Destroyers hunt submarines, submarines hunt all, and there is a surface ship battle where battleships and destroyers fight each other (battleships are 2x as strong)
+  - Added a new unit, Destroyers. Also changed Naval Combat. Destroyers hunt submarines, submarines hunt all, and there is a surface ship battle where battleships and destroyers fight each other (battleships are 2x as strong)
   - Added Aircraft Carrier, which acts as a portable airstrip. Renamed the old Carrier to Transporter
 
 ### Update 1.6.0.1
