@@ -241,7 +241,7 @@ Team Game
 Jul 6, 2026
 1.6 Game 4
 🏆 Brandenburg Pact
-Lfyin | Germany
-SimplyAFryGuy | Yugoslavia -> Balkan Federation
-AceOfLies | France
-Yasin | Britain
+- Lfyin | Germany
+- SimplyAFryGuy | Yugoslavia -> Balkan Federation
+- AceOfLies | France
+- Yasin | Britain
