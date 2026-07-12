@@ -13,7 +13,11 @@ class Game {
     this.rankings = rankings // In the format of [(name, nation), (name, nation), (name, nation)]
   }
 
-  renderHTML(){
+  async renderHTML(){
+    const imageName = this.name.replace("Game ", "");
+    const videoPath = `../../images/${imageName}.mp4`;
+    const hasVideo = await pathExists(videoPath);
+
     return `        
       <div class="col-4 card-group">
         <div class="card">
@@ -31,7 +35,7 @@ class Game {
             <h1 class="third-place">${this.rankings[2].name} 
               <div class="nation">${this.rankings[2].nation} </div>
             </h1>
-            <img src="../../images/${this.name.replace("Game ", "")}.png">
+            ${renderImage(imageName, hasVideo)}
           </div>
         </div>
       </div> `
@@ -52,7 +56,11 @@ class TeamGame {
     this.bronze = bronze
   }
 
-  renderHTML() {
+  async renderHTML() {
+    const imageName = this.imageName.replace("Game ", "")
+    const videoPath = `../../images/${imageName}.mp4`;
+    const hasVideo = await pathExists(videoPath);
+
     return `        
       <div class="col-4 card-group">
         <div class="card">
@@ -64,7 +72,7 @@ class TeamGame {
             ${this.renderMedals(this.gold, "🏆", "first-place")}
             ${this.renderMedals(this.silver, "🥈", "second-place")}
             ${this.renderMedals(this.bronze, "🥉", "third-place")}
-            <img src="../../images/${this.imageName.replace("Game ", "")}.png">
+            ${renderImage(imageName, hasVideo)}
           </div>
         </div>
       </div> `
@@ -88,12 +96,58 @@ class TeamGame {
   }
 }
 
+async function pathExists(path) {
+    const response = await fetch(path, { method: "HEAD" });
+    return response.ok;
+}
+
+function renderImage(imageName, hasVideo) {
+    return `
+      <div class="map-container">
+        <img 
+          id="${imageName}-image"
+          src="../../images/${imageName}.png"
+          class="game-media"
+        >
+
+        ${
+          hasVideo ? `
+          <video id="${imageName}-video" class="game-media" style="display:none" controls>
+              <source src="../../images/${imageName}.mp4" type="video/mp4">
+          </video>
+
+          <button onclick="toggleMedia('${imageName}')">
+              Show Timelapse
+          </button>
+          ` : ""
+        }
+      </div>
+    `;
+}
+
+function toggleMedia(name, button) {
+    const image = document.getElementById(`${name}-image`);
+    const video = document.getElementById(`${name}-video`);
+
+    if (image.style.display === "none") {
+        image.style.display = "block";
+        video.style.display = "none";
+        video.pause();
+        button.textContent = "Show Timelapse";
+    } else {
+        image.style.display = "none";
+        video.style.display = "block";
+        video.play();
+        button.textContent = "Show Map";
+    }
+}
+
 const tableBody = document.getElementById("winners-table-body");
 let winnersTable;
 
 fetch('winners.txt')
   .then(response => response.text())
-  .then(text => {
+  .then(async text => {
     const container = document.getElementById('winners-container')
     const table = document.getElementById('winners-table-body')
     const lines = text.trim().split('\n\n')
@@ -182,7 +236,7 @@ fetch('winners.txt')
       if(i%3 == 0){
         msg += `<div class="row g-4 mb-4">` 
       }
-      msg += games[i].renderHTML()
+      msg += await games[i].renderHTML()
       if(i%3 == 2){
         msg += "</div>"
       }
