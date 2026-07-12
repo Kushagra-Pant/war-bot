@@ -105,7 +105,8 @@ function renderImage(imageName, hasVideo) {
     return `
       ${
         hasVideo ? `
-          <button class="btn btn-outline-secondary" onclick="toggleMedia('${imageName}', this)">
+          <br> <br>
+          <button id='video-toggle' class="btn btn-outline-dark" onclick="toggleMedia('${imageName}', this)">
               Show Timelapse
           </button>
           ` : ""
