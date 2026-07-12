@@ -990,3 +990,22 @@ This update is an organizational revolution, feturing two new major additions: *
 *Jul 3, 2026, 3:06 pm*
 - Fixed edge-case issues with bomb, load, and move commands
 
+## Update 1.6.1 - Centralization
+*Jul 11, 2026, 3:30 pm*
+**Additions**
+- **New Mechanic:** Centralization
+  - The policy of centralization prioritizes important territories over others. This leads to higher population growth in important territories, and lower population growth in other territories. For now, important territories are capitals and territories with financial centers. Centralization currently only impacts population growth. For more details, do `-centralize help`
+  - To centralize your country, simply run `-centralize`. It requires 100 political power and at least 2 territories.
+  - All nations start off decentralized. To decentralize your country once you've centralized, simply run`-decentralize`. This also costs 100 political power.
+- **New Command:** Unit Map!
+  - You can now view a map of a specific unit. Simply do `-unitmap <unit type>`, and it will display all units that you own of that specific type.
+- **New Setting:** Added setting to allow players to decide whether trusted nations should be allowed to retreat to their transporters/aircraft carriers. This is by default true.
+
+### Bug fixes
+- Fixed casualty count in battles if you don't have intelligence
+- Added help information to `-unitinfo`
+- Fixed bug where units could retreat to enemy carriers
+- Made it so bomber damage scales with amount of bombers, previously overlooked
+- Fixed `-pathfrom`
+
+
