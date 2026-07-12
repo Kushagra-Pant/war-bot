@@ -103,6 +103,13 @@ async function pathExists(path) {
 
 function renderImage(imageName, hasVideo) {
     return `
+      ${
+        hasVideo ? `
+          <button style="btn btn-secondary" onclick="toggleMedia('${imageName}')">
+              Show Timelapse
+          </button>
+          ` : ""
+      }
       <div class="map-container">
         <img 
           id="${imageName}-image"
@@ -115,10 +122,6 @@ function renderImage(imageName, hasVideo) {
           <video id="${imageName}-video" class="game-media" style="display:none" controls>
               <source src="../../images/${imageName}.mp4" type="video/mp4">
           </video>
-
-          <button onclick="toggleMedia('${imageName}')">
-              Show Timelapse
-          </button>
           ` : ""
         }
       </div>
