@@ -1000,8 +1000,7 @@ This update is an organizational revolution, feturing two new major additions: *
 - **New Command:** Unit Map!
   - You can now view a map of a specific unit. Simply do `-unitmap <unit type>`, and it will display all units that you own of that specific type.
 - **New Setting:** Added setting to allow players to decide whether trusted nations should be allowed to retreat to their transporters/aircraft carriers. This is by default true.
-
-### Bug fixes
+**Bug fixes**
 - Fixed casualty count in battles if you don't have intelligence
 - Added help information to `-unitinfo`
 - Fixed bug where units could retreat to enemy carriers
