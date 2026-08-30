@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet"></link>
+  </head>
+  <body class="bg-turquoise">
+    <nav class="navbar navbar-expand-lg bg-secondary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="../../">Overview</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="../how-to-play/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                How to Play
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../how-to-play">How to Play</a></li>
+                <li><a class="dropdown-item" href="../command-list/">List of Commands</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="../updates-overview/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Updates
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../updates-overview/">Overview</a></li>
+                <li><a class="dropdown-item disabled" href="../updates-detailed/">Detailed</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="pages/maps/index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Maps
+              </a>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item " href="../maps/">Official Maps</a></li>
+                <li><a class="dropdown-item" href="../make-your-own-map/">Make your own Map Guide</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="../hall-of-fame/">Hall of Fame</a>
+            </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link active text-light" href="../past-versions/">Past Versions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="card page-header" style="margin-top: 2%">
+      <div class="d-flex flex-row">
+        <div class="card-body text-center">
+          <h5 class="card-title main">Detailed Updates</h5> <br>
+          <p class="card-text">
+            This is the section listing every single time the bot has been updated, big or small. The criteria over the years has changed for what truly classifies as an "update," and what the tiers of updates mean. So, I will be outlining that here.
+            <br> <br>
+            The bot spoke its first words on July 17, 2023. Back then it was just an idea, a concept. Back then, I was still using Replit to code rather than VSCode.
+            <br>
+            Upon the initial release of the bot, I didn't have a structured update log system. The numbering was just based off vibes. Even after Update 1.2, when I added an extra tier, I didn't have a system for classification. What classified as a Tier 3 update instead of a Tier 4 update? Well, whatever felt like it took more work.
+            <br> <br>
+            I created a structured tier system upon the release of 1.3.1. This was because 1.3.1 felt <i>bigger</i> than a Tier 3 update, but <i>smaller</i> than a Tier 2 update. So instead of adding some new thing, I redefined the tier system as follows:
+            <br>
+          </p>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">Tier 1 (x.0.0.0) Updates</th>
+                <td>
+                  This is the largest tier of update, an update so massive that it changes the very fabric of the game. Getting to Update 2.0 is like advancing from where humanity is now to a Type 1 Civilization.
+                  <br>
+                  The update must be something that completely changes the game, for example a full UI or mobile app with live statistics, but at that point I'm practically creating an indie game.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Tier 2 (0.x.0.0) Updates</th>
+                <td>
+                  These are major updates. They add several features that are interdependent. Starting Update 1.2 onwards, I try not to bundle up random features, and create some sort of theme connecting the additions of these updates.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Tier 3 (0.0.x.0) Updates</th>
+                <td>These are minor updates. They add one feature/concept to the game, and all the commands related to it. Examples include radars, autotax, or capitals. They change gameplay by adding more variety of strategy, but not to the extent that Tier 2 updates do.</td>
+              </tr>
+              <tr>
+                <th scope="row">Tier 4 (0.0.0.x) Updates</th>
+                <td>These are simple patch fixes. I still announce them to notify users when some bug is fixed. This update tier is also for extremely minor additions, for example adding a small, cosmetic command.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p></p>
+          <h4>
+            <a href="#end">
+                Go to most recent update
+            </a>
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="updates-container" style="padding-inline: 5%">
+    </div>
+
+    <div id="end"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
