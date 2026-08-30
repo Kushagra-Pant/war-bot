@@ -1007,4 +1007,67 @@ This update is an organizational revolution, feturing two new major additions: *
 - Made it so bomber damage scales with amount of bombers, previously overlooked
 - Fixed `-pathfrom`
 
+### Update 1.6.1.1
+*Jul 12, 2026, 9:51 am*
+- Fixed `-buildmap`
+
+### Update 1.6.1.2
+*Jul 13, 2026, 6:11 am*
+- Made it so you can only bomb a nation you're at war with
+- Planes can only bomb when they are on an airport, airstrip, or aircraft carrier
+- Added minimum plane cooldowns (in case bombing/surveilling/moving to the same territory through an aircraft carrier)
+
+### Update 1.6.1.3
+*Jul 13, 2026, 2:00 pm*
+- Fixed issues with plane takeoff conditions, added condition to surveil 
+- Added `-enemy` command which restricts nations ability to enter your airspace
+  - Specifically, if they enter your airspace, you will attempt to intercept them
+  - You can remove an enemy by doing `-cancel enemy <nation>`
+- Added descriptions to each setting in `-diplomacy`
+
+### Update 1.6.1.4
+*Jul 13, 3:30 pm*
+- Made it so planes can only defend a territory if there is an airport or airstrip in the territory, or they are aboard an aircraft carrier
+
+### Update 1.6.1.5
+*Jul 13, 2026, 4:16 pm*
+- Restricted naval bombardments to countries you're at war with
+- Disallowed naval bombardments and air-based bombing raids during the global truce
+
+### Update 1.6.1.6
+*Aug 21, 2026, 10:02 am*
+- Fixed character limit issue with `-income`
+
+### Update 1.6.1.7
+*Aug 24, 2026, 11:09 am*
+- Fixed `-offers` command
+
+## Update 1.6.2 - The Iron Update
+*Aug 30, 2026, 11:08 am*
+- New Resources: **Iron** and **Steel**
+  - Iron is automatically produced, similarly to coal. The existing commands `-resmap` and `-top` work with iron as well.
+  - Steel is a manufactured good, similar to fuel. It requires a **Steel Factory** (new building), using 1 iron and 1 coal to 1 steel per tax cycle (30 minutes).
+  - Many units now require steel, usually the mechanized units. The shop lists each's unit cost.
+- **Three new ground units:** Cannons, Militia, and Heavy Cavalry. All 3 require no steel to buy or fuel to operate.
+  - Cannons are basically fuel-less artillery. More attack-efficient than infantry (0.7 attack for $5000), but 0.1 defense. Very slow as well.
+  - Militia are defense-heavy units. Very slow but high defense (1.5 defense for $6000), in exchange for weak offense (0.3 attack). 
+  - Heavy Cavalry are slower than Light Cavalry but more efficient cost wise if you have the money upfront (3 attack and defense for $34000). They are slightly faster than Light Infantry.
+  - The old cavalry has the same stats and was renamed to Light Cavalry.
+- **Two new naval units:** Sailing Ships and Ironclads
+  - Sailing Ships do not require fuel and can load units. Much lower capacity than aircraft carriers and transporters. You can also equip cannons onto sailing ships with `-equip cannon <sailing ship id>`. Sailing Ships have no naval power **unless** equipped with a cannon.
+  - Ironclads do not require steel, but are more fuel-heavy and have less naval power than existing ships.  
+- Reworked Railway Economic and Population Boosts
+  - Standalone rail stations now give less economic and population boosts.
+  - However, every rail line now gives **new** population boosts to the territories it connects (only if they have rail stations), based on the connected population.
+- Ally Only market setting
+  - You can now sell to allies only by specifying 'allyOnly' in `-sell`
+- Non-player nations accept total annexations when <10% of original population
+  - Non-player nations will now accept total annexation when they have under 10% of their original population left.
+- New command `-resflow` (no parameters) which you can use to see your nation's resource flow.
+- Updated `-distribute` to handle any unit type
+**Minor Additions/Changes**
+- Added new commands to be able to be scheduled: `-load`, `unload`, `-buy`, `-deploy`, `-build`
+- Updated Shop UI: Units that require fuel and units that don't are now differentiated through the use of icons.
+- Fixed `-schedule` bug pertaining to commands in a 'stuck' state
+- Fixed `-battle` bug where you couldn't view naval battles
 
