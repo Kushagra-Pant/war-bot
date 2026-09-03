@@ -1065,9 +1065,33 @@ This update is an organizational revolution, feturing two new major additions: *
   - Non-player nations will now accept total annexation when they have under 10% of their original population left.
 - New command `-resflow` (no parameters) which you can use to see your nation's resource flow.
 - Updated `-distribute` to handle any unit type
+- Adjusted Medical Unit casualty reductions
+- Boosted fuel produced by coal (0.5 -> 0.75) and oil (1.5 -> 2)
+- Made ideology resource boosts apply to manufactured goods (fuel, steel) as well
 **Minor Additions/Changes**
 - Added new commands to be able to be scheduled: `-load`, `unload`, `-buy`, `-deploy`, `-build`
 - Updated Shop UI: Units that require fuel and units that don't are now differentiated through the use of icons.
 - Fixed `-schedule` bug pertaining to commands in a 'stuck' state
 - Fixed `-battle` bug where you couldn't view naval battles
+
+### Update 1.6.2.1
+*Aug 30, 2026, 5:51 pm*
+- Revamped `-kmbetween` command, including adding support for seas and formatting output
+
+### Update 1.6.2.2
+*Aug 31, 9:09 am*
+- Fixed army display issues
+
+### Update 1.6.2.3
+*Aug 31, 2026, 10:33 am*
+- Created new internal structure for recording map changes for timelapse, this time including integration
+
+### Update 1.6.2.4
+*Aug 31, 2026, 5:58 pm*
+- Fixed an issue where stability losses/gains after battles weren't being applied
+
+### Update 1.6.2.5
+*Aug 31, 2026, 9:14 pm*
+- Allowed `-distribute` to entrench troops as well through an additional specification
+- Fixed issue with `-distribute` where it would ignore integration
 
