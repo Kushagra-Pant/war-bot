@@ -216,7 +216,7 @@
         <div class="card-body" style="flex: 1; min-width: 250px;">
           <h5 class="card-title">Expanded Europe (Historical)</h5>
           <p class="card-text fs-4">
-            This is an extension to the Expanded Europe map, adapted for historical scenarios. It adds 13 russian cities, which function the same way as territories. Unlike the main versions of the game, this map is used exclusively for historical conflicts. These scenarios are played as team games, with alliances pre-determined to reflect the real-world situation at the time of conflict. Introduced in Update 1.5.2, the map has so far been used for World War 1, the Napoleonic Wars, and World War 2.
+            This is an extension to the Expanded Europe map, adapted for historical scenarios. It adds 13 russian cities, which function the same way as territories. Unlike the main versions of the game, this map is used exclusively for historical conflicts. These scenarios are played as team games, with alliances, stability, and ideologies pre-determined to reflect the real-world situation at the time of conflict. Introduced in Update 1.5.2, the map has so far been used for World War 1, the Napoleonic Wars, and World War 2.
           </p>
         </div>
 
@@ -238,6 +238,44 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#HistoricalEurope" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
+    <div class="card p-4 page-header" id="MiddleEastCard">
+      <div class="d-flex flex-row flex-wrap align-items-center justify-content-between">
+        
+        <div class="card-body" style="flex: 1; min-width: 250px;">
+          <h5 class="card-title">Middle East</h5>
+          <p class="card-text fs-4">
+            This is a map of the traditional Middle East region. It was decided on in a poll between 4 options, and is the first map to debut with pre-set starting values for balance, stability, and political power, making each nation a unique experience with its own strategy. Introduced shortly after updatee 1.6.2, this map contains 20 nations, 27 seas, and 288 territories.
+          </p>
+        </div>
+
+        <div class="ms-4" style="width: 400px; height: 350px;">
+          <div id="MiddleEast" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100 rounded-4 overflow-hidden">
+              <div class="carousel-item active h-100">
+                <img src="middle-east/map.png" class="d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="middle-east/terrainmap.png" class="mx-auto d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="middle-east/labelledSeas.png" class="mx-auto d-block w-100 h-100 object-fit-cover rounded-4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this.src)">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#MiddleEast" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#MiddleEast" data-bs-slide="next">
               <span class="carousel-control-next-icon"></span>
               <span class="visually-hidden">Next</span>
             </button>
